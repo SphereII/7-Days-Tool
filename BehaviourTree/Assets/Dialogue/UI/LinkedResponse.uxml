@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="LinkedResponse" style="flex-direction: column;">
+        <ui:Button text="Go To..." display-tooltip-when-elided="true" name="GoToResponse" style="width: 90%; align-items: center;" />
+    </ui:VisualElement>
+</ui:UXML>

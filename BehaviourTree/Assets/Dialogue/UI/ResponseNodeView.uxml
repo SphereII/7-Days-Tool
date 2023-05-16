@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;">
+        <ui:TextField picking-mode="Ignore" name="ResponseText" binding-path="responseText" label="Player Says..." />
+        <ui:TextField picking-mode="Ignore" label="Unique ID" name="ResponseID" binding-path="id" />
+        <ui:TextField picking-mode="Ignore" label="Next Statement ID" name="NextstatementID" binding-path="nextstatementId" readonly="true" />
+        <ui:Foldout text="Requirements" name="CollapseFoldOut">
+            <ui:ListView focusable="true" virtualization-method="DynamicHeight" binding-path="requirements" show-border="true" show-alternating-row-backgrounds="ContentOnly" show-foldout-header="false" header-title="Requirements" show-add-remove-footer="true" reorderable="true" name="ListView" style="max-height: none;" />
+        </ui:Foldout>
+        <ui:ListView focusable="true" virtualization-method="DynamicHeight" binding-path="actions" show-border="true" show-alternating-row-backgrounds="ContentOnly" show-foldout-header="true" header-title="Actions" show-add-remove-footer="true" reorderable="true" name="ListView" style="max-height: none; display: none;" />
+    </ui:VisualElement>
+</ui:UXML>

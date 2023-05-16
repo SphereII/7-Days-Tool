@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="height: 700px;">
+        <ui:Label text="A Quick Doodle is an area where you can type in plain text to generate some kind of quick conversation.&#10;&#10;It will read a particular syntax, then generate the appropriate statement and response nodes for you. No requirements or actions are added, however you can edit the graph later for them." display-tooltip-when-elided="true" style="white-space: normal;" />
+        <ui:Label text="&#10;The format accepted here is as follows:&#10;&#10;Statement&#10;&#x9;Response 1&#10;&#x9;Response 2&#10;&#x9;Response 3&#10;&#10;&#10;Statements and Response are separated by new lines and tab. Tabbed Responses are connected to the last Statement line it found." display-tooltip-when-elided="true" style="white-space: normal;" />
+        <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center; margin-top: 10px; margin-bottom: 10px;">
+            <ui:Button text="Create Nodes" display-tooltip-when-elided="true" name="ButtonCreate" />
+            <ui:Button text="Close" display-tooltip-when-elided="true" name="ButtonClose" />
+        </ui:VisualElement>
+        <ui:TextField picking-mode="Ignore" multiline="true" name="targetTextField" style="height: auto; flex-grow: 1; flex-wrap: wrap; flex-shrink: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;">
+        <ui:Label display-tooltip-when-elided="true" name="RequirementDescription" text="True if there&apos;s a quest of this status" />
+        <ui:DropdownField label="RequirementType" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="RequirementType" />
+        <ui:TextField picking-mode="Ignore" label="Value" name="RequirementValue">
+            <ui:Button text="..." display-tooltip-when-elided="true" name="ValueSearch" />
+        </ui:TextField>
+        <ui:DropdownField label="Operator" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="OptionalOperator" />
+        <ui:TextField picking-mode="Ignore" label="id" name="RequirementID">
+            <ui:Button text="..." display-tooltip-when-elided="true" name="IDSearch" />
+        </ui:TextField>
+    </ui:VisualElement>
+</ui:UXML>

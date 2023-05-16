@@ -1,0 +1,86 @@
+﻿<vanilla>
+    <actions>
+        <action name="Trader" >
+            <property name="class" value="Trader" />
+            <property name="description" value="Executes a trader command." />
+            <property name="idDescription" value="Command" />
+            <property name="idType" value="string" />
+            <property name="idOptions" value="restock,reset_quests,trade,restock,drone_follow,drone_sentry,drone_storage,drone_dont_heal_allies,drone_heal_allies,drone_heal" />
+            <property name="idToolTip" value="Pick a trader command." />
+        </action>
+        <action name="AddJournalEntry" >
+            <property name="class" value="AddJournalEntry" />
+            <property name="description" value="Add the specified journal entry." />
+            <property name="idDescription" value="Journal Entry" />
+            <property name="idType" value="string" />
+            <property name="idToolTip" value="Enter in a journal entry." />
+        </action>
+    </actions>
+    <requirements>
+        <requirement name="QuestStatus" >
+            <property name="class" value="QuestStatus" />
+            <property name="description" value="True if there's a quest of this status." />
+            <property name="valueDescription" value="Status" />
+            <property name="valueType" value="queststatus" />
+            <property name="valueOptions" value="InProgress,NotStarted" />
+            <property name="valueToolTip" value="Pick one of the follow types." />
+        </requirement>
+        <requirement name="QuestTierHighest" >
+            <property name="class" value="QuestTierHighest" />
+            <property name="description" value="True if the player has this tier unlocked." />
+            <property name="valueDescription" value="Highest Tier" />
+            <property name="valueType" value="[1,2,3,4,5]" />
+            <property name="valueOptions" value="1,2,3,4,5" />
+            <property name="valueToolTip" value="Pick a range of from 1 to 5." />
+        </requirement>
+
+        <requirement name="QuestTier" >
+            <property name="class" value="QuestTier" />
+            <property name="description" value="True if the player is at this tier" />
+            <property name="valueDescription" value="Tier" />
+            <property name="valueType" value="[1,2,3,4,5]" />
+            <property name="valueOptions" value="1,2,3,4,5" />
+            <property name="valueToolTip" value="Pick a range of from 1 to 5." />
+        </requirement>
+
+        <requirement name="QuestsAvailable" >
+            <property name="class" value="QuestsAvailable" />
+            <property name="description" value="True if the NPC has a special quest available." />
+            <property name="valueDescription" value="Quest Type" />
+            <property name="valueType" value="[special]" />
+            <property name="valueOptions" value="special" />
+            <property name="valueToolTip" value="Check if the NPC has a special quest available." />
+        </requirement>
+
+        <requirement name="Admin" >
+            <property name="class" value="Admin" />
+            <property name="description" value="True if the player is in admin mode." />
+        </requirement>
+
+        <requirement name="DroneState" >
+            <property name="class" value="DroneState" />
+            <property name="description" value="True if the drone is in the listed state." />
+            <property name="valueDescription" value="State" />
+            <property name="valueType" value="string" />
+            <property name="valueOptions" value="Stay,Follow,HealAllies,DoNotHeal,Heal" />
+            <property name="valueToolTip" value="Select one of the following states." />
+        </requirement>
+
+    </requirements>
+
+
+    <template>
+        <action name="Trader" >
+            <property name="class" value="Trader" />
+            <property name="description" value="Executes a trader command." />
+            <property name="valueDescription" value="" />
+            <property name="valueType" value="float" />
+            <property name="valueToolTip" value="The numeric value of the cvar" />
+            <property name="idDescription" value="Command" />
+            <property name="idType" value="string" />
+            <property name="idOptions" value="restock,reset_quests,trade,restock,drone_follow,drone_sentry,drone_dont_heal_allies,drone_heal_allies,drone_heal" />
+            <property name="idToolTip" value="Pick a trader command." />
+            <property name="supportOperator" value="false" />
+        </action>
+    </template>
+</vanilla>

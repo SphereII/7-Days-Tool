@@ -1,0 +1,32 @@
+﻿- Fixed an issue with Localization not being read from the GameXMls folder, and Imports folder
+- Added version number to the UI
+- Adjusted folders so a new version of the Dialogue can be added without removing old imports / dialogs
+- Code clean up.
+- Added documentation.
+
+
+- Added Scratch, aka Quick Doodle.
+    - Allows parsing of plain text to auto-generate connected Statements and Responses.
+        - Responses don't link up with their next statements yet.
+        - Responses are identified by a tab indent
+        - Responses are linked to the last Statement read
+        
+    Format:
+        Statement
+            Response #1
+            Response #2 
+ 
+- Fixed a padding issue around the Action/Requirement text fields that caused a misalignment. 
+- Fixed an issue where imported values were being over-ridden by application default
+    - ie: bufftest01 instead of buffOrderFollow from the import example.
+- Added Delete Node on right click.
+- Added character limit on the Nodes menu.
+- Fixed an issue where Requirement and Actions did not have a unique GUID, causing them to display incorrectly when more than one was on a single node.
+- Added GoTo Node on right click.
+
+
+- Enabled Cloning of Responses / Action Nodes.
+- Fixed an issue where duplicate responses would show up in a statement.
+- Fixed an issue where the Localization.txt was doubling.
+- Fixed position creation when creating a response from the Statement Node, and from Context menu.
+- Added preliminary Play mode.

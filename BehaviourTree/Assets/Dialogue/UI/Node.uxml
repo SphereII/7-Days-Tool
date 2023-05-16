@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Dialogue/UI/uss/StyleSheet.uss?fileID=7433441132597879392&amp;guid=5669e98e893c7a145a0ae204aa761745&amp;type=3#StyleSheet" />
+    <ui:VisualElement name="node-border" class="node-border" style="min-width: 400px;">
+        <ui:VisualElement name="contents">
+            <ui:VisualElement name="divider" class="horizontal" />
+            <ui:VisualElement name="top">
+                <ui:VisualElement name="title" style="align-items: center;">
+                    <ui:Label name="title-label" text="StatementNode" class="unity-text-element unity-label" style="color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0);" />
+                    <ui:VisualElement name="title-button-container" style="color: rgb(0, 0, 0);">
+                        <ui:VisualElement name="collapse-button">
+                            <ui:VisualElement name="icon" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-direction: row; justify-content: space-between;">
+                    <ui:VisualElement name="input" style="flex-direction: row; align-items: center; justify-content: flex-start;" />
+                    <ui:VisualElement name="output" />
+                </ui:VisualElement>
+                <ui:VisualElement name="divider" class="vertical" />
+                <ui:Foldout text="Foldout" name="ToplevelFolderout">
+                    <Dialogue.InspectorView />
+                </ui:Foldout>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="selection-border" picking-mode="Ignore" class="selection-border" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; min-height: 10px; max-height: initial; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px;" />
+</ui:UXML>

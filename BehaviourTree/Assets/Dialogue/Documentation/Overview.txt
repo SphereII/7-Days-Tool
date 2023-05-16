@@ -1,0 +1,176 @@
+﻿This document provides an overview on how an NPC is connected to a dialog, and breaks down all the components involved in a dialog.
+
+Dialog Flow Basics:
+
+    Each NPC has an entry in entityclasses.xml, and has an NPCID string reference.
+
+        <entity_class name="npcTraderJen" extends="npcTraderTemplate">
+        	<property name="Tags" value="entity,npc,human,trader"/>
+    	    <property name="Mesh" value="#Entities/Traders?Prefabs/TraderJen.prefab"/>
+    	    <property name="NPCID" value="traderjen"/>
+    	    <property name="DanceType" value="2" />
+        </entity_class>
+    
+    The NPCID is used to look up its information from the npc.xml file, matching the NPCID with the id attribute.
+    
+    	<npc_info
+    		id="traderjen"
+    		name="Trader Jen"
+    		name_key="npc_traderJen"
+    		faction="whiteriver"
+    		portrait="npc_jen"
+    		greeting_type="nearby"
+    		stance="Like" voice_set="trader_jen"
+    		trader_id="2" dialog_id="trader" quest_faction="2" />
+    
+
+    The dialog_id is the reference to the dialogs.xml, patching the dialog_id to the id attribute.
+
+        <dialogs>
+        	<dialog id="trader" startstatementid="start">
+    	    		<statement id="start" text="dialog_trader_statement_start">
+    
+    The startstatementid points to the starting statement in the dialog chain.
+    
+    A dialog entry contains a unique id, a start statement pointing to the first statement, along with a series of
+    statements and responses.
+    
+    A statement is what the NPC will say to the player.
+    
+    A Response is what the player can say to the NPC in response to a statement.
+    
+    A Response can contain requirements that determine if the response can be selected. If it fails the requirements, the response
+        does not show up to the player.
+
+    A Response can also contain one or more actions. These actions can set journal entries, open up the trader window, etc.
+   
+
+Dialogs.xml Break down:
+
+    The dialogs.xml contains 1 or more dialog entries, each with their own unique id, statements, and responses.
+    
+    An NPC can only have a single dialog entry attached to it.
+
+    The dialog node itself has a unique id, and a startstatementid. This startstatementid is a string value that points to 
+        the statement when the dialog starts. 
+    
+    	<dialog id="junkDrone" startstatementid="start">
+    	
+    A statement node contains a unique id, a text attribute, and an optional nextstatementid.
+    
+        Example:
+    	    <statement id="start" text="dialog_trader_statement_start">
+    	
+        The text attribute contains the localization key to the full sentence in Localization.txt
+        
+            Example of basic Localization.txt:
+        
+                dialog_trader_statement_start,"Hello friend, how can I help you?"
+        
+        If a localization entry is not available, it will display the text of the key.
+        
+        If you do not use a Localization.txt, you can define the text as such:
+        
+                <statement id="start" text="Hello friend, how can I help you?">
+        
+        Note: It is strongly encouraged to use a Localization.txt
+        
+        The nextstatementid is an optional field. If no responses are defined, or valid, then the game will
+            auto-generate a [Next] response, and take the player to that statement.
+            
+        Example:
+        
+            <statement id="navezgane" text="dialog_trader_statement_navezgane" nextstatementid="background"/>
+        	<statement id="theduke" text="dialog_trader_statement_theduke" nextstatementid="background"/>
+        
+    
+    A Statement node may contain one or more response_entry node(s). 
+    
+    A response_entry contains an id that matches a Response node. This sets up what the player can say in response to the current statement.
+    
+        Example:        
+    			<response_entry id="shop"/>
+    			<response_entry id="follow"/>
+    
+    A Response node defines the text, requirements, and actions that a response can trigger when selected.
+        A Response node contains a unique id, a text field for the localization key, and an optional nextstatementid.
+        
+        As with the statement text field, if a localization entry isn't available, the key itself is displayed.
+        
+        The nextstatementid defines the next statement to display when the player selects this response.
+        
+        If nextstatementid is blank or not specified, the dialog exits, and the player returns to the game world.
+    
+        Example:
+    		<response id="shop" text="dialog_trader_response_shop">
+    			<action type="Trader" id="drone_storage"/>
+    		</response>
+
+    		<response id="follow" text="dialog_drone_command_follow">
+    			<requirement type="DroneState" value="Stay" requirementtype="Hide"/>
+    			<action type="Trader" id="drone_follow"/>
+    		</response>
+    		
+    	A Response Node can optional contain one or more Requirement Node(s), and, optionally, one or more Action Node(s).
+    	
+    	A Requirement Node contains a type and requirementtype attribute.  
+    	
+    	    It may also contain an optional value, operator, and id attribute, depending on the requirement.
+    	    
+    	    The type is a pre-defined requirement class, which can evaluate either true or false.
+    	    
+    	    The requirementtype defines what happens when the above evaluation fails. 
+    	    
+    	    Note:
+    	        As of A20, the only valid requirementtype is "Hide". That is, if the requirement fails, 
+    	        the Response will be hidden from the player, and cannot be selected.
+    	    
+    	    Example:
+    	    
+    	        <response id="admin" text="dialog_trader_response_admin" nextstatementid="admin">
+            		<requirement type="Admin" requirementtype="Hide"/>
+            	</response>
+            	
+            	In this example, the "admin" response will only appear if the current player is in an admin, or rather, if in "dm".
+            
+            Multiple requirements may be added to a response, allowing more fine control over whether the response will show up.
+                All requirements must pass in order for the response to be shown.
+                
+
+    	    Some requirements may contain addition attributes to further define the requirement. These attributes depend
+    	        on the type of requirement is specified. 
+    	    
+    	    Example:
+    	    	<response id="follow" text="dialog_drone_command_follow">
+            		<requirement type="DroneState" value="Stay" requirementtype="Hide"/>
+            	</response>
+    	    
+    	        The above "follow" response will only show if the DroneState requirement has a value of "Stay". 
+    	        
+    	        In other words, the drone will only give you the option to tell it to follow you, if it's currently being told to Stay.
+    	        
+    	        At no other time will the option of "Follow" be displayed.
+    	    
+    	
+    	The Action node is another optional node within a Response Node. It can trigger an event or a command. Much like a Requirement,
+    	    the options are pre-defined.
+    	    
+    	    The Action will only trigger if all the requirements are true, and when the player has selected that response.
+    	    
+    	    Multiple actions may be defined to a response.
+    	    
+    	    The type attribute defines which action is to be triggered.
+    	    
+    	    The id attribute further defines the option to the type.
+    	    
+    	    Example:
+    		    <response id="sentry" text="dialog_drone_command_stay">
+    			    <requirement type="DroneState" value="Follow" requirementtype="Hide"/>
+    			    <action type="Trader" id="drone_sentry"/>
+    		    </response>
+    		    
+    		    When the "sentry" response is selected, the Drone will be given a Trader action, passing in the id "drone_sentry".
+    		    
+    		    In the game, this will tell the drone to go into it's sentry state.
+    		    
+    

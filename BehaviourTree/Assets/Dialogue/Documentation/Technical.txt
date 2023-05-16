@@ -1,0 +1,25 @@
+﻿This tool is written using Unity's experimental GraphView. It's an internal API only, thus it's not possible to have as a
+standalone application. It must be run within Unity Editor.
+
+The Nodes are Scriptable Objects that can contain specific information about what kind of node they are. Fore example,
+a Statement Node will have a list of children ResponseNodes, while a Response Node will contain a list of Requirements.
+
+Each node also has a reference to a NodeView. This NodeView is derived from the GraphView node, and itself is the item that
+appears in the graph, and contains all the connections.
+
+The NodeViews are visually created using the UI Toolkit, with the uxml inside the Assets/Dialogue/UI folder. The NodeViews
+control the look and feel of each node. Each type of Node can further define a uss, or a Unity Style Sheet, that controls its 
+colours.
+
+Each NodeView will have an "editor" window attached to its display. These are defined in Scripts/Editor/EditorWindows/. In
+each editor class, there will be a CustomEditor attribute at the top that determines which scriptable object they are to be used for.
+
+If there is not custom editor defined, a default unity inspector will be used. This is checked in the Scripts/Common/UI/CustomControls/InspectorView.cs.
+
+Each editor references its own uxml ( Assets/Dialogue/UI ) to control what information is displayed.
+
+To break down the display a bit more, PropertyDrawers were created. These classes can load inside a custom editor to control 
+individual properties.
+
+In our case, we are using them to control how the Requirement and Actions are laid out. They also control what attributes appear and disappear,
+using the data from the Assets/Dialogue/Configuration/ files as a reference. 

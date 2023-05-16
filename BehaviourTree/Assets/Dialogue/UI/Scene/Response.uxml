@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-direction: row; width: 500px;">
+        <ui:Button display-tooltip-when-elided="true" name="ResponseButton" style="width: 450px;" />
+        <ui:Toggle name="HasRequirements" tooltip="This response has a requirement" text="Pass Requirements" />
+    </ui:VisualElement>
+</ui:UXML>

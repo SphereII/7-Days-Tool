@@ -1,0 +1,89 @@
+.node-border {
+    background-color: rgb(36, 36, 36);
+}
+
+.selection-border {
+    border-left-color: rgb(123, 174, 250);
+    border-right-color: rgb(123, 174, 250);
+    border-top-color: rgb(123, 174, 250);
+    border-bottom-color: rgb(123, 174, 250);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+:hover:selected > #selection-border {
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(123, 174, 250);
+    border-right-color: rgb(123, 174, 250);
+    border-top-color: rgb(123, 174, 250);
+    border-bottom-color: rgb(123, 174, 250);
+}
+
+:hover > #selection-border {
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(123, 174, 250);
+    border-right-color: rgb(123, 174, 250);
+    border-top-color: rgb(123, 174, 250);
+    border-bottom-color: rgb(123, 174, 250);
+}
+
+:selected > #selection-border {
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(123, 174, 250);
+    border-right-color: rgb(123, 174, 250);
+    border-top-color: rgb(123, 174, 250);
+    border-bottom-color: rgb(123, 174, 250);
+}
+
+.node {
+    min-width: 300px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#title {
+    font-size: 14px;
+    -unity-text-align: upper-center;
+}
+
+#divider {
+    min-height: 1px;
+    background-color: rgb(70, 96, 124);
+}
+
+.RootNode #input {
+    background-color: rgb(7, 152, 7);
+}
+
+.ResponseNode #title {
+    background-color: rgb(7, 152, 7);
+}
+
+.StatementNode #title {
+    background-color: rgb(123, 174, 250);
+}
+
+.ActionNode #title {
+    background-color: rgb(178, 0, 0);
+}
+
+.RootNode #title {
+    background-color: rgb(218, 165, 32);
+}
+
+.GotoNode #title {
+    background-color: rgb(255, 255, 255);
+}

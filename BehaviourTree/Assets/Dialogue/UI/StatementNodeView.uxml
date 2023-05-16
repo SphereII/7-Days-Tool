@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="AddNewResponse" src="project://database/Assets/Dialogue/UI/AddNewResponse.uxml?fileID=9197481963319205126&amp;guid=ad6df7bf5b1bc944fbb62362c7f64bee&amp;type=3#AddNewResponse" />
+    <ui:Template name="LinkedResponse" src="project://database/Assets/Dialogue/UI/LinkedResponse.uxml?fileID=9197481963319205126&amp;guid=ef4325b41dbc11a44961b61b1c837985&amp;type=3#LinkedResponse" />
+    <Style src="project://database/Assets/Dialogue/UI/uss/StyleSheet.uss?fileID=7433441132597879392&amp;guid=5669e98e893c7a145a0ae204aa761745&amp;type=3#StyleSheet" />
+    <ui:VisualElement>
+        <ui:VisualElement name="Header" style="height: 25px;">
+            <ui:Label text="Statement" display-tooltip-when-elided="true" style="align-items: center; -unity-text-align: middle-center;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Body" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(123, 174, 250); border-right-color: rgb(123, 174, 250); border-top-color: rgb(123, 174, 250); border-bottom-color: rgb(123, 174, 250);">
+            <ui:Label text="NPC:" display-tooltip-when-elided="true" />
+            <ui:TextField picking-mode="Ignore" name="StatementText" tooltip="This is what the NPC will say to you." multiline="true" binding-path="statementText" text="Hi&#10;" style="min-height: 50px; flex-wrap: wrap; white-space: normal; max-width: 500px;" />
+            <ui:TextField picking-mode="Ignore" label="Statement ID" name="StatementId" tooltip="A unique reference to this statement. No Spaces or special characters. If left blank, it&apos;ll be auto-generated." binding-path="id" />
+            <ui:TextField picking-mode="Ignore" label="Fail Statement" name="FailStatementId" readonly="true" binding-path="nextstatementId" tooltip="The Fail Statement is what gets triggered when there is no valid responses" />
+            <ui:Foldout text="Responses..." name="CollapseFoldOut">
+                <ui:Instance template="AddNewResponse" name="AddNewResponse" />
+                <ui:GroupBox name="LinkedResponses" text="Responses">
+                    <ui:Instance template="LinkedResponse" name="LinkedResponse" />
+                </ui:GroupBox>
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

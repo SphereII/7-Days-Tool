@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Dialogue/UI/uss/StyleSheet.uss?fileID=7433441132597879392&amp;guid=5669e98e893c7a145a0ae204aa761745&amp;type=3#StyleSheet" />
+    <ui:VisualElement>
+        <ui:VisualElement name="Header" style="height: 25px;">
+            <ui:Label text="Actions" display-tooltip-when-elided="true" style="align-items: center; -unity-text-align: middle-center;" />
+        </ui:VisualElement>
+        <ui:Foldout text="Actions..." name="CollapseFoldOut">
+            <ui:VisualElement name="Body" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(123, 174, 250); border-right-color: rgb(123, 174, 250); border-top-color: rgb(123, 174, 250); border-bottom-color: rgb(123, 174, 250);">
+                <ui:Label text="When the connected response is selected,this action is triggered." display-tooltip-when-elided="true" />
+                <ui:ListView focusable="true" name="ListView" header-title="Triggered Actions" show-add-remove-footer="true" reorderable="true" show-foldout-header="false" show-border="true" virtualization-method="DynamicHeight" show-alternating-row-backgrounds="ContentOnly" binding-path="actions" style="max-height: none;" />
+            </ui:VisualElement>
+        </ui:Foldout>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="width: 500px;">
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="Description" />
+        <ui:VisualElement name="Header" style="flex-direction: row; width: auto;" />
+        <ui:VisualElement name="Body" style="flex-direction: row; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;">
+            <ui:VisualElement name="TypeColumn" style="width: auto; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px;">
+                <ui:Label text="Type" display-tooltip-when-elided="true" name="TypeLabel" style="width: auto; white-space: normal;" />
+                <ui:DropdownField index="0" name="DropDown" binding-path="type" style="width: auto;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="IdColumn" style="width: auto; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px;">
+                <ui:Label display-tooltip-when-elided="true" name="idDescription" style="white-space: normal;" />
+                <ui:TextField picking-mode="Ignore" name="IDField" binding-path="Id" />
+                <ui:Button text="Lookup" display-tooltip-when-elided="true" name="idSearch" />
+            </ui:VisualElement>
+            <ui:VisualElement name="OperatorColumn" style="width: auto; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; align-items: center; margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px;">
+                <ui:Label text="Operators" display-tooltip-when-elided="true" style="white-space: normal;" />
+                <ui:DropdownField index="-1" name="OperatorDropDown" binding-path="operator" />
+            </ui:VisualElement>
+            <ui:VisualElement name="ValueColumn" style="width: auto; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px;">
+                <ui:Label display-tooltip-when-elided="true" name="ValueDescription" />
+                <ui:TextField picking-mode="Ignore" name="ValueField" binding-path="Value" />
+                <ui:Button text="Lookup" display-tooltip-when-elided="true" name="ValueSearch" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

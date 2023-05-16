@@ -1,0 +1,195 @@
+﻿<score>
+    <actions>
+        <action name="Teleport" >
+            <property name="class" value="Teleport, SCore" />
+            <property name="description" value="Teleports the player" />
+            <property name="idDescription" value="Location" />
+            <property name="idToolTip" value="A Location such as Bedroll, Backpack, Landclaim, or a portal name." />
+            <property name="idOptions" value="bedroll,backpack,Landclaim" />
+            <property name="idType" value="string" />
+
+        </action>
+
+        <action name="RewardSkillPoint" >
+            <property name="class" value="RewardSkillPoint, SCore" />
+            <property name="description" value="Gives the number of skill points to the player." />
+            <property name="valueDescription" value="Quantity" />
+            <property name="valueType" value="int" />
+            <property name="valueToolTip" value="The number of skill points to award" />
+        </action>
+
+        <action name="AddCVar" >
+            <property name="class" value="AddCVar, SCore" />
+            <property name="description" value="Sets the specified cvar and value on the player." />
+            <property name="valueDescription" value="CVar Value:" />
+            <property name="valueType" value="float" />
+            <property name="valueToolTip" value="The numeric value of the cvar" />
+            <property name="idDescription" value="CVar Name:" />
+            <property name="idType" value="string" />
+            <property name="idToolTip" value="The name of the cvar" />
+            <property name="supportOperator" value="true" />
+        </action>
+        <action name="AddCVarToNPC" >
+            <property name="class" value="AddCVarSelf, SCore" />
+            <property name="description" value="Sets the specified cvar and value on the NPC." />
+            <property name="valueDescription" value="CVar Value:" />
+            <property name="valueType" value="float" />
+            <property name="valueToolTip" value="The numeric value of the cvar" />
+            <property name="idDescription" value="CVar Name:" />
+            <property name="idType" value="string" />
+            <property name="idToolTip" value="The name of the cvar" />
+            <property name="supportOperator" value="true" />
+        </action>
+
+        <action name="AddBuffSDX" >
+            <property name="class" value="AddBuffSDX, SCore" />
+            <property name="description" value="Sets the specified buff on the target: Player, or self (the npc)" />
+            <property name="valueDescription" value="Buff Target" />
+            <property name="valueType" value="[player,self]" />
+            <property name="valueOptions" value="player,self" />
+            <property name="valueToolTip" value="Whether the buff targets the player or the self (the npc)" />
+            <property name="idDescription" value="Buff Name:" />
+            <property name="idType" value="buff" />
+            <property name="idToolTip" value="The name of the buff" />
+        </action>
+
+        <action name="AddItemSDX" >
+            <property name="class" value="AddItemSDX, SCore" />
+            <property name="description" value="Gives the player this item." />
+            <property name="valueDescription" value="Quantity" />
+            <property name="valueType" value="int" />
+            <property name="valueToolTip" value="The quantity of this item" />
+            <property name="idDescription" value="Item Name:" />
+            <property name="idType" value="item" />
+            <property name="idToolTip" value="The name of the item" />
+        </action>
+        <action name="ExecuteCommandSDX" >
+            <property name="class" value="ExecuteCommandSDX, SCore" />
+            <property name="description" value="Gives the NPC one of the supported commands." />
+            <property name="idDescription" value="Command" />
+            <property name="idOptions" value="TellMe, ShowAffection, FollowMe, StayHere, GuardHere, Wander, SetPatrol, Patrol, Hire, OpenInventory, Loot, Dismiss" />
+            <property name="idType" value="string" />
+            <property name="idToolTip" value="One of the supported command: TellMe, ShowAffection, FollowMe, StayHere, GuardHere, Wander, SetPatrol, Patrol, Hire, OpenInventory, Loot, Dismiss" />
+        </action>
+
+        <action name="GiveQuestSDX" >
+            <property name="class" value="GiveQuestSDX, SCore" />
+            <property name="description" value="Gives the player the following quest" />
+            <property name="idDescription" value="Quest" />
+            <property name="idType" value="quest" />
+            <property name="idToolTip" value="The name of a quest." />
+        </action>
+
+        <action name="OpenDialogSDX" >
+            <property name="class" value="OpenDialogSDX, SCore" />
+            <property name="description" value="Opens the Hire window" />
+        </action>
+        <action name="OpenWindow" >
+            <property name="class" value="OpenWindowSDX, SCore" />
+            <property name="description" value="Opens the specified window" />
+            <property name="idDescription" value="The name of the window." />
+            <property name="idType" value="string" />
+        </action>
+
+        <action name="RemoveBuffSDX" >
+            <property name="class" value="RemoveBuffSDX, SCore" />
+            <property name="description" value="Removes the specified buff" />
+            <property name="idDescription" value="Buff name" />
+            <property name="idType" value="buff" />
+        </action>
+
+        <action name="ShowToolTipSDX" >
+            <property name="class" value="ShowToolTipSDX, SCore" />
+            <property name="description" value="Shows the specified tool tip." />
+            <property name="idDescription" value="ToolTip:" />
+            <property name="idType" value="string" />
+        </action>
+
+    </actions>
+    <requirements>
+        <requirement name="Leader" >
+            <property name="class" value="Leader, SCore" />
+            <property name="description" value="True if the player is the leader of the NPC." />
+        </requirement>
+
+        <requirement name="HiredSDX" >
+            <property name="class" value="HiredSDX, SCore" />
+            <property name="description" value="True if the NPC is hired." />
+        </requirement>
+
+        <requirement name="HasQuest" >
+            <property name="class" value="HasQuest, SCore" />
+            <property name="description" value="True if the NPC has a quest." />
+        </requirement>
+        <requirement name="HasBuffSDX" >
+            <property name="class" value="HasBuffSDX, SCore" />
+            <property name="description" value="True if the player has this buff." />
+            <property name="valueDescription" value="Buff:" />
+            <property name="valueType" value="buff" />
+        </requirement>
+
+        <requirement name="HasCVarSDX" >
+            <property name="class" value="HasCVarSDX, SCore" />
+            <property name="description" value="True if the player has the follow cvar." />
+            <property name="valueDescription" value="CVar Value:" />
+            <property name="valueType" value="float" />
+            <property name="valueToolTip" value="The numeric value of the cvar" />
+            <property name="idDescription" value="CVar Name:" />
+            <property name="idType" value="string" />
+            <property name="idToolTip" value="The name of the cvar" />
+            <property name="supportOperator" value="true" />
+        </requirement>
+        <requirement name="HasFailedQuestSDX" >
+            <property name="class" value="HasFailedQuestSDX, SCore" />
+            <property name="description" value="True if the player failed this quest." />
+            <property name="valueDescription" value="Quest:" />
+            <property name="valueType" value="quest" />
+        </requirement>
+
+        <requirement name="HasCompletedQuestSDX" >
+            <property name="class" value="HasCompletedQuestSDX, SCore" />
+            <property name="description" value="True if the player completed this quest." />
+            <property name="valueDescription" value="Quest:" />
+            <property name="valueType" value="quest" />
+        </requirement>
+
+        <requirement name="HasItemSDX" >
+            <property name="class" value="HasItemSDX, SCore" />
+            <property name="description" value="True if the player has this item." />
+            <property name="valueDescription" value="Item:" />
+            <property name="valueType" value="item" />
+            <property name="idToolTip" value="The number of items to have. Default is 1." />
+            <property name="idDescription" value="Quantity ( Optional )" />
+            <property name="idType" value="int" />
+        </requirement>
+
+        <requirement name="FactionStance" >
+            <property name="class" value="HasFactionSDX, SCore" />
+            <property name="description" value="True if the player's faction relationship with the NPC matches this." />
+            <property name="valueDescription" value="Faction Stance:" />
+            <property name="valueType" value="FactionStance" />
+        </requirement>
+
+        <requirement name="FactionValueSDX" >
+            <property name="class" value="HasFactionValueSDX, SCore" />
+            <property name="description" value="True if the player's faction relationship with the NPC matches this." />
+            <property name="valueDescription" value="Faction Value:" />
+            <property name="valueToolTip" value="The numeric value of relationship: [ 0 to 1001 ]" />
+            <property name="valueType" value="[0...1001]" />
+            <property name="supportOperator" value="true" />
+        </requirement>
+
+        <requirement name="HasPackage" >
+            <property name="class" value="HasPackage, SCore" />
+            <property name="description" value="True if the NPC has this UAI Package." />
+            <property name="valueDescription" value="UAI Package:" />
+            <property name="valueType" value="string" />
+        </requirement>
+        <requirement name="HasTask" >
+            <property name="class" value="HasTask, SCore" />
+            <property name="description" value="True if the NPC has this UAI Task." />
+            <property name="valueDescription" value="UAI Task:" />
+            <property name="valueType" value="string" />
+        </requirement>
+    </requirements>
+</score>

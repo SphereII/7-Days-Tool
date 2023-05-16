@@ -1,0 +1,43 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Dialogue/UI/uss/DialogueEditor.uss?fileID=7433441132597879392&amp;guid=3fdf0e9414dddd04a8b29e731f0e6b77&amp;type=3#DialogueEditor" />
+    <uie:Toolbar style="justify-content: space-between;">
+        <ui:VisualElement style="justify-content: center;" />
+        <ui:VisualElement style="flex-direction: row; justify-content: flex-end;">
+            <uie:ToolbarButton text="Scratch" display-tooltip-when-elided="true" name="mnuQuickDoodle" tooltip="A quick option to add in statements with responses." />
+            <uie:ToolbarSpacer style="width: 50px;" />
+            <uie:ToolbarMenu display-tooltip-when-elided="true" name="mnuNodes" text="Nodes" />
+            <uie:ToolbarSpacer />
+            <uie:ToolbarButton text="Refresh" display-tooltip-when-elided="true" name="mnuRefresh" />
+            <uie:ToolbarSpacer />
+            <uie:ToolbarButton text="Auto Layout" display-tooltip-when-elided="true" name="mnuAutoLayout" />
+            <uie:ToolbarSpacer />
+            <uie:ToolbarButton text="Export" display-tooltip-when-elided="true" name="mnuExport" />
+            <uie:ToolbarSpacer />
+            <uie:ToolbarPopupSearchField focusable="true" name="mnuSearchField" />
+            <uie:ToolbarSpacer />
+            <ui:Label text="v1.0.0.0" display-tooltip-when-elided="true" name="lblVersion" style="-unity-text-align: middle-left;" />
+            <uie:ToolbarSpacer style="width: 50px;" />
+            <uie:ToolbarButton text="Close" display-tooltip-when-elided="true" name="mnuClose" />
+        </ui:VisualElement>
+    </uie:Toolbar>
+    <Dialogue.SplitView>
+        <ui:VisualElement name="NavMenu" style="width: 400px; display: none;">
+            <Dialogue.InspectorView>
+                <ui:GroupBox text="Graph Controls" name="GraphControls">
+                    <ui:Button text="Auto Layout" display-tooltip-when-elided="true" name="AdjustLayout" tooltip="Redistributes the nodes" />
+                    <ui:Button text="Export" display-tooltip-when-elided="true" name="Export" />
+                    <ui:Button text="Close" display-tooltip-when-elided="true" name="Close" />
+                    <ui:Button text="Refresh" display-tooltip-when-elided="true" name="Refresh" tooltip="Converts the Dialog Graph into xml." />
+                </ui:GroupBox>
+                <ui:Foldout text="Statements" name="StatementFoldout" value="false" view-data-key="StatementFoldout" />
+                <ui:Foldout text="Responses" name="ResponseFoldout" value="false" view-data-key="ResponseFoldout" />
+                <ui:VisualElement name="Tips" style="flex-wrap: wrap;">
+                    <ui:Label text="- Graphs are auto-saved&#10;- More Tips.&#10;- Don&apos;t eat yellow snow.&#10;" display-tooltip-when-elided="true" style="flex-wrap: wrap; white-space: normal;" />
+                </ui:VisualElement>
+            </Dialogue.InspectorView>
+        </ui:VisualElement>
+        <ui:VisualElement name="Main">
+            <Dialogue.DialogueGraphView focusable="true" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </Dialogue.SplitView>
+</ui:UXML>
