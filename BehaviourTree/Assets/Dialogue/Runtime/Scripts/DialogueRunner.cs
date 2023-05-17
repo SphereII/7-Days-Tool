@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using Dialogue;
+using Dialogue.Scripts.Nodes;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -44,6 +46,10 @@ public class DialogueRunner : MonoBehaviour
             Debug.Log("Missing Dialogue Scriptable Object!");
             return;
         }
+        _statementNodes.Clear();
+        _responseNodes.Clear();
+        _actionNodes.Clear();
+        _playerResponseGrp.Clear();
 
         _rootNode = dialogGraph.rootNode as RootNode;
         if (_rootNode == null)
@@ -51,19 +57,58 @@ public class DialogueRunner : MonoBehaviour
             Debug.Log("No root node in the selected dialog!");
             return;
         }
-        _currentStatementNode = _rootNode.child as StatementNode;
+        AddDialog(dialogGraph);
         foreach (var node in dialogGraph.nodes)
         {
-            if ( node is StatementNode statementNode)
-                _statementNodes.Add(statementNode);
-            if ( node is ResponseNode responseNode)
-                _responseNodes.Add(responseNode);
-            if ( node is ActionNode actionNode)
-                _actionNodes.Add(actionNode);
+            if (node is StatementNode statementNode)
+            {
+                var newchildren = new List<BaseNode>();
+                foreach (var child in statementNode.Children)
+                {
+                    if (child is ImportNode importNode)
+                    {
+                        var graph = importNode.importedDialog;
+                        if (graph == null) continue;
+                        var rootNode = graph.rootNode as RootNode;
+                        if (rootNode == null) continue;
+                        var importStatement = rootNode.child as StatementNode;
+                        if ( importStatement == null ) continue;
+                        newchildren.AddRange(importStatement.Children);
+                        AddDialog(importNode.importedDialog);
+                    }
+                }
+                statementNode.Children.AddRange(newchildren);
+            }
         }
+        _currentStatementNode = _rootNode.child as StatementNode;
         LoadStatement(_currentStatementNode);
     }
 
+    private void AddDialog(DialogGraph dialog)
+    {
+        foreach (var node in dialog.nodes)
+        {
+            if (node is StatementNode statementNode)
+            {
+                if (_statementNodes.Contains(statementNode)) continue;
+                _statementNodes.Add(statementNode);
+            }
+
+            if (node is ResponseNode responseNode)
+            {
+                if (_responseNodes.Contains(responseNode)) continue;
+                _responseNodes.Add(responseNode);
+            }
+
+            if (node is ActionNode actionNode)
+            {
+                if ( _actionNodes.Contains(actionNode)) continue;
+                
+                _actionNodes.Add(actionNode);
+            }
+
+        }
+    }
     private void RefreshScreen()
     {
         if (_currentStatementNode == null)

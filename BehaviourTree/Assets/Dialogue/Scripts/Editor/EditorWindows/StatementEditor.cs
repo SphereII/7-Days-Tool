@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using Dialogue.Scripts.Nodes;
+using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -69,18 +70,45 @@ namespace Dialogue.Editor.EditorWindows
             var responseAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(LinkedResponseUxml);
             foreach (var response in _currentStatement.Children)
             {
-                if (response is not ResponseNode responseNode) continue;
-                var ve = responseAsset.CloneTree();
-                var button = ve.Q<Button>("GoToResponse");
-                button.clickable = new Clickable(() =>
+                if (response is ResponseNode responseNode)
                 {
-                    var graphView = _ve.GetFirstAncestorOfType<DialogueGraphView>();
-                    graphView.ClearSelection();
-                    graphView.AddToSelection(responseNode.nodeView);
-                    graphView.FrameSelection();
-                });
-                button.text = responseNode.responseText;
-                _groupBoxResponses.Add(ve);
+                   var ve = responseAsset.CloneTree();
+                    var button = ve.Q<Button>("GoToResponse");
+                    button.clickable = new Clickable(() =>
+                    {
+                        var graphView = _ve.GetFirstAncestorOfType<DialogueGraphView>();
+                        graphView.ClearSelection();
+                        graphView.AddToSelection(responseNode.nodeView);
+                        graphView.FrameSelection();
+                    });
+                    button.text = responseNode.responseText;
+                    _groupBoxResponses.Add(ve);
+                }
+                else if (response is ImportNode importNode)
+                {
+                    if (importNode == null) continue;
+                    var children = importNode.GetChildren();
+                    foreach (var newChild in children)
+                    {
+                        var newResponse = newChild as ResponseNode;
+                        if( newResponse == null ) continue;
+                        var localized = ConfigurationManager.GetLocalisedValue(newResponse.responseText);
+                        var ve = responseAsset.CloneTree();
+                        var button = ve.Q<Button>("GoToResponse");
+                        button.clickable = new Clickable(() =>
+                        {
+                            var graphView = _ve.GetFirstAncestorOfType<DialogueGraphView>();
+                            graphView.ClearSelection();
+                            graphView.AddToSelection(importNode.nodeView);
+                            graphView.FrameSelection();
+                        });
+                        button.text =localized;
+                      //  if ( _groupBoxResponses.Contains(ve)) continue;
+                        
+                        _groupBoxResponses.Add(ve);
+                    }
+          
+                }
             }
   }
         public override void OnInspectorGUI()

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialogs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dialog id="trader" startstatementid="start">
+    <statement id="start" text="Hello friend, how can I help you?" ref_text="Hello friend, how can I help you?" nextstatementid="">
+      <response_entry id="shop" ref_text="May I see your inventory?" />
+      <response_entry id="jobsnone" ref_text="Do you have any jobs?" />
+      <response_entry id="jobshave1" ref_text="Do you have any jobs?" />
+      <response_entry id="jobshave2" ref_text="Do you have any jobs?" />
+      <response_entry id="jobshave3" ref_text="Do you have any jobs?" />
+      <response_entry id="jobshave4" ref_text="Do you have any jobs?" />
+      <response_entry id="jobshave5" ref_text="Do you have any jobs?" />
+      <response_entry id="specialjobshave" ref_text="Got any special jobs?" />
+      <response_entry id="admin" ref_text="Admin Options" />
+      <response_entry id="done" ref_text="Nevermind." />
+    </statement>
+    <statement id="background" text="What would you like to know about?" ref_text="What would you like to know about?" nextstatementid="">
+      <response_entry id="navezgane" ref_text="Navezgane?" />
+      <response_entry id="theduke" ref_text="The Duke?" />
+      <response_entry id="cassadores" ref_text="The Cassadores?" />
+      <response_entry id="noah" ref_text="Noah Wright?" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+    </statement>
+    <statement id="navezgane" text="Navezgane County Arizona one of the last true Eden’s on Earth where crops can still grow which is mostly Apache Indian Reservation territory." ref_text="Navezgane County Arizona one of the last true Eden’s on Earth where crops can still grow which is mostly Apache Indian Reservation territory." nextstatementid="background" />
+    <statement id="theduke" text="The most powerful man in Navezgane before the war was an ambitious, crooked Native American of Apache decent named 'Duke Cassadore' which means Warrior and Chief in Apache." ref_text="The most powerful man in Navezgane before the war was an ambitious, crooked Native American of Apache decent named 'Duke Cassadore' which means Warrior and Chief in Apache." nextstatementid="background" />
+    <statement id="cassadores" text="The Duke's personal band of mercenaries." ref_text="The Duke's personal band of mercenaries." nextstatementid="background" />
+    <statement id="noah" text="The founder of the White River Settler's Outposts, Noah White stood up to the Duke and is now on the run from the Cassadores." ref_text="The founder of the White River Settler's Outposts, Noah White stood up to the Duke and is now on the run from the Cassadores." nextstatementid="background" />
+    <statement id="currentjobs1" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="jobsnext2" ref_text="Next Tier" />
+      <response_entry id="jobsnext3" ref_text="Next Tier" />
+      <response_entry id="jobsnext4" ref_text="Next Tier" />
+      <response_entry id="jobsnext5" ref_text="Next Tier" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+    </statement>
+    <statement id="currentjobs2" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="jobsprev1" ref_text="Previous Tier" />
+      <response_entry id="jobsnext3" ref_text="Next Tier" />
+      <response_entry id="jobsnext4" ref_text="Next Tier" />
+      <response_entry id="jobsnext5" ref_text="Next Tier" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+    </statement>
+    <statement id="currentjobs3" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="jobsprev2" ref_text="Previous Tier" />
+      <response_entry id="jobsprev1" ref_text="Previous Tier" />
+      <response_entry id="jobsnext4" ref_text="Next Tier" />
+      <response_entry id="jobsnext5" ref_text="Next Tier" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+    </statement>
+    <statement id="currentjobs4" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="jobsprev3" ref_text="Previous Tier" />
+      <response_entry id="jobsprev2" ref_text="Previous Tier" />
+      <response_entry id="jobsprev1" ref_text="Previous Tier" />
+      <response_entry id="jobsnext5" ref_text="Next Tier" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+    </statement>
+    <statement id="currentjobs5" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="jobsprev4" ref_text="Previous Tier" />
+      <response_entry id="jobsprev3" ref_text="Previous Tier" />
+      <response_entry id="jobsprev2" ref_text="Previous Tier" />
+      <response_entry id="jobsprev1" ref_text="Previous Tier" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+    </statement>
+    <statement id="currentjobsspecial" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="nevermind" ref_text="Nevermind." />
+    </statement>
+    <statement id="nojobs" text="I have no work at this time." ref_text="I have no work at this time." nextstatementid="start" />
+    <statement id="admin" text="Admin Options" ref_text="Admin Options" nextstatementid="">
+      <response_entry id="restock" ref_text="Restock Inventory" />
+      <response_entry id="resetquests" ref_text="Reset Quests" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+    </statement>
+    <response id="shop" text="May I see your inventory?" nextstatementid="" ref_text="May I see your inventory?">
+      <action type="Trader" id="trade" />
+    </response>
+    <response id="jobsnone" text="Do you have any jobs?" nextstatementid="nojobs" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="InProgress" />
+    </response>
+    <response id="jobshave1" text="Do you have any jobs?" nextstatementid="currentjobs1" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestTierHighest" requirementtype="Hide" value="1" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="jobshave2" text="Do you have any jobs?" nextstatementid="currentjobs2" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestTierHighest" requirementtype="Hide" value="2" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="jobshave3" text="Do you have any jobs?" nextstatementid="currentjobs3" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestTierHighest" requirementtype="Hide" value="3" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="jobshave4" text="Do you have any jobs?" nextstatementid="currentjobs4" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestTierHighest" requirementtype="Hide" value="4" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="jobshave5" text="Do you have any jobs?" nextstatementid="currentjobs5" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestTierHighest" requirementtype="Hide" value="5" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="jobsprev1" text="Previous Tier" nextstatementid="currentjobs1" ref_text="Previous Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="1" />
+    </response>
+    <response id="jobsprev2" text="Previous Tier" nextstatementid="currentjobs2" ref_text="Previous Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="2" />
+    </response>
+    <response id="jobsprev3" text="Previous Tier" nextstatementid="currentjobs3" ref_text="Previous Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="3" />
+    </response>
+    <response id="jobsprev4" text="Previous Tier" nextstatementid="currentjobs4" ref_text="Previous Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="4" />
+    </response>
+    <response id="jobsnext2" text="Next Tier" nextstatementid="currentjobs2" ref_text="Next Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="2" />
+    </response>
+    <response id="jobsnext3" text="Next Tier" nextstatementid="currentjobs3" ref_text="Next Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="3" />
+    </response>
+    <response id="jobsnext4" text="Next Tier" nextstatementid="currentjobs4" ref_text="Next Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="4" />
+    </response>
+    <response id="jobsnext5" text="Next Tier" nextstatementid="currentjobs5" ref_text="Next Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="5" />
+    </response>
+    <response id="specialjobshave" text="Got any special jobs?" nextstatementid="currentjobsspecial" ref_text="Got any special jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestsAvailable" requirementtype="Hide" value="special" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="background" text="Can you give me some information?" nextstatementid="background" ref_text="Can you give me some information?" />
+    <response id="navezgane" text="Navezgane?" nextstatementid="navezgane" ref_text="Navezgane?" />
+    <response id="theduke" text="The Duke?" nextstatementid="theduke" ref_text="The Duke?" />
+    <response id="cassadores" text="The Cassadores?" nextstatementid="cassadores" ref_text="The Cassadores?" />
+    <response id="noah" text="Noah Wright?" nextstatementid="noah" ref_text="Noah Wright?" />
+    <response id="whiteriveroutposts" text="White River?" nextstatementid="whiteriveroutposts" ref_text="White River?" />
+    <response id="nevermind" text="Nevermind." nextstatementid="start" ref_text="Nevermind." />
+    <response id="admin" text="Admin Options" nextstatementid="admin" ref_text="Admin Options">
+      <requirement type="Admin" requirementtype="Hide" />
+    </response>
+    <response id="restock" text="Restock Inventory" nextstatementid="" ref_text="Restock Inventory">
+      <action type="Trader" id="restock" />
+    </response>
+    <response id="resetquests" text="Reset Quests" nextstatementid="" ref_text="Reset Quests">
+      <action type="Trader" id="reset_quests" />
+    </response>
+    <response id="done" text="Nevermind." nextstatementid="" ref_text="Nevermind." />
+  </dialog>
+</dialogs>

@@ -1,0 +1,597 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8386599333422523740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: cassadores
+  m_EditorClassIdentifier: 
+  guid: a80bd8bcb86bcbe4ca2024e5189b3c75
+  position: {x: 0, y: 0}
+  statementText: The Duke's personal band of mercenaries.
+  id: cassadores
+  nextstatementId: background ( What would you like to know about? )
+  Children:
+  - {fileID: -2642132214796440775}
+  ChildrenNames:
+  - What would you like to know about?
+--- !u!114 &-5997959581952851253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: ca1f55eaca8846c48b210de13ad180b6
+  position: {x: 0, y: 0}
+  responseText: The Cassadores?
+  id: cassadores
+  nextstatementId: cassadores
+  requirements: []
+  Children:
+  - {fileID: -8386599333422523740}
+  parent: {fileID: -2642132214796440775}
+--- !u!114 &-5304728312962728631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 00be04cd280c0954aa0897861ef2a2b6
+  position: {x: 0, y: 0}
+  responseText: Noah Wright?
+  id: noah
+  nextstatementId: noah
+  requirements: []
+  Children:
+  - {fileID: 1444580454643810971}
+  parent: {fileID: -2642132214796440775}
+--- !u!114 &-5196189462650763693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: admin
+  m_EditorClassIdentifier: 
+  guid: f262895053eed0a469f593313bede1a5
+  position: {x: 0, y: 0}
+  statementText: Admin Options
+  id: admin
+  nextstatementId: 
+  Children:
+  - {fileID: 2841613768424891054}
+  - {fileID: 1159672056823065616}
+  ChildrenNames:
+  - Restock Inventory
+  - Nevermind.
+--- !u!114 &-4797912039096743763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: f955b996157d50a4fad4549b2e8d15e7
+  position: {x: 0, y: 0}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Trader
+    Id: restock
+    op: 
+    Value: 
+--- !u!114 &-4652771188990219295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: fb36a97f0b6fbff4dbff104c32a8b7ea
+  position: {x: 0, y: 0}
+  responseText: Do you have any jobs?
+  id: jobshave
+  nextstatementId: currentjobs
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestStatus
+    Requirementtype: Hide
+    Value: NotStarted
+    op: 
+    Id: 
+  Children:
+  - {fileID: -2301311316084497857}
+  parent: {fileID: 4846099607203158371}
+--- !u!114 &-4103444186219679903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 7c2107807e0ebd848ae91193fff0a318
+  position: {x: 0, y: 0}
+  responseText: Admin Options
+  id: admin
+  nextstatementId: admin
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Admin
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: -5196189462650763693}
+  parent: {fileID: 4846099607203158371}
+--- !u!114 &-3926632198229936330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 01823fa08c286e2499704aba5f2deb0a
+  position: {x: 0, y: 0}
+  responseText: The Duke?
+  id: theduke
+  nextstatementId: theduke
+  requirements: []
+  Children:
+  - {fileID: -406687931734389376}
+  parent: {fileID: -2642132214796440775}
+--- !u!114 &-2700780264871909055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: nojobs
+  m_EditorClassIdentifier: 
+  guid: 3ddd465cab468e84580d9e7b47e75256
+  position: {x: 0, y: 0}
+  statementText: I have no work at this time.
+  id: nojobs
+  nextstatementId: start ( Hello friend, how can I help you? )
+  Children:
+  - {fileID: 4846099607203158371}
+  ChildrenNames:
+  - Hello friend, how can I help you?
+--- !u!114 &-2642132214796440775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: background
+  m_EditorClassIdentifier: 
+  guid: bd8666317fb3a8c439b8361d4904e8b4
+  position: {x: 0, y: 0}
+  statementText: What would you like to know about?
+  id: background
+  nextstatementId: 
+  Children:
+  - {fileID: 2174275768990588499}
+  - {fileID: -3926632198229936330}
+  - {fileID: -5997959581952851253}
+  - {fileID: -5304728312962728631}
+  - {fileID: 1159672056823065616}
+  ChildrenNames:
+  - Navezgane?
+  - The Duke?
+  - The Cassadores?
+  - Noah Wright?
+  - Nevermind.
+--- !u!114 &-2480407794351817050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 4cb34c665fc96834694566cfab4afafd
+  position: {x: 0, y: 0}
+  responseText: Nevermind.
+  id: done
+  nextstatementId: 
+  requirements: []
+  Children: []
+  parent: {fileID: 4846099607203158371}
+--- !u!114 &-2301311316084497857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: currentjobs
+  m_EditorClassIdentifier: 
+  guid: 5306296a7d9c4c74381e470828a7b3f4
+  position: {x: 0, y: 0}
+  statementText: Do any of these tasks sound like something you can do?
+  id: currentjobs
+  nextstatementId: 
+  Children:
+  - {fileID: 1159672056823065616}
+  ChildrenNames:
+  - Nevermind.
+--- !u!114 &-406687931734389376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: theduke
+  m_EditorClassIdentifier: 
+  guid: c5de14f2edc5829478d2dd688c8167ee
+  position: {x: 0, y: 0}
+  statementText: The most powerful man in Navezgane before the war was an ambitious,
+    crooked Native American of Apache decent named 'Duke Cassadore' which means Warrior
+    and Chief in Apache.
+  id: theduke
+  nextstatementId: background ( What would you like to know about? )
+  Children:
+  - {fileID: -2642132214796440775}
+  ChildrenNames:
+  - What would you like to know about?
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3f26486cfe4057a48a2d0866716126, type: 3}
+  m_Name: traderTest
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 4963015898601356811}
+  nodes:
+  - {fileID: 4846099607203158371}
+  - {fileID: 4963015898601356811}
+  - {fileID: -2642132214796440775}
+  - {fileID: 6110304018500143361}
+  - {fileID: -406687931734389376}
+  - {fileID: -8386599333422523740}
+  - {fileID: 1444580454643810971}
+  - {fileID: -2301311316084497857}
+  - {fileID: -2700780264871909055}
+  - {fileID: -5196189462650763693}
+  - {fileID: 4670836586882359445}
+  - {fileID: 6479437427380554298}
+  - {fileID: 5238621704715891104}
+  - {fileID: -4652771188990219295}
+  - {fileID: 8476479807103849918}
+  - {fileID: 2174275768990588499}
+  - {fileID: -3926632198229936330}
+  - {fileID: -5997959581952851253}
+  - {fileID: -5304728312962728631}
+  - {fileID: 4552965229318377180}
+  - {fileID: 1159672056823065616}
+  - {fileID: -4103444186219679903}
+  - {fileID: 2841613768424891054}
+  - {fileID: -4797912039096743763}
+  - {fileID: -2480407794351817050}
+--- !u!114 &1159672056823065616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: cf249627b5b6f7f4cbfb9704e16f7b69
+  position: {x: 0, y: 0}
+  responseText: Nevermind.
+  id: nevermind
+  nextstatementId: start
+  requirements: []
+  Children:
+  - {fileID: 4846099607203158371}
+  parent: {fileID: -5196189462650763693}
+--- !u!114 &1444580454643810971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: noah
+  m_EditorClassIdentifier: 
+  guid: 2f899db8616aa8b408eb9a721111a6af
+  position: {x: 0, y: 0}
+  statementText: The founder of the White River Settler's Outposts, Noah White stood
+    up to the Duke and is now on the run from the Cassadores.
+  id: noah
+  nextstatementId: background ( What would you like to know about? )
+  Children:
+  - {fileID: -2642132214796440775}
+  ChildrenNames:
+  - What would you like to know about?
+--- !u!114 &2174275768990588499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 0708547e264733e48a90babd264422da
+  position: {x: 0, y: 0}
+  responseText: Navezgane?
+  id: navezgane
+  nextstatementId: navezgane
+  requirements: []
+  Children:
+  - {fileID: 6110304018500143361}
+  parent: {fileID: -2642132214796440775}
+--- !u!114 &2841613768424891054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 581368afe9f23ee48b00069ad00d9ad6
+  position: {x: 0, y: 0}
+  responseText: Restock Inventory
+  id: restock
+  nextstatementId: 
+  requirements: []
+  Children:
+  - {fileID: -4797912039096743763}
+  parent: {fileID: -5196189462650763693}
+--- !u!114 &4552965229318377180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 1c69282533f3eaa4183d9bcd17984d19
+  position: {x: 0, y: 0}
+  responseText: White River?
+  id: whiteriveroutposts
+  nextstatementId: whiteriveroutposts
+  requirements: []
+  Children: []
+  parent: {fileID: 0}
+--- !u!114 &4670836586882359445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 268bfb0f036f66d4d899ff6ceaf9df75
+  position: {x: 0, y: 0}
+  responseText: May I see your inventory?
+  id: shop
+  nextstatementId: 
+  requirements: []
+  Children:
+  - {fileID: 6479437427380554298}
+  parent: {fileID: 4846099607203158371}
+--- !u!114 &4846099607203158371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: start
+  m_EditorClassIdentifier: 
+  guid: 6be38ff5a4b6b8e438860841138ad3d6
+  position: {x: 0, y: 0}
+  statementText: Hello friend, how can I help you?
+  id: start
+  nextstatementId: 
+  Children:
+  - {fileID: 4670836586882359445}
+  - {fileID: 5238621704715891104}
+  - {fileID: -4652771188990219295}
+  - {fileID: -4103444186219679903}
+  - {fileID: -2480407794351817050}
+  ChildrenNames:
+  - May I see your inventory?
+  - Admin Options
+  - Nevermind.
+--- !u!114 &4963015898601356811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a126453fdb64d70b9b315310a7485f8, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: ee5db606c3165f1489c4279027e46486
+  position: {x: 0, y: 0}
+  child: {fileID: 4846099607203158371}
+  dialogId: traderTest
+  localizationPrefix: 
+  createLocalization: 0
+--- !u!114 &5238621704715891104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 292bf00b786b0b942a5e4fa66ccc6531
+  position: {x: 0, y: 0}
+  responseText: Do you have any jobs?
+  id: jobsnone
+  nextstatementId: nojobs
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestStatus
+    Requirementtype: Hide
+    Value: InProgress
+    op: 
+    Id: 
+  Children:
+  - {fileID: -2700780264871909055}
+  parent: {fileID: 4846099607203158371}
+--- !u!114 &6110304018500143361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: navezgane
+  m_EditorClassIdentifier: 
+  guid: 4651a9e54c2206246bd365b93129e7a8
+  position: {x: 0, y: 0}
+  statementText: "Navezgane County Arizona one of the last true Eden\u2019s on Earth
+    where crops can still grow which is mostly Apache Indian Reservation territory."
+  id: navezgane
+  nextstatementId: background ( What would you like to know about? )
+  Children:
+  - {fileID: -2642132214796440775}
+  ChildrenNames:
+  - What would you like to know about?
+--- !u!114 &6479437427380554298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 168852943e857fa41897a2870a5803f8
+  position: {x: 0, y: 0}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Trader
+    Id: trade
+    op: 
+    Value: 
+--- !u!114 &8476479807103849918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 0b65387c36f2eab4f9aa5dc534afea6e
+  position: {x: 0, y: 0}
+  responseText: Can you give me some information?
+  id: background
+  nextstatementId: background
+  requirements: []
+  Children:
+  - {fileID: -2642132214796440775}
+  parent: {fileID: 0}

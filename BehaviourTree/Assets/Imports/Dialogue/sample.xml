@@ -1,0 +1,24 @@
+<dialog id="Baker" startstatementid="startbaker">
+    <statement id="startbaker" text="Welcome to my bakery! How can I help you?">
+        <response_entry id="TellMeAboutPastries" ref_text="Can you tell me about your pastries?" />
+        <response_entry id="DealsToday" ref_text="Do you have any deals today?" />
+        <response_entry id="NoThanks" ref_text="No, thank you. I'll come back later." />
+    </statement>
+
+    <statement id="PastrySelection" text="Sure, we have a wide selection of pastries ranging from croissants to cupcakes. What are you in the mood for?" >
+        <response_entry id="chocolate" ref_text="I'm in the mood for a chocolate croissant." />
+        <response_entry id="vanilla" ref_text="I'm in the mood for a vanilla croissant." />
+    </statement>
+
+    <statement id="MuffinDeal" text="Yes, we have a special deal on all muffins today. Would you like to try some?" >
+        <response_entry id="YesPlease" ref_text="Yes Please." />
+        <response_entry id="NoThanks" ref_text="No, thank you." />
+    </statement>
+
+    <response id="TellMeAboutPastries" text="Can you tell me about your pastries?" nextstatementid="PastrySelection" />
+    <response id="DealsToday" text="Do you have any deals today?" nextstatementid="MuffinDeal" />
+    <response id="NoThanks" text="No, thank you. I'll come back later." nextstatementid="done" />
+    <response id="chocolate" text="I'm in the mood for a chocolate croissant." nextstatementid="startbaker" />
+    <response id="vanilla" text="I'm in the mood for a vanilla croissant." nextstatementid="startbaker" />
+    <response id="YesPlease" text="Yes Please." nextstatementid="startbaker" />
+</dialog>

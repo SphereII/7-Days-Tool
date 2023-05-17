@@ -47,6 +47,7 @@ namespace Dialogue
             evt.menu.AppendAction($"Add Response", (_) => CreateNodeAtPosition(typeof(ResponseNode), position));
             evt.menu.AppendAction($"Add Action", (_) => CreateNodeAtPosition(typeof(ActionNode), position));
             evt.menu.AppendAction($"Add GoTo", (_) => CreateNodeAtPosition(typeof(GotoNode), position));
+            evt.menu.AppendAction($"Add Import", (_) => CreateNodeAtPosition(typeof(ImportNode), position));
 
             if (evt.target is NodeView target)
             {

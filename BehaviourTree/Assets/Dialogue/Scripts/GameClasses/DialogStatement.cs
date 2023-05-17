@@ -17,6 +17,10 @@ namespace Dialogue.GameData.Dialogs
         public string RefText = "";
         [XmlAttribute(AttributeName = "nextstatementid")] public string Nextstatementid = null;
 
+
+        [XmlElement(ElementName = "quest_entry")]
+        public List<DialogQuestEntry> questEntry = null;
+
         /*public string Localized()
         {
             return Localization.GetLocalization(Text);

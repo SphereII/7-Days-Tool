@@ -1,4 +1,31 @@
-﻿- Fixed an issue with Localization not being read from the GameXMls folder, and Imports folder
+﻿v1.0.0.3
+
+- Fixed a bug where quest_entry wasn't being saved during import
+- Added Import Node 
+    - The Import Node takes a reference to another Dialog graph.
+    - You link the Import Node to the Statement you want to merge with
+    - The "start" node of the Imported Dialog will be removed.
+    - The connected Statement will keep track of the attached Dialog and merge the results during export.
+    - Multiple Imports can be connected to the same Statement
+    - Imports can be attached to any Statements.
+    - Since the merging only happens on an Export, the Imported Dialog will continue to be updated as you change it.
+    - If you want to isolate the target dialog, make a copy of it first.
+- Added Quest Template Dialog
+    - This only contains the elements required to add the quest dialogs to an NPC
+    - Note: You still need to make a reference on your npc.xml to reference a valid quest line.
+- Added Seller Template Dialog
+    - This only contains the basic functionality to allow the NPC to buy and sell goods.    
+    - Note: You still need to make a reference on your npc.xml to reference a trader inventory. 
+- Fixed the Dialog Test Runner to reference Import Nodes
+- Fixed a few bugs with the Export manager involving statements from Import Nodes
+
+
+
+v1.0.0.2
+- Included vanilla's items.xml, buffs.xml, quests.xml, and modified localization.
+
+v1.0.0.1
+- Fixed an issue with Localization not being read from the GameXMls folder, and Imports folder
 - Added version number to the UI
 - Adjusted folders so a new version of the Dialogue can be added without removing old imports / dialogs
 - Code clean up.

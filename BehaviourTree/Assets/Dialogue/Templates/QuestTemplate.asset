@@ -1,0 +1,1074 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8913530706754994387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 351b03bc315551842ab7abe3a0875874
+  position: {x: 3050, y: 1500}
+  responseText: Do you have any jobs?
+  id: jobshave4
+  nextstatementId: currentjobs4
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestStatus
+    Requirementtype: Hide
+    Value: NotStarted
+    op: 
+    Id: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTierHighest
+    Requirementtype: Hide
+    Value: 4
+    op: 
+    Id: 
+  Children:
+  - {fileID: 7281534785219060899}
+  - {fileID: -3028795606808332256}
+  parent: {fileID: 3173632810106932378}
+--- !u!114 &-8745696773689196462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: a985b329ae3ecff45b538aee4d1d2d67
+  position: {x: 3050, y: 2300}
+  responseText: Got any special jobs?
+  id: specialjobshave
+  nextstatementId: currentjobsspecial
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestStatus
+    Requirementtype: Hide
+    Value: NotStarted
+    op: 
+    Id: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestsAvailable
+    Requirementtype: Hide
+    Value: special
+    op: 
+    Id: 
+  Children:
+  - {fileID: -3678022002468263480}
+  - {fileID: 5663183461440687686}
+  parent: {fileID: 3173632810106932378}
+--- !u!114 &-7800473220475316632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: admin
+  m_EditorClassIdentifier: 
+  guid: e32d68ad628922b47af67c617d4c7e12
+  position: {x: 556, y: 900}
+  statementText: Admin Options
+  id: admin
+  nextstatementId: 
+  questEntry: []
+  Children:
+  - {fileID: 8979044681426046002}
+  - {fileID: 1065705922191942544}
+  ChildrenNames:
+  - Reset Quests
+  - Nevermind.
+--- !u!114 &-7616953964133318773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: bc1031a8858b7434aa7d6114a4ca6a12
+  position: {x: 100, y: 2050}
+  responseText: Previous Tier
+  id: jobsprev4
+  nextstatementId: currentjobs4
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTier
+    Requirementtype: Hide
+    Value: 4
+    op: 
+    Id: 
+  Children:
+  - {fileID: -3028795606808332256}
+  parent: {fileID: 3088138514360854532}
+--- !u!114 &-7565694529858116053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 12c348f512a341d4e89e5f975b683492
+  position: {x: 1870, y: 1800}
+  responseText: Previous Tier
+  id: jobsprev1
+  nextstatementId: currentjobs1
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTier
+    Requirementtype: Hide
+    Value: 1
+    op: 
+    Id: 
+  Children:
+  - {fileID: -185928712684203427}
+  parent: {fileID: 3088138514360854532}
+--- !u!114 &-6689837799887157106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 2124d013b1a2fa647a489ff3db737c31
+  position: {x: 690, y: 1700}
+  responseText: Do you have any jobs?
+  id: jobshave5
+  nextstatementId: currentjobs5
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestStatus
+    Requirementtype: Hide
+    Value: NotStarted
+    op: 
+    Id: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTierHighest
+    Requirementtype: Hide
+    Value: 5
+    op: 
+    Id: 
+  Children:
+  - {fileID: -4826500417079424681}
+  - {fileID: 3088138514360854532}
+  parent: {fileID: 3173632810106932378}
+--- !u!114 &-5317094558307932317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 4da33459d825a5446be633aff017f58a
+  position: {x: 3050, y: 1900}
+  responseText: Previous Tier
+  id: jobsprev3
+  nextstatementId: currentjobs3
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTier
+    Requirementtype: Hide
+    Value: 3
+    op: 
+    Id: 
+  Children:
+  - {fileID: 4287304189948684754}
+  parent: {fileID: 3088138514360854532}
+--- !u!114 &-4826500417079424681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: ed6dcf847e69af049b32159e6ef774d6
+  position: {x: 1280, y: 1750}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddJournalEntry
+    Id: questTip
+    op: 
+    Value: 
+--- !u!114 &-3678022002468263480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: b904a9aa06279a84bb151bb447f6ce5e
+  position: {x: 100, y: 2450}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddJournalEntry
+    Id: questTip
+    op: 
+    Value: 
+--- !u!114 &-3330581379349523998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 44f935b7418fe8642b841d1cf9d5bd54
+  position: {x: 2460, y: 1450}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddJournalEntry
+    Id: questTip
+    op: 
+    Value: 
+--- !u!114 &-3028795606808332256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: currentjobs4
+  m_EditorClassIdentifier: 
+  guid: 5dc330aa0b18b3a478ed62e84699cb37
+  position: {x: 1468, y: 600}
+  statementText: Do any of these tasks sound like something you can do?
+  id: currentjobs4
+  nextstatementId: start
+  questEntry:
+  - listindex: 0
+    tier: 4
+  - listindex: 1
+    tier: 4
+  - listindex: 2
+    tier: 4
+  - listindex: 3
+    tier: 4
+  - listindex: 4
+    tier: 4
+  Children:
+  - {fileID: 3173632810106932378}
+  - {fileID: -5317094558307932317}
+  - {fileID: -2281789040177111778}
+  - {fileID: -7565694529858116053}
+  - {fileID: 734059506416071693}
+  - {fileID: 1065705922191942544}
+  ChildrenNames:
+  - Hello friend, how can I help you?
+  - Previous Tier
+  - Previous Tier
+  - Previous Tier
+  - Next Tier
+  - Nevermind.
+--- !u!114 &-2281789040177111778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: a0282d18c5bbc4a42a0a5d0e05845282
+  position: {x: 2460, y: 1850}
+  responseText: Previous Tier
+  id: jobsprev2
+  nextstatementId: currentjobs2
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTier
+    Requirementtype: Hide
+    Value: 2
+    op: 
+    Id: 
+  Children:
+  - {fileID: 8967155238578833547}
+  parent: {fileID: 3088138514360854532}
+--- !u!114 &-1518351404694102702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 35c8341e0bc773648874032fba1a98f4
+  position: {x: 1280, y: 1350}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddJournalEntry
+    Id: questTip
+    op: 
+    Value: 
+--- !u!114 &-499078103986650907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: cced244771f9ae1469bf279ec948bb13
+  position: {x: 1870, y: 2200}
+  responseText: Next Tier
+  id: jobsnext4
+  nextstatementId: currentjobs4
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTier
+    Requirementtype: Hide
+    Value: 4
+    op: 
+    Id: 
+  Children:
+  - {fileID: -3028795606808332256}
+  parent: {fileID: 4287304189948684754}
+--- !u!114 &-185928712684203427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: currentjobs1
+  m_EditorClassIdentifier: 
+  guid: 1bf3fc90d93cf0347ba52f609da7cda0
+  position: {x: 100, y: 450}
+  statementText: Do any of these tasks sound like something you can do?
+  id: currentjobs1
+  nextstatementId: start
+  questEntry:
+  - listindex: 0
+    tier: 1
+  - listindex: 1
+    tier: 1
+  - listindex: 2
+    tier: 1
+  - listindex: 3
+    tier: 1
+  - listindex: 4
+    tier: 1
+  Children:
+  - {fileID: 3173632810106932378}
+  - {fileID: 6965174973751094979}
+  - {fileID: 6000969054741489556}
+  - {fileID: -499078103986650907}
+  - {fileID: 734059506416071693}
+  - {fileID: 1065705922191942544}
+  ChildrenNames:
+  - Hello friend, how can I help you?
+  - Next Tier
+  - Next Tier
+  - Next Tier
+  - Next Tier
+  - Nevermind.
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3f26486cfe4057a48a2d0866716126, type: 3}
+  m_Name: QuestTemplate
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 6303922370702944349}
+  nodes:
+  - {fileID: 3173632810106932378}
+  - {fileID: 6303922370702944349}
+  - {fileID: -185928712684203427}
+  - {fileID: 8967155238578833547}
+  - {fileID: 4287304189948684754}
+  - {fileID: -3028795606808332256}
+  - {fileID: 3088138514360854532}
+  - {fileID: 5663183461440687686}
+  - {fileID: 8856226674129004683}
+  - {fileID: -7800473220475316632}
+  - {fileID: 7134964589526886504}
+  - {fileID: 945898601247909306}
+  - {fileID: 1526565761151039075}
+  - {fileID: 5019155247298101531}
+  - {fileID: -1518351404694102702}
+  - {fileID: 330279862603480018}
+  - {fileID: -3330581379349523998}
+  - {fileID: -8913530706754994387}
+  - {fileID: 7281534785219060899}
+  - {fileID: -6689837799887157106}
+  - {fileID: -4826500417079424681}
+  - {fileID: -7565694529858116053}
+  - {fileID: -2281789040177111778}
+  - {fileID: -5317094558307932317}
+  - {fileID: -7616953964133318773}
+  - {fileID: 6965174973751094979}
+  - {fileID: 6000969054741489556}
+  - {fileID: -499078103986650907}
+  - {fileID: 734059506416071693}
+  - {fileID: -8745696773689196462}
+  - {fileID: -3678022002468263480}
+  - {fileID: 1065705922191942544}
+  - {fileID: 2145483280698843752}
+  - {fileID: 8979044681426046002}
+  - {fileID: 4243592313047792732}
+  - {fileID: 15754534211301694}
+--- !u!114 &15754534211301694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 6a3aceaf8c17bf144b3cd5c35a8b056e
+  position: {x: 690, y: 3300}
+  responseText: Nevermind.
+  id: done
+  nextstatementId: 
+  requirements: []
+  Children: []
+  parent: {fileID: 3173632810106932378}
+--- !u!114 &330279862603480018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: d2aa7b99113aa4d46a83930f32bfcda6
+  position: {x: 1870, y: 1400}
+  responseText: Do you have any jobs?
+  id: jobshave3
+  nextstatementId: currentjobs3
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestStatus
+    Requirementtype: Hide
+    Value: NotStarted
+    op: 
+    Id: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTierHighest
+    Requirementtype: Hide
+    Value: 3
+    op: 
+    Id: 
+  Children:
+  - {fileID: -3330581379349523998}
+  - {fileID: 4287304189948684754}
+  parent: {fileID: 3173632810106932378}
+--- !u!114 &734059506416071693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 9246c3e97e6c9d04eb27354c93f57d78
+  position: {x: 2460, y: 2250}
+  responseText: Next Tier
+  id: jobsnext5
+  nextstatementId: currentjobs5
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTier
+    Requirementtype: Hide
+    Value: 5
+    op: 
+    Id: 
+  Children:
+  - {fileID: 3088138514360854532}
+  parent: {fileID: -3028795606808332256}
+--- !u!114 &945898601247909306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 18465636a33b2ba47b66f4ea2a84f3f8
+  position: {x: 2648, y: 1100}
+  responseText: Do you have any jobs?
+  id: jobshave1
+  nextstatementId: currentjobs1
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestStatus
+    Requirementtype: Hide
+    Value: NotStarted
+    op: 
+    Id: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTierHighest
+    Requirementtype: Hide
+    Value: 1
+    op: 
+    Id: 
+  Children:
+  - {fileID: 1526565761151039075}
+  - {fileID: -185928712684203427}
+  parent: {fileID: 3173632810106932378}
+--- !u!114 &1065705922191942544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: b24b487e62c580a499aff78d5f61c793
+  position: {x: 556, y: 2900}
+  responseText: Nevermind.
+  id: nevermind
+  nextstatementId: start
+  requirements: []
+  Children:
+  - {fileID: 3173632810106932378}
+  parent: {fileID: -7800473220475316632}
+--- !u!114 &1526565761151039075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: c5a99e24286fcff4881e2b4587223797
+  position: {x: 100, y: 1250}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddJournalEntry
+    Id: questTip
+    op: 
+    Value: 
+--- !u!114 &2145483280698843752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 9c4e886e50177a84bac1e51cee2152a3
+  position: {x: 1012, y: 2950}
+  responseText: Admin Options
+  id: admin
+  nextstatementId: admin
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Admin
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: -7800473220475316632}
+  parent: {fileID: 3173632810106932378}
+--- !u!114 &3088138514360854532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: currentjobs5
+  m_EditorClassIdentifier: 
+  guid: 63aac72d2bdae5548bb45cf5c5d4854f
+  position: {x: 1924, y: 650}
+  statementText: Do any of these tasks sound like something you can do?
+  id: currentjobs5
+  nextstatementId: start
+  questEntry:
+  - listindex: 0
+    tier: 5
+  - listindex: 1
+    tier: 5
+  - listindex: 2
+    tier: 5
+  - listindex: 3
+    tier: 5
+  - listindex: 4
+    tier: 5
+  Children:
+  - {fileID: 3173632810106932378}
+  - {fileID: -7616953964133318773}
+  - {fileID: -5317094558307932317}
+  - {fileID: -2281789040177111778}
+  - {fileID: -7565694529858116053}
+  - {fileID: 1065705922191942544}
+  ChildrenNames:
+  - Hello friend, how can I help you?
+  - Previous Tier
+  - Previous Tier
+  - Previous Tier
+  - Previous Tier
+  - Nevermind.
+--- !u!114 &3173632810106932378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: start
+  m_EditorClassIdentifier: 
+  guid: ef0182fae5d794e47898e553ed6db541
+  position: {x: 456, y: 50}
+  statementText: Hello friend, how can I help you?
+  id: start
+  nextstatementId: 
+  questEntry: []
+  Children:
+  - {fileID: 7134964589526886504}
+  - {fileID: 945898601247909306}
+  - {fileID: 5019155247298101531}
+  - {fileID: 330279862603480018}
+  - {fileID: -8913530706754994387}
+  - {fileID: -6689837799887157106}
+  - {fileID: -8745696773689196462}
+  - {fileID: 2145483280698843752}
+  - {fileID: 15754534211301694}
+  ChildrenNames:
+  - Do you have any jobs?
+  - Do you have any jobs?
+  - Do you have any jobs?
+  - Do you have any jobs?
+  - Do you have any jobs?
+  - Do you have any jobs?
+  - Got any special jobs?
+  - Admin Options
+  - Nevermind.
+--- !u!114 &4243592313047792732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: e5165ef4cb00f704c8d44e43ce4ac5c6
+  position: {x: 100, y: 3250}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Trader
+    Id: reset_quests
+    op: 
+    Value: 
+--- !u!114 &4287304189948684754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: currentjobs3
+  m_EditorClassIdentifier: 
+  guid: b8fce7303a309904f957eabb99ff7566
+  position: {x: 1012, y: 550}
+  statementText: Do any of these tasks sound like something you can do?
+  id: currentjobs3
+  nextstatementId: start
+  questEntry:
+  - listindex: 0
+    tier: 3
+  - listindex: 1
+    tier: 3
+  - listindex: 2
+    tier: 3
+  - listindex: 3
+    tier: 3
+  - listindex: 4
+    tier: 3
+  Children:
+  - {fileID: 3173632810106932378}
+  - {fileID: -2281789040177111778}
+  - {fileID: -7565694529858116053}
+  - {fileID: -499078103986650907}
+  - {fileID: 734059506416071693}
+  - {fileID: 1065705922191942544}
+  ChildrenNames:
+  - Hello friend, how can I help you?
+  - Previous Tier
+  - Previous Tier
+  - Next Tier
+  - Next Tier
+  - Nevermind.
+--- !u!114 &5019155247298101531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 3e3363f9ea2f9894da5fbd44be4a06a6
+  position: {x: 690, y: 1300}
+  responseText: Do you have any jobs?
+  id: jobshave2
+  nextstatementId: currentjobs2
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestStatus
+    Requirementtype: Hide
+    Value: NotStarted
+    op: 
+    Id: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTierHighest
+    Requirementtype: Hide
+    Value: 2
+    op: 
+    Id: 
+  Children:
+  - {fileID: -1518351404694102702}
+  - {fileID: 8967155238578833547}
+  parent: {fileID: 3173632810106932378}
+--- !u!114 &5663183461440687686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: currentjobsspecial
+  m_EditorClassIdentifier: 
+  guid: 88a0282aaeb5d1b4b841b2d80e0904bf
+  position: {x: 2380, y: 700}
+  statementText: Do any of these tasks sound like something you can do?
+  id: currentjobsspecial
+  nextstatementId: start
+  questEntry:
+  - listindex: 0
+    tier: 
+  - listindex: 1
+    tier: 
+  - listindex: 2
+    tier: 
+  - listindex: 3
+    tier: 
+  - listindex: 4
+    tier: 
+  Children:
+  - {fileID: 3173632810106932378}
+  - {fileID: 1065705922191942544}
+  ChildrenNames:
+  - Hello friend, how can I help you?
+  - Nevermind.
+--- !u!114 &6000969054741489556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 29b62321ae0ab6a44b146bf7d452e149
+  position: {x: 1280, y: 2150}
+  responseText: Next Tier
+  id: jobsnext3
+  nextstatementId: currentjobs3
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTier
+    Requirementtype: Hide
+    Value: 3
+    op: 
+    Id: 
+  Children:
+  - {fileID: 4287304189948684754}
+  parent: {fileID: 8967155238578833547}
+--- !u!114 &6303922370702944349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a126453fdb64d70b9b315310a7485f8, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: ce3af73b6ab2d7b48962aa70127e1227
+  position: {x: 0, y: 0}
+  child: {fileID: 3173632810106932378}
+  dialogId: QuestTemplate
+  localizationPrefix: 
+  createLocalization: 0
+--- !u!114 &6965174973751094979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 990e8da760d8ba641a5019856f6036fa
+  position: {x: 690, y: 2100}
+  responseText: Next Tier
+  id: jobsnext2
+  nextstatementId: currentjobs2
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestTier
+    Requirementtype: Hide
+    Value: 2
+    op: 
+    Id: 
+  Children:
+  - {fileID: 8967155238578833547}
+  parent: {fileID: -185928712684203427}
+--- !u!114 &7134964589526886504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 38d11bcbfcbce054a97fd2388e54d112
+  position: {x: 2058, y: 1050}
+  responseText: Do you have any jobs?
+  id: jobsnone
+  nextstatementId: nojobs
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: QuestStatus
+    Requirementtype: Hide
+    Value: InProgress
+    op: 
+    Id: 
+  Children:
+  - {fileID: 8856226674129004683}
+  parent: {fileID: 3173632810106932378}
+--- !u!114 &7281534785219060899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 63832c82ae19c77469bb7488a37278b9
+  position: {x: 100, y: 1650}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddJournalEntry
+    Id: questTip
+    op: 
+    Value: 
+--- !u!114 &8856226674129004683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: nojobs
+  m_EditorClassIdentifier: 
+  guid: 9667fc2d2f24ddb4290bcdf73c58299b
+  position: {x: 100, y: 850}
+  statementText: I have no work at this time.
+  id: nojobs
+  nextstatementId: start
+  questEntry: []
+  Children:
+  - {fileID: 3173632810106932378}
+  ChildrenNames:
+  - Hello friend, how can I help you?
+--- !u!114 &8967155238578833547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: currentjobs2
+  m_EditorClassIdentifier: 
+  guid: 2476adcf80a6a3c40adb834ee8450795
+  position: {x: 556, y: 500}
+  statementText: Do any of these tasks sound like something you can do?
+  id: currentjobs2
+  nextstatementId: start
+  questEntry:
+  - listindex: 0
+    tier: 2
+  - listindex: 1
+    tier: 2
+  - listindex: 2
+    tier: 2
+  - listindex: 3
+    tier: 2
+  - listindex: 4
+    tier: 2
+  Children:
+  - {fileID: 3173632810106932378}
+  - {fileID: -7565694529858116053}
+  - {fileID: 6000969054741489556}
+  - {fileID: -499078103986650907}
+  - {fileID: 734059506416071693}
+  - {fileID: 1065705922191942544}
+  ChildrenNames:
+  - Hello friend, how can I help you?
+  - Previous Tier
+  - Next Tier
+  - Next Tier
+  - Next Tier
+  - Nevermind.
+--- !u!114 &8979044681426046002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: aa47197cab1cf834bbe0e0b75f6daed6
+  position: {x: 2648, y: 3100}
+  responseText: Reset Quests
+  id: resetquests
+  nextstatementId: 
+  requirements: []
+  Children:
+  - {fileID: 4243592313047792732}
+  parent: {fileID: -7800473220475316632}

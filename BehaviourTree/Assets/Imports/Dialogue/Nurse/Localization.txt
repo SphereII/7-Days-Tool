@@ -1,0 +1,12 @@
+Key,English
+dialog_nurse_response_startNurse, "Hello there! How can I assist you today? Stay safe, these are perilous times."
+dialog_nurse_response_NurseBackstory, "Before the apocalypse, I used to work at a hospital in Phoenix. I saw the outbreak from the frontlines. Now, I use my medical knowledge to help survivors. I can help with medical advice or finding supplies."
+dialog_nurse_response_MedicineLocation, "There's a pharmacy in the next town over. It's been picked over but you might still find some useful stuff. Just be careful, the place is a hotspot for zombies."
+dialog_nurse_response_WaterLocation, "There's a water tower a few blocks from here. It's still operational, but be careful. You're not the only one who needs water."
+dialog_nurse_response_SafeZoneLocation, "There's a safe zone at the old trading post. It's a few miles from here, heavily fortified and has medical supplies."
+dialog_nurse_response_TellMeAboutYourself, "Tell me about yourself."
+dialog_nurse_response_FindMedicine, "Where can I find some medicine around here?"
+dialog_nurse_response_FindWater, "I need to find some water. Any ideas?"
+dialog_nurse_response_AskForShelter, "Where's the nearest safe zone?"
+Take care, stay safe!, "Take care, stay safe!"
+Hire Menu, "Do you need assistance?"

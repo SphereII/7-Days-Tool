@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialogs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dialog id="quest" startstatementid="start">
+    <statement id="start" text="Hello friend, how can I help you?" ref_text="Hello friend, how can I help you?" nextstatementid="">
+      <response_entry id="jobsnone" ref_text="Do you have any jobs?" />
+      <response_entry id="jobshave1" ref_text="Do you have any jobs?" />
+      <response_entry id="jobshave2" ref_text="Do you have any jobs?" />
+      <response_entry id="jobshave3" ref_text="Do you have any jobs?" />
+      <response_entry id="jobshave4" ref_text="Do you have any jobs?" />
+      <response_entry id="jobshave5" ref_text="Do you have any jobs?" />
+      <response_entry id="specialjobshave" ref_text="Got any special jobs?" />
+      <response_entry id="admin" ref_text="Admin Options" />
+      <response_entry id="done" ref_text="Nevermind." />
+    </statement>
+    <statement id="currentjobs1" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="jobsnext2" ref_text="Next Tier" />
+      <response_entry id="jobsnext3" ref_text="Next Tier" />
+      <response_entry id="jobsnext4" ref_text="Next Tier" />
+      <response_entry id="jobsnext5" ref_text="Next Tier" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+      <quest_entry listindex="0" tier="1" />
+      <quest_entry listindex="1" tier="1" />
+      <quest_entry listindex="2" tier="1" />
+      <quest_entry listindex="3" tier="1" />
+      <quest_entry listindex="4" tier="1" />
+    </statement>
+    <statement id="currentjobs2" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="jobsprev1" ref_text="Previous Tier" />
+      <response_entry id="jobsnext3" ref_text="Next Tier" />
+      <response_entry id="jobsnext4" ref_text="Next Tier" />
+      <response_entry id="jobsnext5" ref_text="Next Tier" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+      <quest_entry listindex="0" tier="2" />
+      <quest_entry listindex="1" tier="2" />
+      <quest_entry listindex="2" tier="2" />
+      <quest_entry listindex="3" tier="2" />
+      <quest_entry listindex="4" tier="2" />
+    </statement>
+    <statement id="currentjobs3" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="jobsprev2" ref_text="Previous Tier" />
+      <response_entry id="jobsprev1" ref_text="Previous Tier" />
+      <response_entry id="jobsnext4" ref_text="Next Tier" />
+      <response_entry id="jobsnext5" ref_text="Next Tier" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+      <quest_entry listindex="0" tier="3" />
+      <quest_entry listindex="1" tier="3" />
+      <quest_entry listindex="2" tier="3" />
+      <quest_entry listindex="3" tier="3" />
+      <quest_entry listindex="4" tier="3" />
+    </statement>
+    <statement id="currentjobs4" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="jobsprev3" ref_text="Previous Tier" />
+      <response_entry id="jobsprev2" ref_text="Previous Tier" />
+      <response_entry id="jobsprev1" ref_text="Previous Tier" />
+      <response_entry id="jobsnext5" ref_text="Next Tier" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+      <quest_entry listindex="0" tier="4" />
+      <quest_entry listindex="1" tier="4" />
+      <quest_entry listindex="2" tier="4" />
+      <quest_entry listindex="3" tier="4" />
+      <quest_entry listindex="4" tier="4" />
+    </statement>
+    <statement id="currentjobs5" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="jobsprev4" ref_text="Previous Tier" />
+      <response_entry id="jobsprev3" ref_text="Previous Tier" />
+      <response_entry id="jobsprev2" ref_text="Previous Tier" />
+      <response_entry id="jobsprev1" ref_text="Previous Tier" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+      <quest_entry listindex="0" tier="5" />
+      <quest_entry listindex="1" tier="5" />
+      <quest_entry listindex="2" tier="5" />
+      <quest_entry listindex="3" tier="5" />
+      <quest_entry listindex="4" tier="5" />
+    </statement>
+    <statement id="currentjobsspecial" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="start">
+      <response_entry id="nevermind" ref_text="Nevermind." />
+      <quest_entry listindex="0" tier="" />
+      <quest_entry listindex="1" tier="" />
+      <quest_entry listindex="2" tier="" />
+      <quest_entry listindex="3" tier="" />
+      <quest_entry listindex="4" tier="" />
+    </statement>
+    <statement id="nojobs" text="I have no work at this time." ref_text="I have no work at this time." nextstatementid="start" />
+    <statement id="admin" text="Admin Options" ref_text="Admin Options" nextstatementid="">
+      <response_entry id="resetquests" ref_text="Reset Quests" />
+      <response_entry id="nevermind" ref_text="Nevermind." />
+    </statement>
+    <response id="jobsnone" text="Do you have any jobs?" nextstatementid="nojobs" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="InProgress" />
+    </response>
+    <response id="jobshave1" text="Do you have any jobs?" nextstatementid="currentjobs1" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestTierHighest" requirementtype="Hide" value="1" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="jobshave2" text="Do you have any jobs?" nextstatementid="currentjobs2" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestTierHighest" requirementtype="Hide" value="2" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="jobshave3" text="Do you have any jobs?" nextstatementid="currentjobs3" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestTierHighest" requirementtype="Hide" value="3" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="jobshave4" text="Do you have any jobs?" nextstatementid="currentjobs4" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestTierHighest" requirementtype="Hide" value="4" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="jobshave5" text="Do you have any jobs?" nextstatementid="currentjobs5" ref_text="Do you have any jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestTierHighest" requirementtype="Hide" value="5" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="jobsprev1" text="Previous Tier" nextstatementid="currentjobs1" ref_text="Previous Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="1" />
+    </response>
+    <response id="jobsprev2" text="Previous Tier" nextstatementid="currentjobs2" ref_text="Previous Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="2" />
+    </response>
+    <response id="jobsprev3" text="Previous Tier" nextstatementid="currentjobs3" ref_text="Previous Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="3" />
+    </response>
+    <response id="jobsprev4" text="Previous Tier" nextstatementid="currentjobs4" ref_text="Previous Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="4" />
+    </response>
+    <response id="jobsnext2" text="Next Tier" nextstatementid="currentjobs2" ref_text="Next Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="2" />
+    </response>
+    <response id="jobsnext3" text="Next Tier" nextstatementid="currentjobs3" ref_text="Next Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="3" />
+    </response>
+    <response id="jobsnext4" text="Next Tier" nextstatementid="currentjobs4" ref_text="Next Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="4" />
+    </response>
+    <response id="jobsnext5" text="Next Tier" nextstatementid="currentjobs5" ref_text="Next Tier">
+      <requirement type="QuestTier" requirementtype="Hide" value="5" />
+    </response>
+    <response id="specialjobshave" text="Got any special jobs?" nextstatementid="currentjobsspecial" ref_text="Got any special jobs?">
+      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
+      <requirement type="QuestsAvailable" requirementtype="Hide" value="special" />
+      <action type="AddJournalEntry" id="questTip" />
+    </response>
+    <response id="nevermind" text="Nevermind." nextstatementid="start" ref_text="Nevermind." />
+    <response id="admin" text="Admin Options" nextstatementid="admin" ref_text="Admin Options">
+      <requirement type="Admin" requirementtype="Hide" />
+    </response>
+    <response id="resetquests" text="Reset Quests" nextstatementid="" ref_text="Reset Quests">
+      <action type="Trader" id="reset_quests" />
+    </response>
+    <response id="done" text="Nevermind." nextstatementid="" ref_text="Nevermind." />
+  </dialog>
+</dialogs>

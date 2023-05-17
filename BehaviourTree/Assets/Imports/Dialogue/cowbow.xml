@@ -1,0 +1,159 @@
+<dialogs>
+	<dialog id="WildWestCowboy" startstatementid="startWildWestCowboy">
+	  <statement id="startWildWestCowboy" text="dialog_cowboy_response_startWildWestCowboy" ref_text="Howdy, partner! What can I do for you in these wild lands?">
+		<response_entry id="TellMeAboutYourself" ref_text="Tell me about yourself." />
+		<response_entry id="FindAmmo" ref_text="Where can I find some ammo around here?" />
+		<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+		<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+		<response_entry id="Bye" ref_text="GoodBye." />
+	  </statement>
+	  <statement id="CowboyBackstory" text="dialog_cowboy_response_CowboyBackstory" ref_text="Well, partner, I'm a gunslinger who's been roamin' these parts for years now. Fought in the war, then came out West to seek my fortune. I've seen it all – outlaws, stagecoach robberies, and even a shootout or two. Nowadays, I try to help folks like you navigate these treacherous lands.">
+		<response_entry id="FindAmmo" ref_text="Where can I find some ammo around here?" />
+		<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+		<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+		<response_entry id="Bye" ref_text="GoodBye." />
+	  </statement>
+	  <statement id="AmmoLocation" text="dialog_cowboy_response_AmmoLocation" ref_text="There's an old general store not too far from here. You might find some ammo there, but be careful, it's swarming with outlaws.">
+		<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+		<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+		<response_entry id="Bye" ref_text="GoodBye." />
+	  </statement>
+	  <statement id="WaterLocation" text="dialog_cowboy_response_WaterLocation" ref_text="There's a river a few miles east of here. The water's pretty clean, but watch out for bandits hiding in the bushes.">
+		<response_entry id="FindAmmo" ref_text="Where can I find some ammo around here?" />
+		<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+		<response_entry id="Bye" ref_text="GoodBye." />
+	  </statement>
+	  <statement id="SafeZoneLocation" text="dialog_cowboy_response_SafeZoneLocation" ref_text="The nearest safe zone is Fort Independence. It's a day's ride south of here. The folks there are friendly and willing to help travelers like yourself.">
+		<response_entry id="FindAmmo" ref_text="Where can I find some ammo around here?" />
+		<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+		<response_entry id="Bye" ref_text="GoodBye." />
+	  </statement>
+	  <response id="TellMeAboutYourself" text="dialog_cowboy_response_TellMeAboutYourself" nextstatementid="CowboyBackstory" ref_text="Tell me about yourself." />
+	  <response id="FindAmmo" text="dialog_cowboy_response_FindAmmo" nextstatementid="AmmoLocation" ref_text="Where can I find some ammo around here?" >
+		<action type="AddItemSDX, SCore" id="ammo9mmBulletBall" />
+	  </response>
+	  <response id="FindWater" text="dialog_cowboy_response_FindWater" nextstatementid="WaterLocation" ref_text="I need to find some water. Any ideas?" >
+		<action type="AddItemSDX, SCore" id="drinkJarBoiledWater" />
+		</response>
+		<response id="AskForShelter" text="dialog_cowboy_response_AskForShelter" nextstatementid="SafeZoneLocation" ref_text="Where's the nearest safe zone?" />
+		<response id="Bye" text="Gotta Go, Bye!" nextstatementid="done" ref_text="Gotta Go, Bye!" />
+	</dialog>
+
+    <dialog id="GenericNPCCowboy" startstatementid="startWildWestCowboy">
+	  <statement id="startWildWestCowboy" text="dialog_cowboy_response_startWildWestCowboy" ref_text="Howdy, partner! What can I do for you in these wild lands?">
+		<response_entry id="startsubmenu" ref_text="startsubmenu" />
+		<response_entry id="TellMeAboutYourself" ref_text="Tell me about yourself." />
+		<response_entry id="FindAmmo" ref_text="Where can I find some ammo around here?" />
+		<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+		<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+		<response_entry id="Bye" ref_text="GoodBye." />
+	  </statement>
+	  <statement id="CowboyBackstory" text="dialog_cowboy_response_CowboyBackstory" ref_text="Well, partner, I'm a gunslinger who's been roamin' these parts for years now. Fought in the war, then came out West to seek my fortune. I've seen it all – outlaws, stagecoach robberies, and even a shootout or two. Nowadays, I try to help folks like you navigate these treacherous lands.">
+		<response_entry id="FindAmmo" ref_text="Where can I find some ammo around here?" />
+		<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+		<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+		<response_entry id="Bye" ref_text="GoodBye." />
+	  </statement>
+	  <statement id="AmmoLocation" text="dialog_cowboy_response_AmmoLocation" ref_text="There's an old general store not too far from here. You might find some ammo there, but be careful, it's swarming with outlaws.">
+		<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+		<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+		<response_entry id="Bye" ref_text="GoodBye." />
+	  </statement>
+	  <statement id="WaterLocation" text="dialog_cowboy_response_WaterLocation" ref_text="There's a river a few miles east of here. The water's pretty clean, but watch out for bandits hiding in the bushes.">
+		<response_entry id="FindAmmo" ref_text="Where can I find some ammo around here?" />
+		<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+		<response_entry id="Bye" ref_text="GoodBye." />
+	  </statement>
+	  <statement id="SafeZoneLocation" text="dialog_cowboy_response_SafeZoneLocation" ref_text="The nearest safe zone is Fort Independence. It's a day's ride south of here. The folks there are friendly and willing to help travelers like yourself.">
+		<response_entry id="FindAmmo" ref_text="Where can I find some ammo around here?" />
+		<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+		<response_entry id="Bye" ref_text="GoodBye." />
+	  </statement>
+	  <response id="TellMeAboutYourself" text="dialog_cowboy_response_TellMeAboutYourself" nextstatementid="CowboyBackstory" ref_text="Tell me about yourself." />
+	  <response id="FindAmmo" text="dialog_cowboy_response_FindAmmo" nextstatementid="AmmoLocation" ref_text="Where can I find some ammo around here?" >
+		<action type="AddItemSDX, SCore" id="ammo9mmBulletBall" />
+	  </response>
+	  <response id="FindWater" text="dialog_cowboy_response_FindWater" nextstatementid="WaterLocation" ref_text="I need to find some water. Any ideas?" >
+		<action type="AddItemSDX, SCore" id="drinkJarBoiledWater" />
+		</response>
+		<response id="AskForShelter" text="dialog_cowboy_response_AskForShelter" nextstatementid="SafeZoneLocation" ref_text="Where's the nearest safe zone?" />
+		<response id="Bye" text="Gotta Go, Bye!" nextstatementid="done" ref_text="Gotta Go, Bye!" />
+		<response id="startsubmenu" text="You looking for work?" nextstatementid="startsubmenu" ref_text="You looking for work?" />
+	  
+      <statement id="startsubmenu" text="dialog_trader_statement_start">
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="SetPatrol" />
+        <response_entry id="SetCode" />
+        <response_entry id="Patrol" />
+        <response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="I am interested in hiring you." nextstatementid="startsubmenu">
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+      <response id="FollowMe" text="Follow me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
+      </response>
+
+    <response id="TellMe" text="Tell me about yourself" ref_text="Tell me about yourself." >
+    </response> 
+	  
+      <response id="ShowMe" text="Show Me your inventory" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay where you are standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Patrol around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	<!--  <response id="Patrol" text="Patrol your route" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
+      </response> -->
+
+	  <response id="GuardHere" text="Stay where I am standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+      </response>
+
+    <!-- <response id="SetCode" text="Here is your Patrol Code" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <action type="OpenWindowSDX, SCore" id="SetCode" />
+      </response> -->
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>  
+
+	  <response id="Dismiss" text="Dismiss" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+ 
+      <response id="done" text="dialog_trader_response_nevermind" />
+	  
+    </dialog>
+	</dialogs>

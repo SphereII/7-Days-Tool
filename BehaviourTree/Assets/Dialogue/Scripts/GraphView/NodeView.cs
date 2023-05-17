@@ -67,6 +67,7 @@ namespace Dialogue
         {
             switch (Node)
             {
+                case ImportNode:
                 case GotoNode:
                     AddToClassList("GotoNode");
                     break;
@@ -102,6 +103,7 @@ namespace Dialogue
                         typeof(bool));
                     label = "To Statement...";
                     break;
+                case ImportNode:
                 case ActionNode:
                     break;
                 case StatementNode:
@@ -132,6 +134,7 @@ namespace Dialogue
                     Input = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Multi,
                         typeof(bool));
                     break;
+                case ImportNode:
                 case StatementNode:
                     label = "From Response...";
                     Input = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single,

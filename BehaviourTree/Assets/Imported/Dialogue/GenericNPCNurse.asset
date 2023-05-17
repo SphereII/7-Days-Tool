@@ -1,0 +1,861 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8987254150866001276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: d438e0e50168c3948892ecd8e0309eee
+  position: {x: 1012, y: 950}
+  responseText: I am interested in hiring you.
+  id: Hire
+  nextstatementId: startsubmenu
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: HiredSDX, SCore
+    Requirementtype: Hide
+    Value: not
+    op: 
+    Id: 
+  Children:
+  - {fileID: 3342499838655375093}
+  - {fileID: 2344167643843717907}
+  parent: {fileID: 2344167643843717907}
+--- !u!114 &-7771537897718120750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac265493e6374a93bf8d31d22c0da53b, type: 3}
+  m_Name: ImportNode
+  m_EditorClassIdentifier: 
+  guid: a489a2942d03d4646bbc9acb94e6ca38
+  position: {x: 1000, y: -154}
+  importedDialog: {fileID: 11400000, guid: 56a88df2929d0a449b08fc6d29f55729, type: 2}
+--- !u!114 &-7533539619450062705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 866a9e8419bdad04a88eb59de7e9e711
+  position: {x: 690, y: 2100}
+  responseText: Nevermind.
+  id: done
+  nextstatementId: 
+  requirements: []
+  Children: []
+  parent: {fileID: 2344167643843717907}
+--- !u!114 &-7378908695005909216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: SafeZoneLocation
+  m_EditorClassIdentifier: 
+  guid: b7b93e2bce572de408f6bd2966c002a1
+  position: {x: 2631, y: 250}
+  statementText: The nearest safe zone is the old trading post. It's about half a
+    day's walk from here. The folks there have fortified the place and they're always
+    looking out for fellow survivors.
+  id: SafeZoneLocation
+  nextstatementId: 
+  Children:
+  - {fileID: -6997184192740617336}
+  - {fileID: 1174365988671318321}
+  - {fileID: 1100672145534452343}
+  ChildrenNames:
+  - Where can I find some medicine around here?
+  - I need to find some water. Any ideas?
+  - Take care, stay safe!
+--- !u!114 &-7296507373149945541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 082fe9cf426a7f244b249751c0276733
+  position: {x: 2916, y: 1500}
+  responseText: Patrol around here
+  id: Wander
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: 1910150061805335304}
+  parent: {fileID: 2344167643843717907}
+--- !u!114 &-6997184192740617336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 666888c9b3404ae4a89c550aab2d48eb
+  position: {x: 556, y: 500}
+  responseText: Where can I find some medicine around here?
+  id: FindMedicine
+  nextstatementId: MedicineLocation
+  requirements: []
+  Children:
+  - {fileID: 7270703557948708483}
+  - {fileID: -936883663739839276}
+  parent: {fileID: -7378908695005909216}
+--- !u!114 &-6000376964740368121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: df029fd6453586a449fa73c6d57b3adb
+  position: {x: 690, y: 1700}
+  responseText: Stay where I am standing
+  id: GuardHere
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: HasTask, SCore
+    Requirementtype: Hide
+    Value: Stay
+    op: 
+    Id: 
+  Children:
+  - {fileID: -3893798302710109571}
+  parent: {fileID: 2344167643843717907}
+--- !u!114 &-5061713461581768047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: WaterLocation
+  m_EditorClassIdentifier: 
+  guid: bafd4b8719f2a0f48919b7b830c88e52
+  position: {x: 2058, y: 200}
+  statementText: There's a well in the center of this town. The water's still potable,
+    but always remember to boil it first.
+  id: WaterLocation
+  nextstatementId: 
+  Children:
+  - {fileID: -6997184192740617336}
+  - {fileID: 1727310057874205914}
+  - {fileID: 1100672145534452343}
+  ChildrenNames:
+  - Where can I find some medicine around here?
+  - Where's the nearest safe zone?
+  - Take care, stay safe!
+--- !u!114 &-3893798302710109571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: c520a1684bb0dad4d8580da347c59b48
+  position: {x: 1280, y: 1750}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderGuardHere
+    op: 
+    Value: Self
+--- !u!114 &-2954264297194188132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 3624b862ca4b11f4484e5230164318af
+  position: {x: 100, y: 2050}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: ExecuteCommandSDX, SCore
+    Id: Dismiss
+    op: 
+    Value: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderDismiss
+    op: 
+    Value: Self
+--- !u!114 &-936883663739839276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: MedicineLocation
+  m_EditorClassIdentifier: 
+  guid: d39ed33b295ba5c4594cd5d3d21c5966
+  position: {x: 1485, y: 150}
+  statementText: There's an abandoned pharmacy in the next town. You might find some
+    medicine there, but tread carefully, the place is crawling with the undead.
+  id: MedicineLocation
+  nextstatementId: 
+  Children:
+  - {fileID: 1174365988671318321}
+  - {fileID: 1727310057874205914}
+  - {fileID: 1100672145534452343}
+  ChildrenNames:
+  - I need to find some water. Any ideas?
+  - Where's the nearest safe zone?
+  - Take care, stay safe!
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3f26486cfe4057a48a2d0866716126, type: 3}
+  m_Name: GenericNPCNurse
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 184113536860453669}
+  nodes:
+  - {fileID: 1948566757776521310}
+  - {fileID: 184113536860453669}
+  - {fileID: 6725337043120885085}
+  - {fileID: -936883663739839276}
+  - {fileID: -5061713461581768047}
+  - {fileID: -7378908695005909216}
+  - {fileID: 2344167643843717907}
+  - {fileID: 6268582879525177909}
+  - {fileID: -6997184192740617336}
+  - {fileID: 7270703557948708483}
+  - {fileID: 1174365988671318321}
+  - {fileID: 1290390470661260599}
+  - {fileID: 1727310057874205914}
+  - {fileID: 1100672145534452343}
+  - {fileID: 6094915916673266025}
+  - {fileID: -8987254150866001276}
+  - {fileID: 3342499838655375093}
+  - {fileID: 9021593636366512443}
+  - {fileID: 724676818821801922}
+  - {fileID: 3306631466379281984}
+  - {fileID: 7413963346085648386}
+  - {fileID: 2132610509253764953}
+  - {fileID: 4465055041004647173}
+  - {fileID: 7295514926072591403}
+  - {fileID: -7296507373149945541}
+  - {fileID: 1910150061805335304}
+  - {fileID: -6000376964740368121}
+  - {fileID: -3893798302710109571}
+  - {fileID: 8174667477953901001}
+  - {fileID: 699433263418916526}
+  - {fileID: 5431417152240164486}
+  - {fileID: -2954264297194188132}
+  - {fileID: -7533539619450062705}
+  - {fileID: -7771537897718120750}
+--- !u!114 &184113536860453669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a126453fdb64d70b9b315310a7485f8, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: 6edf1da6f9b70194bbe34468558e8dbe
+  position: {x: 0, y: 0}
+  child: {fileID: 1948566757776521310}
+  dialogId: GenericNPCNurse
+  localizationPrefix: 
+  createLocalization: 0
+--- !u!114 &699433263418916526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: fe2d73dce47352f4da23fa94dade69b6
+  position: {x: 2460, y: 1850}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderLoot
+    op: 
+    Value: Self
+--- !u!114 &724676818821801922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 36f1678648dbab847bc752f3a72e08dc
+  position: {x: 2782, y: 1100}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderFollow
+    op: 
+    Value: Self
+--- !u!114 &1100672145534452343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: c9a971c991466404dae6a05ad85e9866
+  position: {x: 100, y: 850}
+  responseText: Take care, stay safe!
+  id: Bye
+  nextstatementId: done
+  requirements: []
+  Children: []
+  parent: {fileID: -7378908695005909216}
+--- !u!114 &1174365988671318321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: c8940a7e6fb25e146a6ab53ededb8f70
+  position: {x: 1621, y: 600}
+  responseText: I need to find some water. Any ideas?
+  id: FindWater
+  nextstatementId: WaterLocation
+  requirements: []
+  Children:
+  - {fileID: 1290390470661260599}
+  - {fileID: -5061713461581768047}
+  parent: {fileID: -7378908695005909216}
+--- !u!114 &1290390470661260599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 0b06c04070f08484db4d60f5165b1a89
+  position: {x: 2077, y: 650}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddItemSDX, SCore
+    Id: drinkJarBoiledWater
+    op: 
+    Value: 
+--- !u!114 &1727310057874205914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 98efc89d60d55f3488d4eecc1bc13093
+  position: {x: 2667, y: 700}
+  responseText: Where's the nearest safe zone?
+  id: AskForShelter
+  nextstatementId: SafeZoneLocation
+  requirements: []
+  Children:
+  - {fileID: -7378908695005909216}
+  parent: {fileID: -5061713461581768047}
+--- !u!114 &1910150061805335304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: af07e85573feefe4cadf198f7095bf55
+  position: {x: 100, y: 1650}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderWander
+    op: 
+    Value: Self
+--- !u!114 &1948566757776521310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: startNurse
+  m_EditorClassIdentifier: 
+  guid: f1cb0975e13a1b94f84278d98913a93b
+  position: {x: 466, y: -221}
+  statementText: Hello, traveler! How may I assist you amidst these troubled times?
+  id: startNurse
+  nextstatementId: 
+  Children:
+  - {fileID: 6094915916673266025}
+  - {fileID: 6268582879525177909}
+  - {fileID: -6997184192740617336}
+  - {fileID: 1174365988671318321}
+  - {fileID: 1727310057874205914}
+  - {fileID: 1100672145534452343}
+  - {fileID: -7771537897718120750}
+  ChildrenNames:
+  - Do you need assistance?
+  - Tell me about yourself.
+  - Where can I find some medicine around here?
+  - I need to find some water. Any ideas?
+  - Where's the nearest safe zone?
+  - Take care, stay safe!
+--- !u!114 &2132610509253764953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: e6fb3edae6af6bf478033afbc5cd3ce4
+  position: {x: 1146, y: 1350}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: ExecuteCommandSDX, SCore
+    Id: OpenInventory
+    op: 
+    Value: 
+--- !u!114 &2344167643843717907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: startsubmenu
+  m_EditorClassIdentifier: 
+  guid: 423477fe64f82ea458ee9c725426cb82
+  position: {x: 3204, y: 300}
+  statementText: Hello friend, how can I help you?
+  id: startsubmenu
+  nextstatementId: 
+  Children:
+  - {fileID: 9021593636366512443}
+  - {fileID: 7413963346085648386}
+  - {fileID: 4465055041004647173}
+  - {fileID: -6000376964740368121}
+  - {fileID: -7296507373149945541}
+  - {fileID: 8174667477953901001}
+  - {fileID: -8987254150866001276}
+  - {fileID: 5431417152240164486}
+  - {fileID: -7533539619450062705}
+  ChildrenNames:
+  - Follow me
+  - Show Me your inventory
+  - Stay where you are standing
+  - Stay where I am standing
+  - Patrol around here
+  - Loot around here
+  - I am interested in hiring you.
+  - Dismiss
+  - Nevermind.
+--- !u!114 &3306631466379281984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: fb0d3a8e313ef5e41aa270173e45e260
+  position: {x: 100, y: 1250}
+  responseText: Tell me about yourself.
+  id: TellMe
+  nextstatementId: 
+  requirements: []
+  Children: []
+  parent: {fileID: 0}
+--- !u!114 &3342499838655375093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 59de367dc10e3f849b882b0e8be7057f
+  position: {x: 1602, y: 1000}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: OpenDialogSDX, SCore
+    Id: Hire
+    op: 
+    Value: 
+--- !u!114 &4465055041004647173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: d99ab2b105432114ba7cbc17a4c6d13f
+  position: {x: 1736, y: 1400}
+  responseText: Stay where you are standing
+  id: StayHere
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: 7295514926072591403}
+  parent: {fileID: 2344167643843717907}
+--- !u!114 &5431417152240164486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 2ed3044edc91beb4e86ed1db2123b602
+  position: {x: 3050, y: 1900}
+  responseText: Dismiss
+  id: Dismiss
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: -2954264297194188132}
+  parent: {fileID: 2344167643843717907}
+--- !u!114 &6094915916673266025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 97a7bf02d675d9d41b589532cb4e5fbe
+  position: {x: 556, y: 900}
+  responseText: Do you need assistance?
+  id: startsubmenu
+  nextstatementId: startsubmenu
+  requirements: []
+  Children:
+  - {fileID: 2344167643843717907}
+  parent: {fileID: 1948566757776521310}
+--- !u!114 &6268582879525177909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 8e900b90aebda3f48a0f9de28b76df65
+  position: {x: 100, y: 450}
+  responseText: Tell me about yourself.
+  id: TellMeAboutYourself
+  nextstatementId: NurseBackstory
+  requirements: []
+  Children:
+  - {fileID: 6725337043120885085}
+  parent: {fileID: 1948566757776521310}
+--- !u!114 &6725337043120885085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: NurseBackstory
+  m_EditorClassIdentifier: 
+  guid: c693a31a7357e044c9035a140d28c423
+  position: {x: 912, y: 100}
+  statementText: Before everything turned upside down, I was a nurse in Phoenix.
+    I've been using my medical knowledge to help survivors ever since. We're all
+    in this together, after all.
+  id: NurseBackstory
+  nextstatementId: 
+  Children:
+  - {fileID: -6997184192740617336}
+  - {fileID: 1174365988671318321}
+  - {fileID: 1727310057874205914}
+  - {fileID: 1100672145534452343}
+  ChildrenNames:
+  - Where can I find some medicine around here?
+  - I need to find some water. Any ideas?
+  - Where's the nearest safe zone?
+  - Take care, stay safe!
+--- !u!114 &7270703557948708483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 0ec86f5bc6a8519429af810389cd6e50
+  position: {x: 1031, y: 550}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddItemSDX, SCore
+    Id: medicineFirstAidBandage
+    op: 
+    Value: 
+--- !u!114 &7295514926072591403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 4a9eae1feb7c7474e8620ce9cedc9c1d
+  position: {x: 2326, y: 1450}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderStay
+    op: 
+    Value: Self
+--- !u!114 &7413963346085648386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 6cdfed9a1d064144cbb7cc6dad38f66f
+  position: {x: 556, y: 1300}
+  responseText: Show Me your inventory
+  id: ShowMe
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: 2132610509253764953}
+  parent: {fileID: 2344167643843717907}
+--- !u!114 &8174667477953901001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 86da4f08cf5c3c443bfbe856c1266eed
+  position: {x: 1870, y: 1800}
+  responseText: Loot around here
+  id: Loot
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: HasTask, SCore
+    Requirementtype: Hide
+    Value: LootBasic
+    op: 
+    Id: 
+  Children:
+  - {fileID: 699433263418916526}
+  parent: {fileID: 2344167643843717907}
+--- !u!114 &9021593636366512443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 03cb14e7e64329a4f937d263876d939a
+  position: {x: 2192, y: 1050}
+  responseText: Follow me
+  id: FollowMe
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: 724676818821801922}
+  parent: {fileID: 2344167643843717907}

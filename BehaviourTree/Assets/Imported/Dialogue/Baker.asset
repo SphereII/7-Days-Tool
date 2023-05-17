@@ -1,0 +1,279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7954312637989982410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac265493e6374a93bf8d31d22c0da53b, type: 3}
+  m_Name: ImportNode
+  m_EditorClassIdentifier: 
+  guid: e383665f818b3a34b99c1f4121a2f580
+  position: {x: 901, y: -298}
+  importedDialog: {fileID: 11400000, guid: 506577d7dda5b5443a7f404fbee805e7, type: 2}
+--- !u!114 &-7952906125687723067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 8c13d70d0545e5a498f3b79c363e1efd
+  position: {x: 556, y: 500}
+  responseText: I'm in the mood for a vanilla croissant.
+  id: vanilla
+  nextstatementId: startbaker
+  requirements: []
+  Children:
+  - {fileID: 2083834250298000028}
+  parent: {fileID: -2344970870318426045}
+--- !u!114 &-6984342283552030417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 3f288c3f8d4ab7649871521e99191eb1
+  position: {x: 2452, y: 250}
+  responseText: Do you have any deals today?
+  id: DealsToday
+  nextstatementId: MuffinDeal
+  requirements: []
+  Children:
+  - {fileID: 6914063496163718840}
+  parent: {fileID: 2083834250298000028}
+--- !u!114 &-2860977668861520737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 68a062f37228fa240b254b6974208544
+  position: {x: 100, y: 450}
+  responseText: I'm in the mood for a chocolate croissant.
+  id: chocolate
+  nextstatementId: startbaker
+  requirements: []
+  Children:
+  - {fileID: 2083834250298000028}
+  parent: {fileID: -2344970870318426045}
+--- !u!114 &-2829784037872628986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a126453fdb64d70b9b315310a7485f8, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: 89533ed73118f954a90740d45d1e0fcc
+  position: {x: 0, y: 0}
+  child: {fileID: 2083834250298000028}
+  dialogId: Baker
+  localizationPrefix: 
+  createLocalization: 0
+--- !u!114 &-2344970870318426045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: PastrySelection
+  m_EditorClassIdentifier: 
+  guid: 760de2185336b7944989f31123f2364d
+  position: {x: 912, y: 100}
+  statementText: Sure, we have a wide selection of pastries ranging from croissants
+    to cupcakes. What are you in the mood for?
+  id: PastrySelection
+  nextstatementId: 
+  questEntry: []
+  Children:
+  - {fileID: -2860977668861520737}
+  - {fileID: -7952906125687723067}
+  ChildrenNames:
+  - I'm in the mood for a chocolate croissant.
+  - I'm in the mood for a vanilla croissant.
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3f26486cfe4057a48a2d0866716126, type: 3}
+  m_Name: Baker
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -2829784037872628986}
+  nodes:
+  - {fileID: 2083834250298000028}
+  - {fileID: -2829784037872628986}
+  - {fileID: -2344970870318426045}
+  - {fileID: 6914063496163718840}
+  - {fileID: 7809347144948426458}
+  - {fileID: -6984342283552030417}
+  - {fileID: 8488465351841222162}
+  - {fileID: -2860977668861520737}
+  - {fileID: -7952906125687723067}
+  - {fileID: 8882483314677272687}
+  - {fileID: -7954312637989982410}
+  - {fileID: 4659998967975605390}
+--- !u!114 &2083834250298000028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: startbaker
+  m_EditorClassIdentifier: 
+  guid: 7436da7e1119a1544823c6388c1a788e
+  position: {x: 454, y: -188}
+  statementText: Welcome to my bakery! How can I help you?
+  id: startbaker
+  nextstatementId: 
+  questEntry: []
+  Children:
+  - {fileID: 7809347144948426458}
+  - {fileID: -6984342283552030417}
+  - {fileID: 8488465351841222162}
+  - {fileID: -7954312637989982410}
+  - {fileID: 4659998967975605390}
+  ChildrenNames:
+  - Can you tell me about your pastries?
+  - Do you have any deals today?
+  - No, thank you. I'll come back later.
+--- !u!114 &4659998967975605390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac265493e6374a93bf8d31d22c0da53b, type: 3}
+  m_Name: ImportNode
+  m_EditorClassIdentifier: 
+  guid: 1fe292666409e724e9b090e314faa7a9
+  position: {x: 901, y: -146}
+  importedDialog: {fileID: 11400000, guid: 8b6fadb7458eca5469d8e417c4569e05, type: 2}
+--- !u!114 &6914063496163718840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: MuffinDeal
+  m_EditorClassIdentifier: 
+  guid: 8947b2ba42863d24fb636b76df975519
+  position: {x: 1485, y: 150}
+  statementText: Yes, we have a special deal on all muffins today. Would you like
+    to try some?
+  id: MuffinDeal
+  nextstatementId: 
+  questEntry: []
+  Children:
+  - {fileID: 8882483314677272687}
+  - {fileID: 8488465351841222162}
+  ChildrenNames:
+  - Yes Please.
+  - No, thank you. I'll come back later.
+--- !u!114 &7809347144948426458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 721c9f244159e514b9c59997d933f0cb
+  position: {x: 1996, y: 200}
+  responseText: Can you tell me about your pastries?
+  id: TellMeAboutPastries
+  nextstatementId: PastrySelection
+  requirements: []
+  Children:
+  - {fileID: -2344970870318426045}
+  parent: {fileID: 2083834250298000028}
+--- !u!114 &8488465351841222162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 8f5043bd1d0371240989f1f69c9e68f6
+  position: {x: 2908, y: 300}
+  responseText: No, thank you. I'll come back later.
+  id: NoThanks
+  nextstatementId: done
+  requirements: []
+  Children: []
+  parent: {fileID: 6914063496163718840}
+--- !u!114 &8882483314677272687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 36319480cc19d654c90d6eb4643bc46e
+  position: {x: 1012, y: 550}
+  responseText: Yes Please.
+  id: YesPlease
+  nextstatementId: startbaker
+  requirements: []
+  Children:
+  - {fileID: 2083834250298000028}
+  parent: {fileID: 6914063496163718840}

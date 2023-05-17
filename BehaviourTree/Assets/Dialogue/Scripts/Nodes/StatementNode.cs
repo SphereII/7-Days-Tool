@@ -12,6 +12,8 @@ public class StatementNode : BaseNode
 
     [ReadOnly] public string nextstatementId;
 
+   public List<DialogQuestEntry> questEntry = new List<DialogQuestEntry>();
+    
     // This contains the actual details, but we hide them
     public List<DialogResponseEntry> ResponseEntries = new List<DialogResponseEntry>();
     [HideInInspector] public List<BaseNode> Children = new List<BaseNode>();
@@ -28,6 +30,7 @@ public class StatementNode : BaseNode
         
         var currentGraph = DialogueEditor.GetCurrentGraphView();
         List<BaseNode> childrenToRemove = new List<BaseNode>();
+
         foreach (var child in Children)
         {
             if (child is ActionNode actionNode)
@@ -38,12 +41,12 @@ public class StatementNode : BaseNode
             if (child is ResponseNode response)
             {
                 var localized = ConfigurationManager.GetLocalisedValue(response.responseText);
-                if (ChildrenNames.Contains(localized))
-                {
-                    // This already exists.
-                    childrenToRemove.Add(response);
-                    continue;
-                }
+                // if (ChildrenNames.Contains(localized))
+                // {
+                //     // This already exists.
+                //     childrenToRemove.Add(response);
+                //     continue;
+                // }
 
                 ChildrenNames.Add(localized);
 
@@ -61,19 +64,21 @@ public class StatementNode : BaseNode
             else if (child is StatementNode statementNode)
             {
                 nextstatementId =
-                    $"{statementNode.id} ( {ConfigurationManager.GetLocalisedValue(statementNode.statementText)} )";
+                    $"{statementNode.id}";// ( {ConfigurationManager.GetLocalisedValue(statementNode.statementText)} )";
                 ChildrenNames.Add(statementNode.statementText);
             }
+         
         }
 
+        
         foreach (var child in childrenToRemove)
         {
             if (child is ResponseNode responseNode)
                 ChildrenNames.Remove(ConfigurationManager.GetLocalisedValue(responseNode.responseText));
             currentGraph?.DialogGraph.RemoveChild(this, child);
-
         }
 
+        
         // Action subscribed from the inspector's view, so it can refresh the list of items.
         OnNodeUpdate?.Invoke();
         // if (forceRefresh)
@@ -93,7 +98,6 @@ public class StatementNode : BaseNode
         {
             node.Children.Add(child.Clone());
         }
-
         node.Update();
         return node;
     }

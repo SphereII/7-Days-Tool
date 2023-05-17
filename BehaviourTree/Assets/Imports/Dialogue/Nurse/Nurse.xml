@@ -1,0 +1,105 @@
+<dialogs>
+
+ <append xpath="/dialogs">
+	<dialog id="GenericNPCNurse" startstatementid="startNurse">
+		<statement id="startNurse" text="dialog_nurse_response_startNurse" ref_text="Hello, traveler! How may I assist you amidst these troubled times?">
+			<response_entry id="startsubmenu" ref_text="startsubmenu" />
+			<response_entry id="TellMeAboutYourself" ref_text="Tell me about yourself." />
+			<response_entry id="FindMedicine" ref_text="Where can I find some medicine around here?" />
+			<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+			<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+			<response_entry id="Bye" ref_text="GoodBye." />
+		</statement>
+		<statement id="NurseBackstory" text="dialog_nurse_response_NurseBackstory" ref_text="Before everything turned upside down, I was a nurse in Phoenix. I've been using my medical knowledge to help survivors ever since. We're all in this together, after all.">
+			<response_entry id="FindMedicine" ref_text="Where can I find some medicine around here?" />
+			<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+			<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+			<response_entry id="Bye" ref_text="GoodBye." />
+		</statement>
+		<statement id="MedicineLocation" text="dialog_nurse_response_MedicineLocation" ref_text="There's an abandoned pharmacy in the next town. You might find some medicine there, but tread carefully, the place is crawling with the undead.">
+			<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+			<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+			<response_entry id="Bye" ref_text="GoodBye." />
+		</statement>
+		<statement id="WaterLocation" text="dialog_nurse_response_WaterLocation" ref_text="There's a well in the center of this town. The water's still potable, but always remember to boil it first.">
+			<response_entry id="FindMedicine" ref_text="Where can I find some medicine around here?" />
+			<response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
+			<response_entry id="Bye" ref_text="GoodBye." />
+		</statement>
+		<statement id="SafeZoneLocation" text="dialog_nurse_response_SafeZoneLocation" ref_text="The nearest safe zone is the old trading post. It's about half a day's walk from here. The folks there have fortified the place and they're always looking out for fellow survivors.">
+			<response_entry id="FindMedicine" ref_text="Where can I find some medicine around here?" />
+			<response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
+			<response_entry id="Bye" ref_text="GoodBye." />
+		</statement>
+
+		<response id="TellMeAboutYourself" text="dialog_nurse_response_TellMeAboutYourself" nextstatementid="NurseBackstory" ref_text="Tell me about yourself." />
+		<response id="FindMedicine" text="dialog_nurse_response_FindMedicine" nextstatementid="MedicineLocation" ref_text="Where can I find some medicine around here?" >
+			<action type="AddItemSDX, SCore" id="medicineFirstAidBandage" />
+		</response>
+		<response id="FindWater" text="dialog_nurse_response_FindWater" nextstatementid="WaterLocation" ref_text="I need to find some water. Any ideas?" >
+			<action type="AddItemSDX, SCore" id="drinkJarBoiledWater" />
+		</response>
+		<response id="AskForShelter" text="dialog_nurse_response_AskForShelter" nextstatementid="SafeZoneLocation" ref_text="Where's the nearest safe zone?" />
+		<response id="Bye" text="Take care, stay safe!" nextstatementid="done" ref_text="Take care, stay safe!" />
+		<response id="startsubmenu" text="Hire Menu" nextstatementid="startsubmenu" ref_text="Do you need assistance?" />
+		
+		  <!--  Hiring Submenu  -->
+		  <statement id="startsubmenu" text="dialog_trader_statement_start">
+			<response_entry id="FollowMe" />
+			<response_entry id="ShowMe" />
+			<response_entry id="StayHere" />
+			<response_entry id="GuardHere" />
+			<response_entry id="Wander" />
+			<response_entry id="SetPatrol" />
+			<response_entry id="SetCode" />
+			<response_entry id="Patrol" />
+			<response_entry id="Loot" />
+			<response_entry id="Hire" />
+			<response_entry id="Dismiss" />
+			<response_entry id="done" />
+		  </statement>
+
+		  <response id="Hire" text="I am interested in hiring you." nextstatementid="startsubmenu">
+			<requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+			<action type="OpenDialogSDX, SCore" id="Hire" />
+		  </response>
+		  <response id="FollowMe" text="Follow me" >
+			<requirement type="Leader, SCore" requirementtype="Hide"/>
+			<action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
+		  </response>
+		  <response id="TellMe" text="Tell me about yourself" ref_text="Tell me about yourself." >
+		  </response> 
+		  <response id="ShowMe" text="Show Me your inventory" >
+			<requirement type="Leader, SCore" requirementtype="Hide" />
+			<action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+		  </response>
+		  <response id="StayHere" text="Stay where you are standing" >
+			<requirement type="Leader, SCore" requirementtype="Hide" />
+			<action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+		  </response>
+		  <response id="Wander" text="Patrol around here" >
+			<requirement type="Leader, SCore" requirementtype="Hide" />
+			<action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+		  </response>
+		  <response id="GuardHere" text="Stay where I am standing" >
+			<requirement type="Leader, SCore" requirementtype="Hide" />
+			<requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+			<action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+		  </response>
+		  <response id="Loot" text="Loot around here" >
+			<requirement type="Leader, SCore" requirementtype="Hide" />
+			<requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
+			<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+		  </response>  
+		  <response id="Dismiss" text="Dismiss" >
+			<requirement type="Leader, SCore" requirementtype="Hide" />
+			<action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+			<action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+		  </response>
+		  <response id="done" text="dialog_trader_response_nevermind" />
+	</dialog>
+
+	
+  </append>
+  
+</dialogs>

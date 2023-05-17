@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4134ce744fcde3042a74a8a8f299f22a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogGraph: {fileID: 11400000, guid: cf0ec4527a7b42b4686facfb3d5b737a, type: 2}
+  dialogGraph: {fileID: 0}
 --- !u!4 &706357217
 Transform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6241413429093988967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: e5a80c94fda51fa46a7d2d163c653b68
+  position: {x: 2340.0195, y: 118.000015}
+  actions:
+  - guid: 
+    type: Trader
+    Id: restock
+    op: 
+    Value: 
+--- !u!114 &-4029041170640643006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 6366e542ec1cd33479d30527e6599fa2
+  position: {x: 1891, y: 118.000015}
+  responseText: Restock Inventory
+  id: restock
+  nextstatementId: 
+  requirements: []
+  Children:
+  - {fileID: -6241413429093988967}
+  parent: {fileID: -916987310086601102}
+--- !u!114 &-1644913577655916988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: fb12d2bf07484284fa55bb523ec53c20
+  position: {x: 914.99603, y: -268.6483}
+  responseText: May I see your inventory?
+  id: shop
+  nextstatementId: 
+  requirements: []
+  Children:
+  - {fileID: 2203464448783727872}
+  parent: {fileID: 3173632810106932378}
+--- !u!114 &-916987310086601102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: StatementNode
+  m_EditorClassIdentifier: 
+  guid: a10ccdec7e413bd4aad9942b180269cc
+  position: {x: 1452.996, y: 118.000015}
+  statementText: Hello
+  id: Admin
+  nextstatementId: 
+  questEntry: []
+  Children:
+  - {fileID: -4029041170640643006}
+  ChildrenNames:
+  - Restock Inventory
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3f26486cfe4057a48a2d0866716126, type: 3}
+  m_Name: Seller
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 6303922370702944349}
+  nodes:
+  - {fileID: 3173632810106932378}
+  - {fileID: 6303922370702944349}
+  - {fileID: -1644913577655916988}
+  - {fileID: 2203464448783727872}
+  - {fileID: 1302490435828536886}
+  - {fileID: -916987310086601102}
+  - {fileID: -4029041170640643006}
+  - {fileID: -6241413429093988967}
+--- !u!114 &1302490435828536886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 318757be0e54158459a568aca40bbb9f
+  position: {x: 883.99994, y: 117.63316}
+  responseText: Admin
+  id: 318757be0e54158459a568aca40bbb9f
+  nextstatementId: Admin
+  requirements:
+  - guid: 
+    type: Admin
+    Requirementtype: 
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: -916987310086601102}
+  parent: {fileID: 3173632810106932378}
+--- !u!114 &2203464448783727872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 63355f0e4090dfb489876cfcbae859a9
+  position: {x: 1350.9999, y: -268.99994}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Trader
+    Id: trade
+    op: 
+    Value: 
+--- !u!114 &3173632810106932378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: start
+  m_EditorClassIdentifier: 
+  guid: ef0182fae5d794e47898e553ed6db541
+  position: {x: 450.75293, y: -0.00004196167}
+  statementText: Hello friend, how can I help you?
+  id: start
+  nextstatementId: 
+  questEntry: []
+  Children:
+  - {fileID: -1644913577655916988}
+  - {fileID: 1302490435828536886}
+  ChildrenNames:
+  - May I see your inventory?
+  - Admin
+--- !u!114 &6303922370702944349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a126453fdb64d70b9b315310a7485f8, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: ce3af73b6ab2d7b48962aa70127e1227
+  position: {x: 0, y: 0}
+  child: {fileID: 3173632810106932378}
+  dialogId: Seller
+  localizationPrefix: 
+  createLocalization: 0

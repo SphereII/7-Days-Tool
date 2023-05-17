@@ -1,0 +1,844 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8637404863734474167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 311d31091d2cb324f8144c35df0e6f37
+  position: {x: 2916, y: 1500}
+  responseText: Patrol around here
+  id: Wander
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: -7551812221201044131}
+  parent: {fileID: -8635516312686219971}
+--- !u!114 &-8635516312686219971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: startsubmenu
+  m_EditorClassIdentifier: 
+  guid: e5c07ce189243184da5dceee6ea86e08
+  position: {x: 3204, y: 300}
+  statementText: Hello friend, how can I help you?
+  id: startsubmenu
+  nextstatementId: 
+  Children:
+  - {fileID: 5440878533118987329}
+  - {fileID: 8026756515684661581}
+  - {fileID: -6717851474025950417}
+  - {fileID: 3568281737252860434}
+  - {fileID: -8637404863734474167}
+  - {fileID: 7028902252480232554}
+  - {fileID: 7621853341311656355}
+  - {fileID: 6198627367457562656}
+  - {fileID: -6600902010536110228}
+  ChildrenNames:
+  - Follow me
+  - Show Me your inventory
+  - Stay where you are standing
+  - Stay where I am standing
+  - Patrol around here
+  - Loot around here
+  - I am interested in hiring you.
+  - Dismiss
+  - Nevermind.
+--- !u!114 &-8583411468485195021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a126453fdb64d70b9b315310a7485f8, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: 19b4259f4c1746a4e92114e2c62a371e
+  position: {x: 0, y: 0}
+  child: {fileID: -1513481628809423306}
+  dialogId: GenericNPCCowboy
+  localizationPrefix: 
+  createLocalization: 0
+--- !u!114 &-8098709015053007886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 49ada37e055bc734297b16ac1865c5a3
+  position: {x: 1280, y: 1750}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderGuardHere
+    op: 
+    Value: Self
+--- !u!114 &-8022047327741673473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: WaterLocation
+  m_EditorClassIdentifier: 
+  guid: 2dd7547c50f68304fa179586a20500db
+  position: {x: 2058, y: 200}
+  statementText: There's a river a few miles east of here. The water's pretty clean,
+    but watch out for bandits hiding in the bushes.
+  id: WaterLocation
+  nextstatementId: 
+  Children:
+  - {fileID: -6539279311495446218}
+  - {fileID: 8042548022930006271}
+  - {fileID: -1240830933133619953}
+  ChildrenNames:
+  - Where can I find some ammo around here?
+  - Where's the nearest safe zone?
+  - Gotta Go, Bye!
+--- !u!114 &-7551812221201044131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: e5e2a4242470389469f4d5193e9603a9
+  position: {x: 100, y: 1650}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderWander
+    op: 
+    Value: Self
+--- !u!114 &-7545619055565889033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 1fd5e67a5fb60024c89c02d5d48b9a84
+  position: {x: 2326, y: 1450}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderStay
+    op: 
+    Value: Self
+--- !u!114 &-7536908863150846586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: SafeZoneLocation
+  m_EditorClassIdentifier: 
+  guid: bb60ec4fdc1d1934dba92b32ecea06bd
+  position: {x: 2631, y: 250}
+  statementText: The nearest safe zone is Fort Independence. It's a day's ride south
+    of here. The folks there are friendly and willing to help travelers like yourself.
+  id: SafeZoneLocation
+  nextstatementId: 
+  Children:
+  - {fileID: -6539279311495446218}
+  - {fileID: -4777637753079711011}
+  - {fileID: -1240830933133619953}
+  ChildrenNames:
+  - Where can I find some ammo around here?
+  - I need to find some water. Any ideas?
+  - Gotta Go, Bye!
+--- !u!114 &-7101034120908961757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: b31ce59c0ab61b54eae47e3014ff1bba
+  position: {x: 2060, y: 650}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddItemSDX, SCore
+    Id: drinkJarBoiledWater
+    op: 
+    Value: 
+--- !u!114 &-6717851474025950417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 06b78c5381a34de44a395a1bdea14643
+  position: {x: 1736, y: 1400}
+  responseText: Stay where you are standing
+  id: StayHere
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: -7545619055565889033}
+  parent: {fileID: -8635516312686219971}
+--- !u!114 &-6600902010536110228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: dc82842c717574044b863980c212ab0d
+  position: {x: 690, y: 2100}
+  responseText: Nevermind.
+  id: done
+  nextstatementId: 
+  requirements: []
+  Children: []
+  parent: {fileID: -8635516312686219971}
+--- !u!114 &-6539279311495446218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: b14a50ba3ef49084685feabb0aa68203
+  position: {x: 556, y: 500}
+  responseText: Where can I find some ammo around here?
+  id: FindAmmo
+  nextstatementId: AmmoLocation
+  requirements: []
+  Children:
+  - {fileID: 4190931815750882512}
+  - {fileID: -4260953609950150773}
+  parent: {fileID: -7536908863150846586}
+--- !u!114 &-5762716911618407344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 79a8de4154023934fb0a45cbd994cdb9
+  position: {x: 2782, y: 1100}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderFollow
+    op: 
+    Value: Self
+--- !u!114 &-5724885402010031017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 4fa1ba04c55907f4ab7aac98f8541ff1
+  position: {x: 100, y: 450}
+  responseText: Tell me about yourself.
+  id: TellMeAboutYourself
+  nextstatementId: CowboyBackstory
+  requirements: []
+  Children:
+  - {fileID: 7629147291222742119}
+  parent: {fileID: -1513481628809423306}
+--- !u!114 &-4977955116139960341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 65a8279123b7c76468054090d5a6234f
+  position: {x: 100, y: 1250}
+  responseText: Tell me about yourself.
+  id: TellMe
+  nextstatementId: 
+  requirements: []
+  Children: []
+  parent: {fileID: 0}
+--- !u!114 &-4777637753079711011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 5d287122eccd5b64081dcbb0fb5ec037
+  position: {x: 1604, y: 600}
+  responseText: I need to find some water. Any ideas?
+  id: FindWater
+  nextstatementId: WaterLocation
+  requirements: []
+  Children:
+  - {fileID: -7101034120908961757}
+  - {fileID: -8022047327741673473}
+  parent: {fileID: -7536908863150846586}
+--- !u!114 &-4601938496240739384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 0d9f95641481c0d43b07ba505ae354a3
+  position: {x: 1146, y: 1350}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: ExecuteCommandSDX, SCore
+    Id: OpenInventory
+    op: 
+    Value: 
+--- !u!114 &-4260953609950150773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: AmmoLocation
+  m_EditorClassIdentifier: 
+  guid: d6aee906fb77ec6439ca56fb102c6b2d
+  position: {x: 1485, y: 150}
+  statementText: There's an old general store not too far from here. You might find
+    some ammo there, but be careful, it's swarming with outlaws.
+  id: AmmoLocation
+  nextstatementId: 
+  Children:
+  - {fileID: -4777637753079711011}
+  - {fileID: 8042548022930006271}
+  - {fileID: -1240830933133619953}
+  ChildrenNames:
+  - I need to find some water. Any ideas?
+  - Where's the nearest safe zone?
+  - Gotta Go, Bye!
+--- !u!114 &-3361720381604377426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 1a1bdbd380f226247b4b783cf23b7c7d
+  position: {x: 1602, y: 1000}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: OpenDialogSDX, SCore
+    Id: Hire
+    op: 
+    Value: 
+--- !u!114 &-3082932363508366606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: f863be1e0e6107440bb1721e2911a0a9
+  position: {x: 100, y: 2050}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: ExecuteCommandSDX, SCore
+    Id: Dismiss
+    op: 
+    Value: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderDismiss
+    op: 
+    Value: Self
+--- !u!114 &-1513481628809423306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: startWildWestCowboy
+  m_EditorClassIdentifier: 
+  guid: 5dc19cc1442692d4ba0e12ddce0a1485
+  position: {x: 34.960083, y: -440.548}
+  statementText: Howdy, partner! What can I do for you in these wild lands?
+  id: startWildWestCowboy
+  nextstatementId: 
+  Children:
+  - {fileID: -26083843676642474}
+  - {fileID: -5724885402010031017}
+  - {fileID: -6539279311495446218}
+  - {fileID: -4777637753079711011}
+  - {fileID: 8042548022930006271}
+  - {fileID: -1240830933133619953}
+  ChildrenNames:
+  - You looking for work?
+  - Tell me about yourself.
+  - Where can I find some ammo around here?
+  - I need to find some water. Any ideas?
+  - Where's the nearest safe zone?
+  - Gotta Go, Bye!
+--- !u!114 &-1240830933133619953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: a5543fe7f16a9644a897fca5f6c3ac90
+  position: {x: 100, y: 850}
+  responseText: Gotta Go, Bye!
+  id: Bye
+  nextstatementId: done
+  requirements: []
+  Children: []
+  parent: {fileID: -7536908863150846586}
+--- !u!114 &-26083843676642474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 3d15f2a6190a8614cafdb266e465ce55
+  position: {x: 556, y: 900}
+  responseText: You looking for work?
+  id: startsubmenu
+  nextstatementId: startsubmenu
+  requirements: []
+  Children:
+  - {fileID: -8635516312686219971}
+  parent: {fileID: -1513481628809423306}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3f26486cfe4057a48a2d0866716126, type: 3}
+  m_Name: GenericNPCCowboy
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -8583411468485195021}
+  nodes:
+  - {fileID: -1513481628809423306}
+  - {fileID: -8583411468485195021}
+  - {fileID: 7629147291222742119}
+  - {fileID: -4260953609950150773}
+  - {fileID: -8022047327741673473}
+  - {fileID: -7536908863150846586}
+  - {fileID: -8635516312686219971}
+  - {fileID: -5724885402010031017}
+  - {fileID: -6539279311495446218}
+  - {fileID: 4190931815750882512}
+  - {fileID: -4777637753079711011}
+  - {fileID: -7101034120908961757}
+  - {fileID: 8042548022930006271}
+  - {fileID: -1240830933133619953}
+  - {fileID: -26083843676642474}
+  - {fileID: 7621853341311656355}
+  - {fileID: -3361720381604377426}
+  - {fileID: 5440878533118987329}
+  - {fileID: -5762716911618407344}
+  - {fileID: -4977955116139960341}
+  - {fileID: 8026756515684661581}
+  - {fileID: -4601938496240739384}
+  - {fileID: -6717851474025950417}
+  - {fileID: -7545619055565889033}
+  - {fileID: -8637404863734474167}
+  - {fileID: -7551812221201044131}
+  - {fileID: 3568281737252860434}
+  - {fileID: -8098709015053007886}
+  - {fileID: 7028902252480232554}
+  - {fileID: 7475107641093796759}
+  - {fileID: 6198627367457562656}
+  - {fileID: -3082932363508366606}
+  - {fileID: -6600902010536110228}
+--- !u!114 &3568281737252860434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: ede513de5b5dd1a4bb1de294487d1a4d
+  position: {x: 690, y: 1700}
+  responseText: Stay where I am standing
+  id: GuardHere
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: HasTask, SCore
+    Requirementtype: Hide
+    Value: Stay
+    op: 
+    Id: 
+  Children:
+  - {fileID: -8098709015053007886}
+  parent: {fileID: -8635516312686219971}
+--- !u!114 &4190931815750882512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: 1fa44284325232c43be2567a7344d7c6
+  position: {x: 1014, y: 550}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddItemSDX, SCore
+    Id: ammo9mmBulletBall
+    op: 
+    Value: 
+--- !u!114 &5440878533118987329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: fd9aff946ec119049ad413d750fc8ae4
+  position: {x: 2192, y: 1050}
+  responseText: Follow me
+  id: FollowMe
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: -5762716911618407344}
+  parent: {fileID: -8635516312686219971}
+--- !u!114 &6198627367457562656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 3a667133f4af3554398514a472e47d37
+  position: {x: 3050, y: 1900}
+  responseText: Dismiss
+  id: Dismiss
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: -3082932363508366606}
+  parent: {fileID: -8635516312686219971}
+--- !u!114 &7028902252480232554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 6f0e8fce4328f3a4c9354c82e36f1f88
+  position: {x: 1870, y: 1800}
+  responseText: Loot around here
+  id: Loot
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: HasTask, SCore
+    Requirementtype: Hide
+    Value: LootBasic
+    op: 
+    Id: 
+  Children:
+  - {fileID: 7475107641093796759}
+  parent: {fileID: -8635516312686219971}
+--- !u!114 &7475107641093796759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: fa2d782c5092b9546a8a42c545bf91bf
+  position: {x: 2460, y: 1850}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddBuffSDX, SCore
+    Id: buffOrderLoot
+    op: 
+    Value: Self
+--- !u!114 &7621853341311656355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: d79b2caab8ab1d840a62ac55cb64e701
+  position: {x: 1012, y: 950}
+  responseText: I am interested in hiring you.
+  id: Hire
+  nextstatementId: startsubmenu
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: HiredSDX, SCore
+    Requirementtype: Hide
+    Value: not
+    op: 
+    Id: 
+  Children:
+  - {fileID: -3361720381604377426}
+  - {fileID: -8635516312686219971}
+  parent: {fileID: -8635516312686219971}
+--- !u!114 &7629147291222742119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: CowboyBackstory
+  m_EditorClassIdentifier: 
+  guid: 722d93738cdcf8f448b54edff0b0500a
+  position: {x: 791.6525, y: 340.69504}
+  statementText: "Well, partner, I'm a gunslinger who's been roamin' these parts
+    for years now. Fought in the war, then came out West to seek my fortune. I've
+    seen it all \u2013 outlaws, stagecoach robberies, and even a shootout or two.
+    Nowadays, I try to help folks like you navigate these treacherous lands."
+  id: CowboyBackstory
+  nextstatementId: 
+  Children:
+  - {fileID: -6539279311495446218}
+  - {fileID: -4777637753079711011}
+  - {fileID: 8042548022930006271}
+  - {fileID: -1240830933133619953}
+  ChildrenNames:
+  - Where can I find some ammo around here?
+  - I need to find some water. Any ideas?
+  - Where's the nearest safe zone?
+  - Gotta Go, Bye!
+--- !u!114 &8026756515684661581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: a1e37a1aed63de14eb1549d18d1785b2
+  position: {x: 556, y: 1300}
+  responseText: Show Me your inventory
+  id: ShowMe
+  nextstatementId: 
+  requirements:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: Leader, SCore
+    Requirementtype: Hide
+    Value: 
+    op: 
+    Id: 
+  Children:
+  - {fileID: -4601938496240739384}
+  parent: {fileID: -8635516312686219971}
+--- !u!114 &8042548022930006271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 7562a912a504e1c49af2c51a6b2a2e73
+  position: {x: 2650, y: 700}
+  responseText: Where's the nearest safe zone?
+  id: AskForShelter
+  nextstatementId: SafeZoneLocation
+  requirements: []
+  Children:
+  - {fileID: -7536908863150846586}
+  parent: {fileID: -8022047327741673473}

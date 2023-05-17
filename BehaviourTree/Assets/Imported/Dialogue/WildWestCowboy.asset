@@ -1,0 +1,330 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5305615379889830472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: cf36b23fb24df0b47b3d642183ab68fa
+  position: {x: 0, y: 0}
+  responseText: Gotta Go, Bye!
+  id: Bye
+  nextstatementId: done
+  requirements: []
+  Children: []
+  parent: {fileID: -5052776521160417588}
+--- !u!114 &-5052776521160417588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: SafeZoneLocation
+  m_EditorClassIdentifier: 
+  guid: b18de0b9a8f2f9146aba46eeb188ddaf
+  position: {x: 0, y: 0}
+  statementText: The nearest safe zone is Fort Independence. It's a day's ride south
+    of here. The folks there are friendly and willing to help travelers like yourself.
+  id: SafeZoneLocation
+  nextstatementId: 
+  Children:
+  - {fileID: 740597706978543625}
+  - {fileID: 8516033729716525506}
+  - {fileID: -5305615379889830472}
+  ChildrenNames:
+  - Where can I find some ammo around here?
+  - I need to find some water. Any ideas?
+  - Gotta Go, Bye!
+--- !u!114 &-216339506039506523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: f447b4aa4eb82ea4589a96baf1a9a181
+  position: {x: 0, y: 0}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddItemSDX, SCore
+    Id: ammo9mmBulletBall
+    op: 
+    Value: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3f26486cfe4057a48a2d0866716126, type: 3}
+  m_Name: WildWestCowboy
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 6829654599636796552}
+  nodes:
+  - {fileID: 1210476210525669322}
+  - {fileID: 6829654599636796552}
+  - {fileID: 8097968590497643974}
+  - {fileID: 2848853214432885852}
+  - {fileID: 7283254940946709870}
+  - {fileID: -5052776521160417588}
+  - {fileID: 6791159821582667809}
+  - {fileID: 740597706978543625}
+  - {fileID: -216339506039506523}
+  - {fileID: 8516033729716525506}
+  - {fileID: 954466612543524528}
+  - {fileID: 8739787893532709207}
+  - {fileID: -5305615379889830472}
+--- !u!114 &740597706978543625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 9379c170f4c43414085e6b8aa8affe58
+  position: {x: 0, y: 0}
+  responseText: Where can I find some ammo around here?
+  id: FindAmmo
+  nextstatementId: AmmoLocation
+  requirements: []
+  Children:
+  - {fileID: -216339506039506523}
+  - {fileID: 2848853214432885852}
+  parent: {fileID: -5052776521160417588}
+--- !u!114 &954466612543524528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ceff5d4fce646b0a9e41b7054434110, type: 3}
+  m_Name: ActionNode
+  m_EditorClassIdentifier: 
+  guid: e7bf5bca70082734793e4db353e2f8ee
+  position: {x: 0, y: 0}
+  actions:
+  - guid: 00000000-0000-0000-0000-000000000000
+    type: AddItemSDX, SCore
+    Id: drinkJarBoiledWater
+    op: 
+    Value: 
+--- !u!114 &1210476210525669322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: startWildWestCowboy
+  m_EditorClassIdentifier: 
+  guid: 69d6790392499bc4297a62fbb224fb50
+  position: {x: 0, y: 0}
+  statementText: Howdy, partner! What can I do for you in these wild lands?
+  id: startWildWestCowboy
+  nextstatementId: 
+  Children:
+  - {fileID: 6791159821582667809}
+  - {fileID: 740597706978543625}
+  - {fileID: 8516033729716525506}
+  - {fileID: 8739787893532709207}
+  - {fileID: -5305615379889830472}
+  ChildrenNames:
+  - Tell me about yourself.
+  - Where can I find some ammo around here?
+  - I need to find some water. Any ideas?
+  - Where's the nearest safe zone?
+  - Gotta Go, Bye!
+--- !u!114 &2848853214432885852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: AmmoLocation
+  m_EditorClassIdentifier: 
+  guid: 0298c4ef7b75d8e499d91e7dae9ebd27
+  position: {x: 0, y: 0}
+  statementText: There's an old general store not too far from here. You might find
+    some ammo there, but be careful, it's swarming with outlaws.
+  id: AmmoLocation
+  nextstatementId: 
+  Children:
+  - {fileID: 8516033729716525506}
+  - {fileID: 8739787893532709207}
+  - {fileID: -5305615379889830472}
+  ChildrenNames:
+  - I need to find some water. Any ideas?
+  - Where's the nearest safe zone?
+  - Gotta Go, Bye!
+--- !u!114 &6791159821582667809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: d7f6151ff85f7304dab8699aed5312cc
+  position: {x: 0, y: 0}
+  responseText: Tell me about yourself.
+  id: TellMeAboutYourself
+  nextstatementId: CowboyBackstory
+  requirements: []
+  Children:
+  - {fileID: 8097968590497643974}
+  parent: {fileID: 1210476210525669322}
+--- !u!114 &6829654599636796552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a126453fdb64d70b9b315310a7485f8, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: 2f9830cbeda11a64d84f7b7352f7a0dc
+  position: {x: 0, y: 0}
+  child: {fileID: 1210476210525669322}
+  dialogId: WildWestCowboy
+  localizationPrefix: 
+  createLocalization: 0
+--- !u!114 &7283254940946709870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: WaterLocation
+  m_EditorClassIdentifier: 
+  guid: 4cb34f06d26d9a145a9d17d0507b163d
+  position: {x: 0, y: 0}
+  statementText: There's a river a few miles east of here. The water's pretty clean,
+    but watch out for bandits hiding in the bushes.
+  id: WaterLocation
+  nextstatementId: 
+  Children:
+  - {fileID: 740597706978543625}
+  - {fileID: 8739787893532709207}
+  - {fileID: -5305615379889830472}
+  ChildrenNames:
+  - Where can I find some ammo around here?
+  - Where's the nearest safe zone?
+  - Gotta Go, Bye!
+--- !u!114 &8097968590497643974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: CowboyBackstory
+  m_EditorClassIdentifier: 
+  guid: 1254cfea22ffd504a9566f70558e91ea
+  position: {x: 0, y: 0}
+  statementText: "Well, partner, I'm a gunslinger who's been roamin' these parts
+    for years now. Fought in the war, then came out West to seek my fortune. I've
+    seen it all \u2013 outlaws, stagecoach robberies, and even a shootout or two.
+    Nowadays, I try to help folks like you navigate these treacherous lands."
+  id: CowboyBackstory
+  nextstatementId: 
+  Children:
+  - {fileID: 740597706978543625}
+  - {fileID: 8516033729716525506}
+  - {fileID: 8739787893532709207}
+  - {fileID: -5305615379889830472}
+  ChildrenNames:
+  - Where can I find some ammo around here?
+  - I need to find some water. Any ideas?
+  - Where's the nearest safe zone?
+  - Gotta Go, Bye!
+--- !u!114 &8516033729716525506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: f3c4c1d81c88289458492ca0190ba054
+  position: {x: 0, y: 0}
+  responseText: I need to find some water. Any ideas?
+  id: FindWater
+  nextstatementId: WaterLocation
+  requirements: []
+  Children:
+  - {fileID: 954466612543524528}
+  - {fileID: 7283254940946709870}
+  parent: {fileID: -5052776521160417588}
+--- !u!114 &8739787893532709207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  guid: 1a6d76dd410fb99428ab0b75b1a37e49
+  position: {x: 0, y: 0}
+  responseText: Where's the nearest safe zone?
+  id: AskForShelter
+  nextstatementId: SafeZoneLocation
+  requirements: []
+  Children:
+  - {fileID: -5052776521160417588}
+  parent: {fileID: 7283254940946709870}
