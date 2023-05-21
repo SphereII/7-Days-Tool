@@ -1,7 +1,11 @@
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Dialogue;
 using Dialogue.Editor;
 using Dialogue.Scripts.Editor.EditorWindows;
+using Dialogue.Scripts.Nodes;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -13,20 +17,25 @@ using File = UnityEngine.Windows.File;
 public class DialogueEditor : EditorWindow
 {
     private MiniMap _miniMap;
+
     private static DialogueGraphView _graphView;
-    //private InspectorView _inspectorView;
+
+    private InspectorView _inspectorView;
     private ToolbarPopupSearchField _searchField;
     private ToolbarMenu _toolbarMenuNodes;
+   
     private static void OpenWindow()
     {
         var wnd = GetWindow<DialogueEditor>();
         wnd.titleContent = new GUIContent("DialogueEditor");
     }
+
     [OnOpenAsset]
     public static bool OnOpenAsset(int instanceId, int line)
     {
-        if (Selection.activeObject is not DialogGraph ) return false;
+        if (Selection.activeObject is not DialogGraph) return false;
         OpenWindow();
+
         return true;
     }
 
@@ -34,6 +43,7 @@ public class DialogueEditor : EditorWindow
     {
         return _graphView;
     }
+
     public void CreateGUI()
     {
         var root = rootVisualElement;
@@ -48,44 +58,48 @@ public class DialogueEditor : EditorWindow
         _graphView.OnNodeSelected = OnNodeSelectionChanged;
 
         // This controls a potential side inspector in the graphview, but is not currently needed.
-        // _inspectorView = root.Q<InspectorView>();
-        //
+        _inspectorView = root.Q<InspectorView>();
+
         // _inspectorView.Q<Button>("Refresh").clickable = new Clickable(Refresh);
         // _inspectorView.Q<Button>("Close").clickable = new Clickable(Close);
         // _inspectorView.Q<Button>("Export").clickable = new Clickable(Export);
         // _inspectorView.Q<Button>("AdjustLayout").clickable = new Clickable(UpdateLayout);
-     //   _graphView.OnNodeSelected += (_ => UpdateInspector());
+        //   _graphView.OnNodeSelected += (_ => UpdateInspector());
 
         new ConfigurationManager().Init();
         OnSelectionChange();
         GenerateMiniMap();
-      //  UpdateInspector();
+        UpdateInspector();
         ConfigureToolbar();
-
     }
 
+  
     private void ConfigureToolbar()
     {
         var toolbar = rootVisualElement.Q<Toolbar>();
         if (toolbar == null) return;
 
         var refreshButton = toolbar.Q<ToolbarButton>("mnuRefresh");
-        refreshButton.RegisterCallback<ClickEvent>( _=> Refresh());
+        refreshButton.RegisterCallback<ClickEvent>(_ => Refresh());
         var autoLayoutButton = toolbar.Q<ToolbarButton>("mnuAutoLayout");
-        autoLayoutButton.RegisterCallback<ClickEvent>( _=> UpdateLayout());
-        var exportButton = toolbar.Q<ToolbarButton>("mnuExport");
-        exportButton.RegisterCallback<ClickEvent>( _=> Export());
+        autoLayoutButton.RegisterCallback<ClickEvent>(_ => UpdateLayout());
+
+        var exportMenu = toolbar.Q<ToolbarMenu>("ExportOptions");
+        exportMenu.menu.AppendAction("Export", _ => Export(true), _ => DropdownMenuAction.Status.Normal);
+        exportMenu.menu.AppendAction("Export No Localization", _ => Export(), _ => DropdownMenuAction.Status.Normal);
+        //var exportButton = toolbar.Q<ToolbarButton>("mnuExport");
+        //exportButton.RegisterCallback<ClickEvent>(_ => Export());
         var closeButton = toolbar.Q<ToolbarButton>("mnuClose");
-        closeButton.RegisterCallback<ClickEvent>( _=> Close());
-        
+        closeButton.RegisterCallback<ClickEvent>(_ => Close());
+
         _searchField = toolbar.Q<ToolbarPopupSearchField>("mnuSearchField");
         _searchField.RegisterValueChangedCallback(OnSearchTextChanged);
 
         _toolbarMenuNodes = toolbar.Q<ToolbarMenu>("mnuNodes");
         _toolbarMenuNodes.RegisterCallback<ClickEvent>(_ => ViewNodes());
-        
+
         var doodle = toolbar.Q<ToolbarButton>("mnuQuickDoodle");
-        doodle.RegisterCallback<ClickEvent>( _=> OpenQuickDoodle());
+        doodle.RegisterCallback<ClickEvent>(_ => OpenQuickDoodle());
 
         var versionLabel = toolbar.Q<Label>("lblVersion");
         var versionFile = Path.Combine("Assets", "Dialogue", "version.txt");
@@ -122,6 +136,7 @@ public class DialogueEditor : EditorWindow
                         _toolbarMenuNodes.menu.AppendAction(subMenu, _ => DropDownMenuGoTo(node.nodeView),
                             _ => DropdownMenuAction.Status.Normal);
                     }
+
                     break;
                 case ActionNode actionNode:
                     foreach (var action in actionNode.actions)
@@ -130,6 +145,7 @@ public class DialogueEditor : EditorWindow
                         _toolbarMenuNodes.menu.AppendAction(subMenu, _ => DropDownMenuGoTo(node.nodeView),
                             _ => DropdownMenuAction.Status.Normal);
                     }
+
                     break;
                 default:
                     continue;
@@ -138,9 +154,9 @@ public class DialogueEditor : EditorWindow
             if (string.IsNullOrEmpty(menuEntry)) continue;
             _toolbarMenuNodes.menu.AppendAction(menuEntry, _ => DropDownMenuGoTo(node.nodeView),
                 _ => DropdownMenuAction.Status.Normal);
-        
         }
-        _toolbarMenuNodes.ShowMenu();        
+
+        _toolbarMenuNodes.ShowMenu();
     }
 
 
@@ -148,7 +164,7 @@ public class DialogueEditor : EditorWindow
     {
         if (string.IsNullOrEmpty(evt.newValue)) return;
         if (evt.newValue.Length < 3) return;
-        
+
         foreach (var node in _graphView.DialogGraph.nodes)
         {
             var addItem = false;
@@ -162,10 +178,9 @@ public class DialogueEditor : EditorWindow
                 _searchField.menu.AppendAction(nodeText, _ => DropDownMenuGoTo(nodeView),
                     _ => DropdownMenuAction.Status.Normal);
             }
-
         }
-        _searchField.ShowMenu();
 
+        _searchField.ShowMenu();
     }
 
     private static void DropDownMenuGoTo(NodeView nodeView)
@@ -174,7 +189,7 @@ public class DialogueEditor : EditorWindow
         _graphView.AddToSelection(nodeView);
         _graphView.FrameSelection();
     }
-    
+
     // Re-distribute the nodes on the graph
     private static void UpdateLayout()
     {
@@ -188,10 +203,18 @@ public class DialogueEditor : EditorWindow
     }
 
 
-    private static void Export()
+    private static void Export(bool forceLocalization = false)
     {
         var exportManager = new ExportManager();
-        exportManager.Init(_graphView.DialogGraph);
+        exportManager.Init(_graphView.DialogGraph, forceLocalization);
+    }
+
+    private void UpdateInspector()
+    {
+      //  _inspectorView.UpdateInspector(cvars);
+        // var list = _inspectorView.Q<ListView>("CVarList");
+        // list.itemsSource = cvars;
+        
 
     }
     // private void UpdateInspector()

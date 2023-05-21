@@ -16,6 +16,8 @@ namespace Dialogue
         public Port Output;
         private SerializedObject _serializedObject;
 
+        public bool alreadyMoved = false;
+
         public NodeView(BaseNode node) : base("Assets/Dialogue/UI/Node.uxml")
         {
             Node = node;
@@ -53,6 +55,8 @@ namespace Dialogue
                 _ => typeof(Node).ToString()
             };
 
+            if (string.IsNullOrEmpty(text))
+                return "<No Response>";
             if (maxLength > 0 && text.Length > maxLength)
                 return text.Substring(0, maxLength) + "...";
             return text;
@@ -137,7 +141,7 @@ namespace Dialogue
                 case ImportNode:
                 case StatementNode:
                     label = "From Response...";
-                    Input = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single,
+                    Input = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Multi,
                         typeof(bool));
                     break;
             }
@@ -161,6 +165,7 @@ namespace Dialogue
             Node.position.x = newPos.xMin;
             Node.position.y = newPos.yMin;
             EditorUtility.SetDirty(Node); // Helps with save for record object
+            alreadyMoved = true;
         }
 
         public void Collapse(bool full = false)

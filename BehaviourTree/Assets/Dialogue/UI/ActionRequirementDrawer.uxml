@@ -14,7 +14,7 @@
             </ui:VisualElement>
             <ui:VisualElement name="OperatorColumn" style="width: auto; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; align-items: center; margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px;">
                 <ui:Label text="Operators" display-tooltip-when-elided="true" style="white-space: normal;" />
-                <ui:DropdownField index="-1" name="OperatorDropDown" binding-path="operator" />
+                <ui:DropdownField index="-1" name="OperatorDropDown" binding-path="op" />
             </ui:VisualElement>
             <ui:VisualElement name="ValueColumn" style="width: auto; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px;">
                 <ui:Label display-tooltip-when-elided="true" name="ValueDescription" />

@@ -1,4 +1,43 @@
-﻿v1.0.0.3
+﻿v1.0.0.4
+
+- Fixed a bug with the cvars not showing the set option for actions
+- Fixed a bug in the requirements where the Hide requirement field was empty
+- Added a new syntax to the Scratch feature
+    - Statements are identified by starting at the start of the line ( no tab)
+    - Statements can have reference key by placing a    === <key name>   above the statement
+    - Responses are single tab-indented under neath their statements.
+    - Response can link to another statement by using double tab, with a > character, followed by a key name.
+
+No support for setting actions or requirements. Once the conversation is added, you can go through the node editor to 
+add the requirements and actions.
+
+Sample:
+
+=== start
+Hi... 
+	Are you an actual nurse?  
+		> start_01
+	[ Tell Your Story ]
+		> YourStory
+	[ Give Gift ]
+		> GiveGift
+	[ Hire ] 
+		> HireThem
+		
+=== HireThem
+I'd like to hire you.
+	No
+		> start
+=== start_01
+You think I wear this outfit for the fun of it? Yes, I'm a real nurse. I was at work when the world went to shit. 
+I worked with a group of first responders. We got a call to the skate park because there was some kids getting sick. We got there, and it was a shit show. All the kids there were sick, and throwing up.
+	What made them sick?
+		> madethemsick
+
+
+
+
+v1.0.0.3
 
 - Fixed a bug where quest_entry wasn't being saved during import
 - Added Import Node 

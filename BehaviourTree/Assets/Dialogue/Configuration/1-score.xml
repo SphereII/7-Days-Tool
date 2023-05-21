@@ -25,7 +25,7 @@
             <property name="valueType" value="float" />
             <property name="valueToolTip" value="The numeric value of the cvar" />
             <property name="idDescription" value="CVar Name:" />
-            <property name="idType" value="string" />
+            <property name="idType" value="cvar" />
             <property name="idToolTip" value="The name of the cvar" />
             <property name="supportOperator" value="true" />
         </action>
@@ -36,7 +36,7 @@
             <property name="valueType" value="float" />
             <property name="valueToolTip" value="The numeric value of the cvar" />
             <property name="idDescription" value="CVar Name:" />
-            <property name="idType" value="string" />
+            <property name="idType" value="cvar" />
             <property name="idToolTip" value="The name of the cvar" />
             <property name="supportOperator" value="true" />
         </action>
@@ -135,7 +135,7 @@
             <property name="valueType" value="float" />
             <property name="valueToolTip" value="The numeric value of the cvar" />
             <property name="idDescription" value="CVar Name:" />
-            <property name="idType" value="string" />
+            <property name="idType" value="cvar" />
             <property name="idToolTip" value="The name of the cvar" />
             <property name="supportOperator" value="true" />
         </requirement>

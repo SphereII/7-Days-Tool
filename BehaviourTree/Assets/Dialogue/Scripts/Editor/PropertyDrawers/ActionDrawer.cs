@@ -29,7 +29,7 @@ namespace Dialogue.Scripts.Editor.EditorWindows
             AvailableTypes.RegisterValueChangedCallback(Refresh);
 
             Operator.viewDataKey = $"operator_{Guid}";
-            Operator.choices = Cfg.Operators;
+            Operator.choices = Cfg.ActionOperator;
             
             Refresh(null);
         }
@@ -42,10 +42,8 @@ namespace Dialogue.Scripts.Editor.EditorWindows
             else
                 newType = evt.newValue;
             
-           // var newActionType = evt.newValue;
             ConfigMap = Cfg.GetActionMapByClass(newType);
             Description.text = ConfigMap.description;
-
             AvailableTypesLabel.text = "Action Type";
             
             ShowVisualElement(OperatorGroup, false);

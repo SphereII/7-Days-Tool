@@ -11,7 +11,8 @@
             <uie:ToolbarSpacer />
             <uie:ToolbarButton text="Auto Layout" display-tooltip-when-elided="true" name="mnuAutoLayout" />
             <uie:ToolbarSpacer />
-            <uie:ToolbarButton text="Export" display-tooltip-when-elided="true" name="mnuExport" />
+            <uie:ToolbarMenu display-tooltip-when-elided="true" name="ExportOptions" text="Export..." />
+            <uie:ToolbarButton text="Export" display-tooltip-when-elided="true" name="mnuExport" style="display: none;" />
             <uie:ToolbarSpacer />
             <uie:ToolbarPopupSearchField focusable="true" name="mnuSearchField" />
             <uie:ToolbarSpacer />
@@ -22,18 +23,8 @@
     </uie:Toolbar>
     <Dialogue.SplitView>
         <ui:VisualElement name="NavMenu" style="width: 400px; display: none;">
-            <Dialogue.InspectorView>
-                <ui:GroupBox text="Graph Controls" name="GraphControls">
-                    <ui:Button text="Auto Layout" display-tooltip-when-elided="true" name="AdjustLayout" tooltip="Redistributes the nodes" />
-                    <ui:Button text="Export" display-tooltip-when-elided="true" name="Export" />
-                    <ui:Button text="Close" display-tooltip-when-elided="true" name="Close" />
-                    <ui:Button text="Refresh" display-tooltip-when-elided="true" name="Refresh" tooltip="Converts the Dialog Graph into xml." />
-                </ui:GroupBox>
-                <ui:Foldout text="Statements" name="StatementFoldout" value="false" view-data-key="StatementFoldout" />
-                <ui:Foldout text="Responses" name="ResponseFoldout" value="false" view-data-key="ResponseFoldout" />
-                <ui:VisualElement name="Tips" style="flex-wrap: wrap;">
-                    <ui:Label text="- Graphs are auto-saved&#10;- More Tips.&#10;- Don&apos;t eat yellow snow.&#10;" display-tooltip-when-elided="true" style="flex-wrap: wrap; white-space: normal;" />
-                </ui:VisualElement>
+            <Dialogue.InspectorView style="flex-grow: 1; display: none;">
+                <ui:ListView focusable="true" name="CVarList" show-foldout-header="true" header-title="CVars" show-add-remove-footer="true" reorderable="true" virtualization-method="DynamicHeight" show-alternating-row-backgrounds="ContentOnly" binding-path="cvars" style="max-height: none;" />
             </Dialogue.InspectorView>
         </ui:VisualElement>
         <ui:VisualElement name="Main">

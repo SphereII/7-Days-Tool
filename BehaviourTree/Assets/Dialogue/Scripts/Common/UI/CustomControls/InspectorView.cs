@@ -1,4 +1,5 @@
-﻿using Dialogue.Scripts.Nodes;
+﻿using System.Collections.Generic;
+using Dialogue.Scripts.Nodes;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine.UIElements;
@@ -12,7 +13,8 @@ namespace Dialogue
         }
 
         private UnityEditor.Editor _editor;
-      
+
+       
         public void UpdateSelection(NodeView nodeView)
         {
             Clear();
@@ -26,6 +28,7 @@ namespace Dialogue
                 case GotoNode:
                 case ActionNode:
                 case ResponseNode:
+                    case RootNode:
                     var customEditor = _editor.CreateInspectorGUI();
                     customEditor.Bind(_editor.serializedObject);
                     Add(customEditor);

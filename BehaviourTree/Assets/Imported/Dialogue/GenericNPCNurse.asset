@@ -82,6 +82,7 @@ MonoBehaviour:
     looking out for fellow survivors.
   id: SafeZoneLocation
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: -6997184192740617336}
   - {fileID: 1174365988671318321}
@@ -190,6 +191,7 @@ MonoBehaviour:
     but always remember to boil it first.
   id: WaterLocation
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: -6997184192740617336}
   - {fileID: 1727310057874205914}
@@ -261,6 +263,7 @@ MonoBehaviour:
     medicine there, but tread carefully, the place is crawling with the undead.
   id: MedicineLocation
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: 1174365988671318321}
   - {fileID: 1727310057874205914}
@@ -317,6 +320,7 @@ MonoBehaviour:
   - {fileID: -2954264297194188132}
   - {fileID: -7533539619450062705}
   - {fileID: -7771537897718120750}
+  cvars: []
 --- !u!114 &184113536860453669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +339,7 @@ MonoBehaviour:
   dialogId: GenericNPCNurse
   localizationPrefix: 
   createLocalization: 0
+  dialogCVarsList: []
 --- !u!114 &699433263418916526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,6 +500,7 @@ MonoBehaviour:
   statementText: Hello, traveler! How may I assist you amidst these troubled times?
   id: startNurse
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: 6094915916673266025}
   - {fileID: 6268582879525177909}
@@ -547,6 +553,7 @@ MonoBehaviour:
   statementText: Hello friend, how can I help you?
   id: startsubmenu
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: 9021593636366512443}
   - {fileID: 7413963346085648386}
@@ -722,6 +729,7 @@ MonoBehaviour:
     in this together, after all.
   id: NurseBackstory
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: -6997184192740617336}
   - {fileID: 1174365988671318321}

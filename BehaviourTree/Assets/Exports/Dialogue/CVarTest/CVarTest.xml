@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialogs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dialog id="CVarTest" startstatementid="86263b61d1cab264193c0df2ba3299d2">
+    <statement id="86263b61d1cab264193c0df2ba3299d2" text="CVarTest_86263b61d1cab264193c0df2ba3299d2" ref_text="Hello there" nextstatementid="">
+      <response_entry id="5be4f13f118ed074895ce2cb99d72893" ref_text="Hi" />
+    </statement>
+    <response id="5be4f13f118ed074895ce2cb99d72893" text="CVarTest_5be4f13f118ed074895ce2cb99d72893" nextstatementid="" ref_text="Hi">
+      <requirement type="HasCVarSDX, SCore" requirementtype="" value="2" id="mynurse2" />
+      <action type="AddCVar, SCore" id="nurse4" operator="lte" value="1" />
+    </response>
+  </dialog>
+</dialogs>

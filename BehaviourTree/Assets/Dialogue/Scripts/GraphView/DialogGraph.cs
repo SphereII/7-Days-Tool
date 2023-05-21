@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Dialogue.Scripts.GraphView;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Dialogue
 {
@@ -10,6 +12,7 @@ namespace Dialogue
     {
         public BaseNode rootNode;
         public List<BaseNode> nodes = new List<BaseNode>();
+        public List<string> cvars = new List<string>();
         public BaseNode CreateNode(Type type)
         {
             var node = CreateInstance(type) as BaseNode;

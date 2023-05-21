@@ -3,6 +3,6 @@
     <Style src="project://database/Assets/Dialogue/UI/uss/StyleSheet.uss?fileID=7433441132597879392&amp;guid=5669e98e893c7a145a0ae204aa761745&amp;type=3#StyleSheet" />
     <ui:VisualElement style="width: 400px; height: 50px;">
         <ui:Label text="Select a statement to redirect too." display-tooltip-when-elided="true" />
-        <ui:DropdownField label="Statements:" index="-1" name="AvailableStatements" view-data-key="AvailableStatements" style="max-height: none; max-width: 400px; min-width: 400px;" />
+        <ui:DropdownField label="Statements:" index="-1" name="AvailableStatements" view-data-key="AvailableStatements" binding-path="statementId" style="max-height: none; max-width: 400px; min-width: 400px;" />
     </ui:VisualElement>
 </ui:UXML>

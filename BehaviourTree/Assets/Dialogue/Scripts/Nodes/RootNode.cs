@@ -1,5 +1,10 @@
 
 
+using System.Collections.Generic;
+using System.ComponentModel;
+using Dialogue.Scripts.Nodes;
+using UnityEngine.Serialization;
+
 public class RootNode : BaseNode
 {
     public BaseNode child;
@@ -7,6 +12,7 @@ public class RootNode : BaseNode
     public string localizationPrefix;
     public bool createLocalization;
 
+    public List<DialogCVar> dialogCVarsList = new List<DialogCVar>();
     public override BaseNode Clone()
     {
         var node = Instantiate(this);

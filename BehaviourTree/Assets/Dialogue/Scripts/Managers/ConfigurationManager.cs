@@ -18,7 +18,7 @@ namespace Dialogue.Editor
         private static ConfigurationManager _instance;
 
         public List<string> Operators = new List<string>() {"None", "lt", "lte", "eq", "neq", "gte", "gt"};
-        public List<string> ActionTypes = new List<string>();
+        public List<string> ActionOperator = new List<string>() {"add", "sub", "set"};
 
         public static string GetLocalisedValue(string key)
         {

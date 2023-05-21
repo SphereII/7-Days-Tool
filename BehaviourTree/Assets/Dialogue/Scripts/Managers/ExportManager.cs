@@ -18,7 +18,7 @@ namespace Dialogue.Editor
 
         private List<DialogGraph> _importedDialogs = new List<DialogGraph>();
 
-        public void Init(DialogGraph dialogGraph)
+        public void Init(DialogGraph dialogGraph, bool forceLocalization)
         {
             var dialog = new Dialog();
             _importedDialogs.Clear();
@@ -31,6 +31,7 @@ namespace Dialogue.Editor
                 return;
             }
 
+            _localizeText = forceLocalization;
             var startStatement = rootNode.child as StatementNode;
             if (startStatement == null)
             {
@@ -46,8 +47,6 @@ namespace Dialogue.Editor
             _localizationPrefix = rootNode.localizationPrefix;
             if (string.IsNullOrEmpty(_localizationPrefix))
                 _localizationPrefix = rootNode.dialogId;
-
-            _localizeText = rootNode.createLocalization;
             _localization.Clear();
 
             Debug.Log($"Generating {dialog.Id}...");
@@ -73,7 +72,7 @@ namespace Dialogue.Editor
                 }
             }
 
-            if (_localizeText)
+            if (forceLocalization)
             {
                 var localizationFile = Path.Combine(exportTarget, "Localization.txt");
                 if (File.Exists(localizationFile))
@@ -308,6 +307,7 @@ namespace Dialogue.Editor
                     requirement.Value = null;
                 if (string.IsNullOrEmpty(requirement.op))
                     requirement.op = null;
+                requirement.Requirementtype = "Hide";
             }
 
             return requirements;

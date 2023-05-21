@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using Dialogue.Scripts.GraphView;
 using Dialogue.Scripts.Nodes;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -16,7 +19,7 @@ namespace Dialogue
 
         public DialogGraph DialogGraph;
         public Action<NodeView> OnNodeSelected;
-
+      
         public DialogueGraphView()
         {
             Insert(0, new GridBackground());
@@ -26,7 +29,6 @@ namespace Dialogue
             this.AddManipulator(new FreehandSelector());
             this.AddManipulator(new SelectionDragger());
             this.AddManipulator(new RectangleSelector());
-
 
             var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Dialogue/UI/uss/DialogueEditor.uss");
             styleSheets.Add(styleSheet);
@@ -49,6 +51,11 @@ namespace Dialogue
             evt.menu.AppendAction($"Add GoTo", (_) => CreateNodeAtPosition(typeof(GotoNode), position));
             evt.menu.AppendAction($"Add Import", (_) => CreateNodeAtPosition(typeof(ImportNode), position));
 
+            evt.menu.AppendSeparator();
+            // Move to Here
+            DrawSubmenus(evt.menu, position);
+            
+            evt.menu.AppendSeparator();
             if (evt.target is NodeView target)
             {
                 evt.menu.AppendSeparator();
@@ -73,6 +80,40 @@ namespace Dialogue
             evt.menu.AppendAction("Auto Sort", _ => UpdateLayout());
         }
 
+        private void DrawSubmenus(DropdownMenu menu, Vector3 position)
+        {
+            foreach (var node in DialogGraph.nodes)
+            {
+                var menuEntry = "";
+                switch (node)
+                {
+                    case StatementNode:
+                        menuEntry = $"Move To Here.../Statements/{node.nodeView.GetText(50)}";
+                        break;
+                    case ResponseNode responseNode:
+                        menuEntry = $"Move To Here.../Responses/{responseNode.nodeView.GetText(50)}";
+                        break;
+                    case ActionNode actionNode:
+                        menuEntry = $"Move To Here.../Actions/{actionNode.nodeView.GetText(50)}";
+                        break;
+                    default:
+                        continue;
+                }
+
+                if (string.IsNullOrEmpty(menuEntry)) continue;
+                menu.AppendAction(menuEntry, _ => AdjustNodePosition(node.nodeView, position),
+                    _ => DropdownMenuAction.Status.Normal);
+            }
+        }
+
+        private void AdjustNodePosition(NodeView nodeView, Vector3 newPos)
+        {
+            var nodePosition = nodeView.GetPosition();
+            nodePosition.x = newPos.x;
+            nodePosition.y = newPos.y;
+            nodeView.SetPosition(nodePosition);
+        }
+        
         private void Expand(NodeView target, bool full = false)
         {
             if (target == null)
@@ -192,6 +233,7 @@ namespace Dialogue
                     }
                 }
 
+                
                 EditorUtility.SetDirty(DialogGraph);
                 AssetDatabase.SaveAssets();
             }
@@ -213,6 +255,8 @@ namespace Dialogue
                     AddElement(edge);
                 });
             });
+   
+
         }
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
@@ -266,6 +310,7 @@ namespace Dialogue
 
             return graphviewchange;
         }
+
         private void CreateNodeView(BaseNode node)
         {
             var nodeView = new NodeView(node);
@@ -275,6 +320,10 @@ namespace Dialogue
 
         public void UpdateLayout()
         {
+
+            var viewLayout = new ViewLayouts(this, DialogGraph);
+            viewLayout.UpdateLayout();
+            return;
             var rootNode = DialogGraph.rootNode as RootNode;
             if (rootNode == null)
             {
@@ -291,7 +340,7 @@ namespace Dialogue
                 // We've already placed the root, we want it in the default position, and everything off of it.
                 if (node is RootNode) continue;
                 AdjustPosition(node, ref position);
-                
+
                 // After the counter reaches its limit, it resets to a new row on the graph.
                 counter++;
                 if (counter <= 5) continue;
@@ -312,5 +361,6 @@ namespace Dialogue
             position.y += 50;
             position.x += nodePosition.width + 50;
         }
+        
     }
 }

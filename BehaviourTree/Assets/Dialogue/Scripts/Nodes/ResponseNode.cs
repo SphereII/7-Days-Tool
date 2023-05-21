@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using Dialogue;
+using Dialogue.Editor;
 using Dialogue.GameData.Dialogs;
 using Dialogue.Nodes.CustomAttributes;
 using UnityEngine;
@@ -27,10 +29,12 @@ public class ResponseNode : BaseNode
         if (string.IsNullOrEmpty(id)) id = guid;
         foreach (var child in Children)
         {
-            if ( child is not StatementNode statement ) continue;
-            nextstatementId = statement.id;
+            if ( child is StatementNode statement )
+                nextstatementId = statement.id;
+            if ( child is ActionNode actionNode)
+                actionNode.Update();
         }
-
+     
         if (parent == null) return;
         parent.Update();
     }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: 311d31091d2cb324f8144c35df0e6f37
-  position: {x: 2916, y: 1500}
+  position: {x: 1824, y: 1897}
   responseText: Patrol around here
   id: Wander
   nextstatementId: 
@@ -40,10 +40,11 @@ MonoBehaviour:
   m_Name: startsubmenu
   m_EditorClassIdentifier: 
   guid: e5c07ce189243184da5dceee6ea86e08
-  position: {x: 3204, y: 300}
+  position: {x: 1368, y: 0}
   statementText: Hello friend, how can I help you?
   id: startsubmenu
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: 5440878533118987329}
   - {fileID: 8026756515684661581}
@@ -51,7 +52,6 @@ MonoBehaviour:
   - {fileID: 3568281737252860434}
   - {fileID: -8637404863734474167}
   - {fileID: 7028902252480232554}
-  - {fileID: 7621853341311656355}
   - {fileID: 6198627367457562656}
   - {fileID: -6600902010536110228}
   ChildrenNames:
@@ -61,7 +61,6 @@ MonoBehaviour:
   - Stay where I am standing
   - Patrol around here
   - Loot around here
-  - I am interested in hiring you.
   - Dismiss
   - Nevermind.
 --- !u!114 &-8583411468485195021
@@ -82,6 +81,7 @@ MonoBehaviour:
   dialogId: GenericNPCCowboy
   localizationPrefix: 
   createLocalization: 0
+  dialogCVarsList: []
 --- !u!114 &-8098709015053007886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: ActionNode
   m_EditorClassIdentifier: 
   guid: 49ada37e055bc734297b16ac1865c5a3
-  position: {x: 1280, y: 1750}
+  position: {x: 1874, y: 1697}
   actions:
   - guid: 00000000-0000-0000-0000-000000000000
     type: AddBuffSDX, SCore
@@ -120,6 +120,7 @@ MonoBehaviour:
     but watch out for bandits hiding in the bushes.
   id: WaterLocation
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: -6539279311495446218}
   - {fileID: 8042548022930006271}
@@ -141,7 +142,7 @@ MonoBehaviour:
   m_Name: ActionNode
   m_EditorClassIdentifier: 
   guid: e5e2a4242470389469f4d5193e9603a9
-  position: {x: 100, y: 1650}
+  position: {x: 1874, y: 2156}
   actions:
   - guid: 00000000-0000-0000-0000-000000000000
     type: AddBuffSDX, SCore
@@ -161,7 +162,7 @@ MonoBehaviour:
   m_Name: ActionNode
   m_EditorClassIdentifier: 
   guid: 1fd5e67a5fb60024c89c02d5d48b9a84
-  position: {x: 2326, y: 1450}
+  position: {x: 1874, y: 1177}
   actions:
   - guid: 00000000-0000-0000-0000-000000000000
     type: AddBuffSDX, SCore
@@ -186,6 +187,7 @@ MonoBehaviour:
     of here. The folks there are friendly and willing to help travelers like yourself.
   id: SafeZoneLocation
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: -6539279311495446218}
   - {fileID: -4777637753079711011}
@@ -227,7 +229,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: 06b78c5381a34de44a395a1bdea14643
-  position: {x: 1736, y: 1400}
+  position: {x: 1824, y: 918}
   responseText: Stay where you are standing
   id: StayHere
   nextstatementId: 
@@ -296,7 +298,7 @@ MonoBehaviour:
   m_Name: ActionNode
   m_EditorClassIdentifier: 
   guid: 79a8de4154023934fb0a45cbd994cdb9
-  position: {x: 2782, y: 1100}
+  position: {x: 1874, y: 259}
   actions:
   - guid: 00000000-0000-0000-0000-000000000000
     type: AddBuffSDX, SCore
@@ -379,7 +381,7 @@ MonoBehaviour:
   m_Name: ActionNode
   m_EditorClassIdentifier: 
   guid: 0d9f95641481c0d43b07ba505ae354a3
-  position: {x: 1146, y: 1350}
+  position: {x: 1874, y: 718}
   actions:
   - guid: 00000000-0000-0000-0000-000000000000
     type: ExecuteCommandSDX, SCore
@@ -399,11 +401,12 @@ MonoBehaviour:
   m_Name: AmmoLocation
   m_EditorClassIdentifier: 
   guid: d6aee906fb77ec6439ca56fb102c6b2d
-  position: {x: 1485, y: 150}
+  position: {x: 1486.9998, y: 155.00003}
   statementText: There's an old general store not too far from here. You might find
     some ammo there, but be careful, it's swarming with outlaws.
   id: AmmoLocation
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: -4777637753079711011}
   - {fileID: 8042548022930006271}
@@ -425,7 +428,7 @@ MonoBehaviour:
   m_Name: ActionNode
   m_EditorClassIdentifier: 
   guid: 1a1bdbd380f226247b4b783cf23b7c7d
-  position: {x: 1602, y: 1000}
+  position: {x: 1874, y: 3135}
   actions:
   - guid: 00000000-0000-0000-0000-000000000000
     type: OpenDialogSDX, SCore
@@ -470,10 +473,11 @@ MonoBehaviour:
   m_Name: startWildWestCowboy
   m_EditorClassIdentifier: 
   guid: 5dc19cc1442692d4ba0e12ddce0a1485
-  position: {x: 34.960083, y: -440.548}
+  position: {x: 456, y: 0}
   statementText: Howdy, partner! What can I do for you in these wild lands?
   id: startWildWestCowboy
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: -26083843676642474}
   - {fileID: -5724885402010031017}
@@ -521,7 +525,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: 3d15f2a6190a8614cafdb266e465ce55
-  position: {x: 556, y: 900}
+  position: {x: 912, y: 0}
   responseText: You looking for work?
   id: startsubmenu
   nextstatementId: startsubmenu
@@ -576,6 +580,7 @@ MonoBehaviour:
   - {fileID: 6198627367457562656}
   - {fileID: -3082932363508366606}
   - {fileID: -6600902010536110228}
+  cvars: []
 --- !u!114 &3568281737252860434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,7 +594,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: ede513de5b5dd1a4bb1de294487d1a4d
-  position: {x: 690, y: 1700}
+  position: {x: 1824, y: 1377}
   responseText: Stay where I am standing
   id: GuardHere
   nextstatementId: 
@@ -642,7 +647,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: fd9aff946ec119049ad413d750fc8ae4
-  position: {x: 2192, y: 1050}
+  position: {x: 1824, y: 0}
   responseText: Follow me
   id: FollowMe
   nextstatementId: 
@@ -696,7 +701,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: 6f0e8fce4328f3a4c9354c82e36f1f88
-  position: {x: 1870, y: 1800}
+  position: {x: 1824, y: 2356}
   responseText: Loot around here
   id: Loot
   nextstatementId: 
@@ -729,7 +734,7 @@ MonoBehaviour:
   m_Name: ActionNode
   m_EditorClassIdentifier: 
   guid: fa2d782c5092b9546a8a42c545bf91bf
-  position: {x: 2460, y: 1850}
+  position: {x: 1874, y: 2676}
   actions:
   - guid: 00000000-0000-0000-0000-000000000000
     type: AddBuffSDX, SCore
@@ -749,7 +754,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: d79b2caab8ab1d840a62ac55cb64e701
-  position: {x: 1012, y: 950}
+  position: {x: 1824, y: 2876}
   responseText: I am interested in hiring you.
   id: Hire
   nextstatementId: startsubmenu
@@ -784,6 +789,7 @@ MonoBehaviour:
     Nowadays, I try to help folks like you navigate these treacherous lands."
   id: CowboyBackstory
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: -6539279311495446218}
   - {fileID: -4777637753079711011}
@@ -807,7 +813,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: a1e37a1aed63de14eb1549d18d1785b2
-  position: {x: 556, y: 1300}
+  position: {x: 1824, y: 459}
   responseText: Show Me your inventory
   id: ShowMe
   nextstatementId: 

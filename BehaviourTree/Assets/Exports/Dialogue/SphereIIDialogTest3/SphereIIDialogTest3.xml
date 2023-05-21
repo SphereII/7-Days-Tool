@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dialogs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dialog id="SphereIIDialogTest3" startstatementid="start">
+    <statement id="start" text="Hi... &#xD;" ref_text="Hi... &#xD;">
+      <response_entry id="8e5a5043e533b044896f9cd4283ae329" ref_text="Are you an actual nurse?" />
+      <response_entry id="bbd5ede896d367b45bf65b30cd98472f" ref_text="[ Tell Your Story ]" />
+      <response_entry id="d91d012f62899564f95cdb75ff76aed1" ref_text="[ Give Gift ]" />
+      <response_entry id="55b068e835ff84040aed245d02ec0a6a" ref_text="[ Hire ]" />
+    </statement>
+    <statement id="HireThem" text="I'd like to hire you.&#xD;" ref_text="I'd like to hire you.&#xD;">
+      <response_entry id="a4e7ac9b2fb992b499afec5827145621" ref_text="No" />
+    </statement>
+    <statement id="start_01" text="You think I wear this outfit for the fun of it? Yes, I'm a real nurse. I was at work when the world went to shit. &#xD;" ref_text="You think I wear this outfit for the fun of it? Yes, I'm a real nurse. I was at work when the world went to shit. &#xD;" nextstatementid="860354f59236e19469093dfcc989b693" />
+    <statement id="860354f59236e19469093dfcc989b693" text="I worked with a group of first responders. We got a call to the skate park because there was some kids getting sick. We got there, and it was a shit show. All the kids there were sick, and throwing up.&#xD;" ref_text="I worked with a group of first responders. We got a call to the skate park because there was some kids getting sick. We got there, and it was a shit show. All the kids there were sick, and throwing up.&#xD;">
+      <response_entry id="8cd348fe3971aad40a393a38678e28c8" ref_text="What made them sick?" />
+    </statement>
+    <statement id="madethemsick" text="We didn't know at first. We thought it might have been a gas leak, so we called in support from the bio-lab. They came in their hazmat suits, but by the time they arrived, it was too late.&#xD;" ref_text="We didn't know at first. We thought it might have been a gas leak, so we called in support from the bio-lab. They came in their hazmat suits, but by the time they arrived, it was too late.&#xD;" nextstatementid="6ab80a4224cd27e468f508c7129e1e0c" />
+    <statement id="6ab80a4224cd27e468f508c7129e1e0c" text="The lab workers didn't detect any gas leak, so they cleared the area for us to go get the bodies. That's when things got really bad.&#xD;" ref_text="The lab workers didn't detect any gas leak, so they cleared the area for us to go get the bodies. That's when things got really bad.&#xD;" nextstatementid="b6d615aa21cca594386df85aea06f4c6" />
+    <statement id="b6d615aa21cca594386df85aea06f4c6" text="The kids started to get up, growling and snarling at us. I ran back to the van, but I was the only one who made it...&#xD;" ref_text="The kids started to get up, growling and snarling at us. I ran back to the van, but I was the only one who made it...&#xD;">
+      <response_entry id="81d65a3ceb8c3ed48b31e75bf6f01e6a" ref_text="That sounds awful." />
+      <response_entry id="7d91314074cf93e429ff8140b45a4335" ref_text="You could have saved them." />
+    </statement>
+    <statement id="soundsawful" text="I hid in the van for hours, hearing them snarl and growl. I must have fallen asleep; when I woke up, it was all quiet. I woke up to this new hell.&#xD;" ref_text="I hid in the van for hours, hearing them snarl and growl. I must have fallen asleep; when I woke up, it was all quiet. I woke up to this new hell.&#xD;">
+      <response_entry id="6623fa595df9d554cad7263504507bb9" ref_text="Sorry that happened." />
+    </statement>
+    <statement id="sorryithappened" text="Sorry doesn't make it go away. But thanks for listening.&#xD;" ref_text="Sorry doesn't make it go away. But thanks for listening.&#xD;">
+      <response_entry id="6f85d00136a131d42b9ec272c4652190" ref_text="Any Time" />
+    </statement>
+    <statement id="YourStory" text="You must have gotten hit in the head pretty hard, if you don't remember a lot. Sounds like a touch of amnesia.&#xD;" ref_text="You must have gotten hit in the head pretty hard, if you don't remember a lot. Sounds like a touch of amnesia.&#xD;">
+      <response_entry id="965446cdd28313344b2a50a864640b72" ref_text="Amnesia?" />
+      <response_entry id="45783ecad69e5aa40bf30e7e5002ae0f" ref_text="Will it get better?" />
+    </statement>
+    <statement id="amnesia" text="Amnesia is the fancy word for losing your memory. It can happen if you get hit in the head, if you've gotten a fever, or a few other causes.&#xD;" ref_text="Amnesia is the fancy word for losing your memory. It can happen if you get hit in the head, if you've gotten a fever, or a few other causes.&#xD;">
+      <response_entry id="66a25fb797dcdba4aa4f7a83c9085522" ref_text="Will it get any better?" />
+    </statement>
+    <statement id="willitgetbetter" text="It's hard to say. I'm not a doctor, so it's not really area. It might get better over time. You'll just have to have some patience.&#xD;" ref_text="It's hard to say. I'm not a doctor, so it's not really area. It might get better over time. You'll just have to have some patience.&#xD;">
+      <response_entry id="ce39c309699b61546ad9e64fb6a46fb5" ref_text="Thank you." />
+    </statement>
+    <statement id="donotbelieve" text="What the hell? I don't give a shit about you believe. I'm done with you.&#xD;" ref_text="What the hell? I don't give a shit about you believe. I'm done with you.&#xD;">
+      <response_entry id="dc45e2f54800fad4d93f69c870a53238" ref_text="Sorry, I'm just stressed." />
+      <response_entry id="748418ef15bf26c43937413e39c73f7f" ref_text="You've poisoned people for years!" />
+    </statement>
+    <statement id="sorry_1" text="I can understand that. We are all stressed. You don't see us taking it out on others though.&#xD;" ref_text="I can understand that. We are all stressed. You don't see us taking it out on others though.&#xD;">
+      <response_entry id="fcdebf4f5ba015546a31aeb65cda1641" ref_text="I know. Again, sorry." />
+    </statement>
+    <statement id="poisoned" text="Poison people?! What the hell is your problem? &#xD;" ref_text="Poison people?! What the hell is your problem? &#xD;">
+      <response_entry id="869abf0c0e1494e4699d77f37ba52262" ref_text="I know a liar when I see one." />
+    </statement>
+    <response id="8e5a5043e533b044896f9cd4283ae329" text="Are you an actual nurse?" nextstatementid="start_01" ref_text="Are you an actual nurse?" />
+    <response id="bbd5ede896d367b45bf65b30cd98472f" text="[ Tell Your Story ]" nextstatementid="YourStory" ref_text="[ Tell Your Story ]" />
+    <response id="d91d012f62899564f95cdb75ff76aed1" text="[ Give Gift ]" ref_text="[ Give Gift ]" />
+    <response id="55b068e835ff84040aed245d02ec0a6a" text="[ Hire ]" nextstatementid="HireThem" ref_text="[ Hire ]" />
+    <response id="a4e7ac9b2fb992b499afec5827145621" text="No" nextstatementid="start" ref_text="No" />
+    <response id="8cd348fe3971aad40a393a38678e28c8" text="What made them sick?" nextstatementid="madethemsick" ref_text="What made them sick?" />
+    <response id="81d65a3ceb8c3ed48b31e75bf6f01e6a" text="That sounds awful." nextstatementid="soundsawful" ref_text="That sounds awful." />
+    <response id="7d91314074cf93e429ff8140b45a4335" text="You could have saved them." nextstatementid="donotbelieve" ref_text="You could have saved them." />
+    <response id="6623fa595df9d554cad7263504507bb9" text="Sorry that happened." nextstatementid="sorryithappened" ref_text="Sorry that happened." />
+    <response id="6f85d00136a131d42b9ec272c4652190" text="Any Time" nextstatementid="start" ref_text="Any Time" />
+    <response id="965446cdd28313344b2a50a864640b72" text="Amnesia?" nextstatementid="amnesia" ref_text="Amnesia?" />
+    <response id="45783ecad69e5aa40bf30e7e5002ae0f" text="Will it get better?" nextstatementid="willitgetbetter" ref_text="Will it get better?" />
+    <response id="66a25fb797dcdba4aa4f7a83c9085522" text="Will it get any better?" nextstatementid="willitgetbetter" ref_text="Will it get any better?" />
+    <response id="ce39c309699b61546ad9e64fb6a46fb5" text="Thank you." ref_text="Thank you." />
+    <response id="dc45e2f54800fad4d93f69c870a53238" text="Sorry, I'm just stressed." nextstatementid="sorry_1" ref_text="Sorry, I'm just stressed." />
+    <response id="748418ef15bf26c43937413e39c73f7f" text="You've poisoned people for years!" nextstatementid="poisoned" ref_text="You've poisoned people for years!" />
+    <response id="fcdebf4f5ba015546a31aeb65cda1641" text="I know. Again, sorry." ref_text="I know. Again, sorry." />
+    <response id="869abf0c0e1494e4699d77f37ba52262" text="I know a liar when I see one." nextstatementid="start" ref_text="I know a liar when I see one." />
+  </dialog>
+</dialogs>

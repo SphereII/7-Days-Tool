@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Foldout text="Foldout" name="CollapseFoldOut">
+        <ui:TextField picking-mode="Ignore" label="Dialog ID" name="txtDialogID" binding-path="dialogId" />
+        <ui:TextField picking-mode="Ignore" label="Localization Prefix" name="txtLocalizationPrefix" binding-path="localizationPrefix" />
+        <ui:ListView focusable="true" binding-path="dialogCVarsList" name="DialogCVar" virtualization-method="DynamicHeight" show-foldout-header="true" header-title="CVars" show-add-remove-footer="true" reorderable="true" tooltip="A list of cvars to use as a reference in your dialog" style="max-height: none;" />
+    </ui:Foldout>
+</ui:UXML>
