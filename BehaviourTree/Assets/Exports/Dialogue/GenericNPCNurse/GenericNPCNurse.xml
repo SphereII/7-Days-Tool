@@ -1,42 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dialogs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <dialog id="GenericNPCNurse" startstatementid="startNurse">
-    <statement id="startNurse" text="Hello, traveler! How may I assist you amidst these troubled times?" ref_text="Hello, traveler! How may I assist you amidst these troubled times?" nextstatementid="">
+    <statement id="startNurse" text="GenericNPCNurse_startNurse" ref_text="Hello, traveler! How may I assist you amidst these troubled times?" nextstatementid="">
       <response_entry id="startsubmenu" ref_text="Do you need assistance?" />
       <response_entry id="TellMeAboutYourself" ref_text="Tell me about yourself." />
       <response_entry id="FindMedicine" ref_text="Where can I find some medicine around here?" />
       <response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
       <response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
       <response_entry id="Bye" ref_text="Take care, stay safe!" />
-      <response_entry id="shop" ref_text="May I see your inventory?" />
-      <response_entry id="jobsnone" ref_text="Do you have any jobs?" />
-      <response_entry id="specialjobshave" ref_text="Got any special jobs?" />
-      <response_entry id="admin" ref_text="Admin Options" />
-      <response_entry id="done" ref_text="Nevermind." />
-      <response_entry id="background" ref_text="Can you give me some information?" />
     </statement>
-    <statement id="NurseBackstory" text="Before everything turned upside down, I was a nurse in Phoenix. I've been using my medical knowledge to help survivors ever since. We're all in this together, after all." ref_text="Before everything turned upside down, I was a nurse in Phoenix. I've been using my medical knowledge to help survivors ever since. We're all in this together, after all." nextstatementid="">
+    <statement id="NurseBackstory" text="GenericNPCNurse_NurseBackstory" ref_text="Before everything turned upside down, I was a nurse in Phoenix. I've been using my medical knowledge to help survivors ever since. We're all in this together, after all." nextstatementid="">
       <response_entry id="FindMedicine" ref_text="Where can I find some medicine around here?" />
       <response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
       <response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
       <response_entry id="Bye" ref_text="Take care, stay safe!" />
     </statement>
-    <statement id="MedicineLocation" text="There's an abandoned pharmacy in the next town. You might find some medicine there, but tread carefully, the place is crawling with the undead." ref_text="There's an abandoned pharmacy in the next town. You might find some medicine there, but tread carefully, the place is crawling with the undead." nextstatementid="">
+    <statement id="MedicineLocation" text="GenericNPCNurse_MedicineLocation" ref_text="There's an abandoned pharmacy in the next town. You might find some medicine there, but tread carefully, the place is crawling with the undead." nextstatementid="">
       <response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
       <response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
       <response_entry id="Bye" ref_text="Take care, stay safe!" />
     </statement>
-    <statement id="WaterLocation" text="There's a well in the center of this town. The water's still potable, but always remember to boil it first." ref_text="There's a well in the center of this town. The water's still potable, but always remember to boil it first." nextstatementid="">
+    <statement id="WaterLocation" text="GenericNPCNurse_WaterLocation" ref_text="There's a well in the center of this town. The water's still potable, but always remember to boil it first." nextstatementid="">
       <response_entry id="FindMedicine" ref_text="Where can I find some medicine around here?" />
       <response_entry id="AskForShelter" ref_text="Where's the nearest safe zone?" />
       <response_entry id="Bye" ref_text="Take care, stay safe!" />
     </statement>
-    <statement id="SafeZoneLocation" text="The nearest safe zone is the old trading post. It's about half a day's walk from here. The folks there have fortified the place and they're always looking out for fellow survivors." ref_text="The nearest safe zone is the old trading post. It's about half a day's walk from here. The folks there have fortified the place and they're always looking out for fellow survivors." nextstatementid="">
+    <statement id="SafeZoneLocation" text="GenericNPCNurse_SafeZoneLocation" ref_text="The nearest safe zone is the old trading post. It's about half a day's walk from here. The folks there have fortified the place and they're always looking out for fellow survivors." nextstatementid="">
       <response_entry id="FindMedicine" ref_text="Where can I find some medicine around here?" />
       <response_entry id="FindWater" ref_text="I need to find some water. Any ideas?" />
       <response_entry id="Bye" ref_text="Take care, stay safe!" />
     </statement>
-    <statement id="startsubmenu" text="Hello friend, how can I help you?" ref_text="Hello friend, how can I help you?" nextstatementid="">
+    <statement id="startsubmenu" text="GenericNPCNurse_startsubmenu" ref_text="Hello friend, how can I help you?" nextstatementid="">
       <response_entry id="FollowMe" ref_text="Follow me" />
       <response_entry id="ShowMe" ref_text="Show Me your inventory" />
       <response_entry id="StayHere" ref_text="Stay where you are standing" />
@@ -47,192 +41,61 @@
       <response_entry id="Dismiss" ref_text="Dismiss" />
       <response_entry id="done" ref_text="Nevermind." />
     </statement>
-    <statement id="background" text="What would you like to know about?" ref_text="What would you like to know about?" nextstatementid="">
-      <response_entry id="navezgane" ref_text="Navezgane?" />
-      <response_entry id="theduke" ref_text="The Duke?" />
-      <response_entry id="cassadores" ref_text="The Cassadores?" />
-      <response_entry id="noah" ref_text="Noah Wright?" />
-      <response_entry id="nevermind" ref_text="Nevermind." />
-      <response_entry id="TellMeAboutPastries" ref_text="Can you tell me about your pastries?" />
-      <response_entry id="DealsToday" ref_text="Do you have any deals today?" />
-      <response_entry id="NoThanks" ref_text="No, thank you. I'll come back later." />
-      <response_entry id="TellMeAboutPastries" ref_text="Can you tell me about your pastries?" />
-      <response_entry id="DealsToday" ref_text="Do you have any deals today?" />
-      <response_entry id="NoThanks" ref_text="No, thank you. I'll come back later." />
-    </statement>
-    <statement id="navezgane" text="Navezgane County Arizona one of the last true Eden’s on Earth where crops can still grow which is mostly Apache Indian Reservation territory." ref_text="Navezgane County Arizona one of the last true Eden’s on Earth where crops can still grow which is mostly Apache Indian Reservation territory." nextstatementid="background" />
-    <statement id="theduke" text="The most powerful man in Navezgane before the war was an ambitious, crooked Native American of Apache decent named 'Duke Cassadore' which means Warrior and Chief in Apache." ref_text="The most powerful man in Navezgane before the war was an ambitious, crooked Native American of Apache decent named 'Duke Cassadore' which means Warrior and Chief in Apache." nextstatementid="background" />
-    <statement id="cassadores" text="The Duke's personal band of mercenaries." ref_text="The Duke's personal band of mercenaries." nextstatementid="background" />
-    <statement id="noah" text="The founder of the White River Settler's Outposts, Noah White stood up to the Duke and is now on the run from the Cassadores." ref_text="The founder of the White River Settler's Outposts, Noah White stood up to the Duke and is now on the run from the Cassadores." nextstatementid="background" />
-    <statement id="currentjobs1" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="startNurse">
-      <response_entry id="jobsnext2" ref_text="Next Tier" />
-      <response_entry id="nevermind" ref_text="Nevermind." />
-    </statement>
-    <statement id="currentjobs2" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="startNurse">
-      <response_entry id="jobsprev1" ref_text="Previous Tier" />
-      <response_entry id="jobsnext3" ref_text="Next Tier" />
-      <response_entry id="nevermind" ref_text="Nevermind." />
-    </statement>
-    <statement id="currentjobs3" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="startNurse">
-      <response_entry id="jobsprev2" ref_text="Previous Tier" />
-      <response_entry id="jobsnext4" ref_text="Next Tier" />
-      <response_entry id="nevermind" ref_text="Nevermind." />
-    </statement>
-    <statement id="currentjobs4" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="startNurse">
-      <response_entry id="jobsprev3" ref_text="Previous Tier" />
-      <response_entry id="jobsnext5" ref_text="Next Tier" />
-      <response_entry id="nevermind" ref_text="Nevermind." />
-    </statement>
-    <statement id="currentjobs5" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="startNurse">
-      <response_entry id="jobsprev4" ref_text="Previous Tier" />
-      <response_entry id="nevermind" ref_text="Nevermind." />
-    </statement>
-    <statement id="currentjobsspecial" text="Do any of these tasks sound like something you can do?" ref_text="Do any of these tasks sound like something you can do?" nextstatementid="startNurse">
-      <response_entry id="nevermind" ref_text="Nevermind." />
-    </statement>
-    <statement id="nojobs" text="I have no work at this time." ref_text="I have no work at this time." nextstatementid="startNurse" />
-    <statement id="admin" text="Admin Options" ref_text="Admin Options" nextstatementid="">
-      <response_entry id="restock" ref_text="Restock Inventory" />
-      <response_entry id="resetquests" ref_text="Reset Quests" />
-      <response_entry id="nevermind" ref_text="Nevermind." />
-    </statement>
-    <statement id="PastrySelection" text="Sure, we have a wide selection of pastries ranging from croissants to cupcakes. What are you in the mood for?" ref_text="Sure, we have a wide selection of pastries ranging from croissants to cupcakes. What are you in the mood for?" nextstatementid="">
-      <response_entry id="chocolate" ref_text="I'm in the mood for a chocolate croissant." />
-      <response_entry id="vanilla" ref_text="I'm in the mood for a vanilla croissant." />
-    </statement>
-    <statement id="MuffinDeal" text="Yes, we have a special deal on all muffins today. Would you like to try some?" ref_text="Yes, we have a special deal on all muffins today. Would you like to try some?" nextstatementid="">
-      <response_entry id="YesPlease" ref_text="Yes Please." />
-      <response_entry id="NoThanks" ref_text="No, thank you. I'll come back later." />
-    </statement>
-    <response id="TellMeAboutYourself" text="Tell me about yourself." nextstatementid="NurseBackstory" ref_text="Tell me about yourself." />
-    <response id="FindMedicine" text="Where can I find some medicine around here?" nextstatementid="MedicineLocation" ref_text="Where can I find some medicine around here?">
+    <response id="TellMeAboutYourself" text="GenericNPCNurse_TellMeAboutYourself" nextstatementid="NurseBackstory" ref_text="Tell me about yourself.">
+      <action type="PlaySoundSDX, SCore" id="NurseBackstory" />
+    </response>
+    <response id="FindMedicine" text="GenericNPCNurse_FindMedicine" nextstatementid="MedicineLocation" ref_text="Where can I find some medicine around here?">
       <action type="AddItemSDX, SCore" id="medicineFirstAidBandage" />
+      <action type="PlaySoundSDX, SCore" id="MedicineLocation" />
     </response>
-    <response id="FindWater" text="I need to find some water. Any ideas?" nextstatementid="WaterLocation" ref_text="I need to find some water. Any ideas?">
+    <response id="FindWater" text="GenericNPCNurse_FindWater" nextstatementid="WaterLocation" ref_text="I need to find some water. Any ideas?">
       <action type="AddItemSDX, SCore" id="drinkJarBoiledWater" />
+      <action type="PlaySoundSDX, SCore" id="WaterLocation" />
     </response>
-    <response id="AskForShelter" text="Where's the nearest safe zone?" nextstatementid="SafeZoneLocation" ref_text="Where's the nearest safe zone?" />
-    <response id="Bye" text="Take care, stay safe!" nextstatementid="done" ref_text="Take care, stay safe!" />
-    <response id="startsubmenu" text="Do you need assistance?" nextstatementid="startsubmenu" ref_text="Do you need assistance?" />
-    <response id="Hire" text="I am interested in hiring you." nextstatementid="startsubmenu" ref_text="I am interested in hiring you.">
+    <response id="AskForShelter" text="GenericNPCNurse_AskForShelter" nextstatementid="SafeZoneLocation" ref_text="Where's the nearest safe zone?">
+      <action type="PlaySoundSDX, SCore" id="SafeZoneLocation" />
+    </response>
+    <response id="Bye" text="GenericNPCNurse_Bye" nextstatementid="done" ref_text="Take care, stay safe!" />
+    <response id="startsubmenu" text="GenericNPCNurse_startsubmenu" nextstatementid="startsubmenu" ref_text="Do you need assistance?">
+      <action type="PlaySoundSDX, SCore" id="startsubmenu" />
+    </response>
+    <response id="Hire" text="GenericNPCNurse_Hire" nextstatementid="startsubmenu" ref_text="I am interested in hiring you.">
       <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not" />
       <action type="OpenDialogSDX, SCore" id="Hire" />
+      <action type="PlaySoundSDX, SCore" id="startsubmenu" />
     </response>
-    <response id="FollowMe" text="Follow me" nextstatementid="" ref_text="Follow me">
+    <response id="FollowMe" text="GenericNPCNurse_FollowMe" nextstatementid="" ref_text="Follow me">
       <requirement type="Leader, SCore" requirementtype="Hide" />
       <action type="AddBuffSDX, SCore" id="buffOrderFollow" value="Self" />
     </response>
-    <response id="TellMe" text="Tell me about yourself." nextstatementid="" ref_text="Tell me about yourself." />
-    <response id="ShowMe" text="Show Me your inventory" nextstatementid="" ref_text="Show Me your inventory">
+    <response id="TellMe" text="GenericNPCNurse_TellMe" nextstatementid="" ref_text="Tell me about yourself." />
+    <response id="ShowMe" text="GenericNPCNurse_ShowMe" nextstatementid="" ref_text="Show Me your inventory">
       <requirement type="Leader, SCore" requirementtype="Hide" />
       <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
     </response>
-    <response id="StayHere" text="Stay where you are standing" nextstatementid="" ref_text="Stay where you are standing">
+    <response id="StayHere" text="GenericNPCNurse_StayHere" nextstatementid="" ref_text="Stay where you are standing">
       <requirement type="Leader, SCore" requirementtype="Hide" />
       <action type="AddBuffSDX, SCore" id="buffOrderStay" value="Self" />
     </response>
-    <response id="Wander" text="Patrol around here" nextstatementid="" ref_text="Patrol around here">
+    <response id="Wander" text="GenericNPCNurse_Wander" nextstatementid="" ref_text="Patrol around here">
       <requirement type="Leader, SCore" requirementtype="Hide" />
       <action type="AddBuffSDX, SCore" id="buffOrderWander" value="Self" />
     </response>
-    <response id="GuardHere" text="Stay where I am standing" nextstatementid="" ref_text="Stay where I am standing">
+    <response id="GuardHere" text="GenericNPCNurse_GuardHere" nextstatementid="" ref_text="Stay where I am standing">
       <requirement type="Leader, SCore" requirementtype="Hide" />
       <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
       <action type="AddBuffSDX, SCore" id="buffOrderGuardHere" value="Self" />
     </response>
-    <response id="Loot" text="Loot around here" nextstatementid="" ref_text="Loot around here">
+    <response id="Loot" text="GenericNPCNurse_Loot" nextstatementid="" ref_text="Loot around here">
       <requirement type="Leader, SCore" requirementtype="Hide" />
       <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
       <action type="AddBuffSDX, SCore" id="buffOrderLoot" value="Self" />
     </response>
-    <response id="Dismiss" text="Dismiss" nextstatementid="" ref_text="Dismiss">
+    <response id="Dismiss" text="GenericNPCNurse_Dismiss" nextstatementid="" ref_text="Dismiss">
       <requirement type="Leader, SCore" requirementtype="Hide" />
       <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
       <action type="AddBuffSDX, SCore" id="buffOrderDismiss" value="Self" />
     </response>
-    <response id="done" text="Nevermind." nextstatementid="" ref_text="Nevermind." />
-    <response id="shop" text="May I see your inventory?" nextstatementid="" ref_text="May I see your inventory?">
-      <action type="Trader" id="trade" />
-    </response>
-    <response id="jobsnone" text="Do you have any jobs?" nextstatementid="nojobs" ref_text="Do you have any jobs?">
-      <requirement type="QuestStatus" requirementtype="Hide" value="InProgress" />
-    </response>
-    <response id="jobshave1" text="Do you have any jobs?" nextstatementid="currentjobs1" ref_text="Do you have any jobs?">
-      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
-      <requirement type="QuestTierHighest" requirementtype="Hide" value="1" />
-      <action type="AddJournalEntry" id="questTip" />
-    </response>
-    <response id="jobshave2" text="Do you have any jobs?" nextstatementid="currentjobs2" ref_text="Do you have any jobs?">
-      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
-      <requirement type="QuestTierHighest" requirementtype="Hide" value="2" />
-      <action type="AddJournalEntry" id="questTip" />
-    </response>
-    <response id="jobshave3" text="Do you have any jobs?" nextstatementid="currentjobs3" ref_text="Do you have any jobs?">
-      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
-      <requirement type="QuestTierHighest" requirementtype="Hide" value="3" />
-      <action type="AddJournalEntry" id="questTip" />
-    </response>
-    <response id="jobshave4" text="Do you have any jobs?" nextstatementid="currentjobs4" ref_text="Do you have any jobs?">
-      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
-      <requirement type="QuestTierHighest" requirementtype="Hide" value="4" />
-      <action type="AddJournalEntry" id="questTip" />
-    </response>
-    <response id="jobshave5" text="Do you have any jobs?" nextstatementid="currentjobs5" ref_text="Do you have any jobs?">
-      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
-      <requirement type="QuestTierHighest" requirementtype="Hide" value="5" />
-      <action type="AddJournalEntry" id="questTip" />
-    </response>
-    <response id="jobsprev1" text="Previous Tier" nextstatementid="currentjobs1" ref_text="Previous Tier">
-      <requirement type="QuestTier" requirementtype="Hide" value="1" />
-    </response>
-    <response id="jobsprev2" text="Previous Tier" nextstatementid="currentjobs2" ref_text="Previous Tier">
-      <requirement type="QuestTier" requirementtype="Hide" value="2" />
-    </response>
-    <response id="jobsprev3" text="Previous Tier" nextstatementid="currentjobs3" ref_text="Previous Tier">
-      <requirement type="QuestTier" requirementtype="Hide" value="3" />
-    </response>
-    <response id="jobsprev4" text="Previous Tier" nextstatementid="currentjobs4" ref_text="Previous Tier">
-      <requirement type="QuestTier" requirementtype="Hide" value="4" />
-    </response>
-    <response id="jobsnext2" text="Next Tier" nextstatementid="currentjobs2" ref_text="Next Tier">
-      <requirement type="QuestTier" requirementtype="Hide" value="2" />
-    </response>
-    <response id="jobsnext3" text="Next Tier" nextstatementid="currentjobs3" ref_text="Next Tier">
-      <requirement type="QuestTier" requirementtype="Hide" value="3" />
-    </response>
-    <response id="jobsnext4" text="Next Tier" nextstatementid="currentjobs4" ref_text="Next Tier">
-      <requirement type="QuestTier" requirementtype="Hide" value="4" />
-    </response>
-    <response id="jobsnext5" text="Next Tier" nextstatementid="currentjobs5" ref_text="Next Tier">
-      <requirement type="QuestTier" requirementtype="Hide" value="5" />
-    </response>
-    <response id="specialjobshave" text="Got any special jobs?" nextstatementid="currentjobsspecial" ref_text="Got any special jobs?">
-      <requirement type="QuestStatus" requirementtype="Hide" value="NotStarted" />
-      <requirement type="QuestsAvailable" requirementtype="Hide" value="special" />
-      <action type="AddJournalEntry" id="questTip" />
-    </response>
-    <response id="background" text="Can you give me some information?" nextstatementid="background" ref_text="Can you give me some information?" />
-    <response id="navezgane" text="Navezgane?" nextstatementid="navezgane" ref_text="Navezgane?" />
-    <response id="theduke" text="The Duke?" nextstatementid="theduke" ref_text="The Duke?" />
-    <response id="cassadores" text="The Cassadores?" nextstatementid="cassadores" ref_text="The Cassadores?" />
-    <response id="noah" text="Noah Wright?" nextstatementid="noah" ref_text="Noah Wright?" />
-    <response id="whiteriveroutposts" text="White River?" nextstatementid="whiteriveroutposts" ref_text="White River?" />
-    <response id="nevermind" text="Nevermind." nextstatementid="start" ref_text="Nevermind." />
-    <response id="admin" text="Admin Options" nextstatementid="admin" ref_text="Admin Options">
-      <requirement type="Admin" requirementtype="Hide" />
-    </response>
-    <response id="restock" text="Restock Inventory" nextstatementid="" ref_text="Restock Inventory">
-      <action type="Trader" id="restock" />
-    </response>
-    <response id="resetquests" text="Reset Quests" nextstatementid="" ref_text="Reset Quests">
-      <action type="Trader" id="reset_quests" />
-    </response>
-    <response id="done" text="Nevermind." nextstatementid="" ref_text="Nevermind." />
-    <response id="TellMeAboutPastries" text="Can you tell me about your pastries?" nextstatementid="PastrySelection" ref_text="Can you tell me about your pastries?" />
-    <response id="DealsToday" text="Do you have any deals today?" nextstatementid="MuffinDeal" ref_text="Do you have any deals today?" />
-    <response id="NoThanks" text="No, thank you. I'll come back later." nextstatementid="done" ref_text="No, thank you. I'll come back later." />
-    <response id="chocolate" text="I'm in the mood for a chocolate croissant." nextstatementid="startbaker" ref_text="I'm in the mood for a chocolate croissant." />
-    <response id="vanilla" text="I'm in the mood for a vanilla croissant." nextstatementid="startbaker" ref_text="I'm in the mood for a vanilla croissant." />
-    <response id="YesPlease" text="Yes Please." nextstatementid="startbaker" ref_text="Yes Please." />
+    <response id="done" text="GenericNPCNurse_done" nextstatementid="" ref_text="Nevermind." />
   </dialog>
 </dialogs>

@@ -62,6 +62,22 @@ namespace Dialogue
             return text;
         }
 
+        public string GetCleanText(int maxLength = -1)
+        {
+            var text = Node switch
+            {
+                StatementNode statementNode => statementNode.statementText,
+                ResponseNode responseNode => responseNode.responseText,
+                _ => typeof(Node).ToString()
+            };
+
+            if (string.IsNullOrEmpty(text))
+                return "<No Response>";
+            if (maxLength > 0 && text.Length > maxLength)
+                return text.Substring(0, maxLength);
+            return text;
+        }
+
         public void UpdateTitle()
         {
             title = GetText(30);
@@ -164,8 +180,12 @@ namespace Dialogue
             Undo.RecordObject(Node, "Set Position");
             Node.position.x = newPos.xMin;
             Node.position.y = newPos.yMin;
+            Node.Order = newPos.yMin;
             EditorUtility.SetDirty(Node); // Helps with save for record object
             alreadyMoved = true;
+
+            if (Node is not ResponseNode responseNode) return;
+            responseNode.parent.Update();
         }
 
         public void Collapse(bool full = false)

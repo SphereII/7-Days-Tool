@@ -10,5 +10,7 @@ namespace Dialogue.GameData.Dialogs
     {
         [XmlAttribute(AttributeName = "listindex")] public string listindex = null;
         [XmlAttribute(AttributeName = "tier")] public string tier = null;
+        [XmlAttribute(AttributeName = "type")] public string type = null;
+
     }
 }

@@ -15,7 +15,6 @@ namespace Dialogue.Editor.EditorWindows
             _ve = visualTreeAsset.CloneTree();
             
             _actionNode= serializedObject.targetObject as ActionNode;
-            if (_actionNode == null) return _ve;
             return _ve;
         }
         public override void OnInspectorGUI()

@@ -10,4 +10,5 @@ namespace Dialogue.GameData.Dialogs
     {
         [XmlElement(ElementName = "dialog")] public List<Dialog> Dialog = new List<Dialog>();
     }
+    
 }

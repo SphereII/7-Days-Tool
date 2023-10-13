@@ -80,6 +80,14 @@
             <property name="idToolTip" value="The name of a quest." />
         </action>
 
+        <action name="PlaySoundSDX" >
+            <property name="class" value="PlaySoundSDX, SCore" />
+            <property name="description" value="Plays a sound inside the player's head/" />
+            <property name="idDescription" value="Sound Name" />
+            <property name="idType" value="statements" />
+            <property name="idToolTip" value="The name of the sound data node." />
+        </action>
+
         <action name="OpenDialogSDX" >
             <property name="class" value="OpenDialogSDX, SCore" />
             <property name="description" value="Opens the Hire window" />

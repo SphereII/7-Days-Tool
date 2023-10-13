@@ -16,7 +16,18 @@ namespace Dialogue.Editor
         private static Dictionary<string, List<string>> _gameInfo;
         public static Dictionary<string, string> LanguageEn = new Dictionary<string, string>();
         private static ConfigurationManager _instance;
+        private static List<DialogGraph> _history = new List<DialogGraph>();
 
+        public List<DialogGraph> GetHistory()
+        {
+            return _history;
+        }
+
+        public void AddHistory(DialogGraph graph)
+        {
+            if (_history.Contains(graph)) return;
+            _history.Add(graph);
+        }
         public List<string> Operators = new List<string>() {"None", "lt", "lte", "eq", "neq", "gte", "gt"};
         public List<string> ActionOperator = new List<string>() {"add", "sub", "set"};
 

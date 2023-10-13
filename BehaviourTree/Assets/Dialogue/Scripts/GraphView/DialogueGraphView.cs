@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using Dialogue.Editor;
 using Dialogue.Scripts.GraphView;
 using Dialogue.Scripts.Nodes;
 using UnityEditor;
@@ -183,6 +184,8 @@ namespace Dialogue
 
         private NodeView FindNodeView(BaseNode node)
         {
+            // Bad node?
+            if (node == null) return null;
             return GetNodeByGuid(node.guid) as NodeView;
         }
 
@@ -202,6 +205,9 @@ namespace Dialogue
 
         public void PopulateView(DialogGraph tree)
         {
+            var cfg = new ConfigurationManager();
+            cfg.AddHistory(tree);
+            
             DialogGraph = tree;
 
             graphViewChanged -= OnGraphViewChanged;
@@ -315,6 +321,7 @@ namespace Dialogue
         {
             var nodeView = new NodeView(node);
             nodeView.OnNodeSelected += OnNodeSelected;
+            node.currenGraphView = this;
             AddElement(nodeView);
         }
 

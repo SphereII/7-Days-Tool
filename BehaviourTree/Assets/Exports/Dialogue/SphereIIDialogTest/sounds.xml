@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sounds xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <append xpath="/Sounds">
+    <SoundDataNode name="SphereIIDialogTest_start">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?start" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_HireThem">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?HireThem" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_start_01">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?start_01" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_860354f59236e19469093dfcc989b693">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?860354f59236e19469093dfcc989b693" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_madethemsick">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?madethemsick" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_6ab80a4224cd27e468f508c7129e1e0c">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?6ab80a4224cd27e468f508c7129e1e0c" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_b6d615aa21cca594386df85aea06f4c6">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?b6d615aa21cca594386df85aea06f4c6" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_soundsawful">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?soundsawful" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_sorryithappened">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?sorryithappened" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_YourStory">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?YourStory" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_amnesia">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?amnesia" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_willitgetbetter">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?willitgetbetter" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_donotbelieve">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?donotbelieve" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_sorry_1">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?sorry_1" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+    <SoundDataNode name="SphereIIDialogTest_poisoned">
+      <AudioSource name="Sounds/AudioSource_Notifications" />
+      <AudioClip ClipName="#@modfolder:Resources/SphereIIDialogTest.unity3d?poisoned" Loop="false" />
+      <LocalCrouchVolumeScale value="0" />
+      <CrouchNoiseScale value="0.5" />
+      <NoiseScale value="1" />
+      <MaxVoices value="10" />
+    </SoundDataNode>
+  </append>
+</Sounds>

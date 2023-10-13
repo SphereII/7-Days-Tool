@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sounds xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SoundDataNode name="startNurse">
+    <AudioSource name="Sounds/AudioSource_Notifications" />
+    <AudioClip ClipName="#@modfolder:Resources/GenericNPCNurse.unity3d?startNurse" Loop="false" />
+    <LocalCrouchVolumeScale value="0" />
+    <CrouchNoiseScale value="0.5" />
+    <NoiseScale value="1" />
+    <MaxVoices value="10" />
+  </SoundDataNode>
+  <SoundDataNode name="NurseBackstory">
+    <AudioSource name="Sounds/AudioSource_Notifications" />
+    <AudioClip ClipName="#@modfolder:Resources/GenericNPCNurse.unity3d?NurseBackstory" Loop="false" />
+    <LocalCrouchVolumeScale value="0" />
+    <CrouchNoiseScale value="0.5" />
+    <NoiseScale value="1" />
+    <MaxVoices value="10" />
+  </SoundDataNode>
+  <SoundDataNode name="MedicineLocation">
+    <AudioSource name="Sounds/AudioSource_Notifications" />
+    <AudioClip ClipName="#@modfolder:Resources/GenericNPCNurse.unity3d?MedicineLocation" Loop="false" />
+    <LocalCrouchVolumeScale value="0" />
+    <CrouchNoiseScale value="0.5" />
+    <NoiseScale value="1" />
+    <MaxVoices value="10" />
+  </SoundDataNode>
+  <SoundDataNode name="WaterLocation">
+    <AudioSource name="Sounds/AudioSource_Notifications" />
+    <AudioClip ClipName="#@modfolder:Resources/GenericNPCNurse.unity3d?WaterLocation" Loop="false" />
+    <LocalCrouchVolumeScale value="0" />
+    <CrouchNoiseScale value="0.5" />
+    <NoiseScale value="1" />
+    <MaxVoices value="10" />
+  </SoundDataNode>
+  <SoundDataNode name="SafeZoneLocation">
+    <AudioSource name="Sounds/AudioSource_Notifications" />
+    <AudioClip ClipName="#@modfolder:Resources/GenericNPCNurse.unity3d?SafeZoneLocation" Loop="false" />
+    <LocalCrouchVolumeScale value="0" />
+    <CrouchNoiseScale value="0.5" />
+    <NoiseScale value="1" />
+    <MaxVoices value="10" />
+  </SoundDataNode>
+  <SoundDataNode name="startsubmenu">
+    <AudioSource name="Sounds/AudioSource_Notifications" />
+    <AudioClip ClipName="#@modfolder:Resources/GenericNPCNurse.unity3d?startsubmenu" Loop="false" />
+    <LocalCrouchVolumeScale value="0" />
+    <CrouchNoiseScale value="0.5" />
+    <NoiseScale value="1" />
+    <MaxVoices value="10" />
+  </SoundDataNode>
+</Sounds>

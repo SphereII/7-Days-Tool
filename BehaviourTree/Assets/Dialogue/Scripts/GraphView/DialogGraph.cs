@@ -139,6 +139,16 @@ namespace Dialogue
         }
 
 
+        public List<StatementNode> GetStatements()
+        {
+            var statementNodes = new List<StatementNode>();
+            foreach (var node in nodes)
+            {
+                if (node is not StatementNode statementNode) continue;
+                statementNodes.Add(statementNode);
+            }
+            return statementNodes;
+        }
         public DialogGraph Clone()
         {
             var tree = Instantiate(this);

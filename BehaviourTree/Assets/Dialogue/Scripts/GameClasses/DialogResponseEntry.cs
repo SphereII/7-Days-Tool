@@ -1,7 +1,9 @@
-﻿using System.Xml.Serialization;
+﻿using System;
+using System.Xml.Serialization;
 
 namespace Dialogue.GameData.Dialogs
 {
+    [Serializable]
     [XmlRoot(ElementName = "response_entry")]
     public class DialogResponseEntry
     {
@@ -9,5 +11,6 @@ namespace Dialogue.GameData.Dialogs
         [XmlAttribute(AttributeName = "ref_text")] public string Ref_text = null;
         
         [XmlAttribute(AttributeName = "uniqueid")] public string uniqueid = null;
+        [XmlIgnore] public NodeView nodeView = null;
     }
 }

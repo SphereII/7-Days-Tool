@@ -1,8 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 using Dialogue.Editor;
+
 using Dialogue.GameData.Dialogs;
 using Dialogue.Nodes.CustomAttributes;
 using Dialogue.Scripts.Nodes;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class StatementNode : BaseNode
@@ -18,6 +21,7 @@ public class StatementNode : BaseNode
     public List<DialogResponseEntry> ResponseEntries = new List<DialogResponseEntry>();
     [HideInInspector] public List<BaseNode> Children = new List<BaseNode>();
 
+    public List<DialogAction> Actions = new List<DialogAction>();
     // These display the friendly name for the responses.
     [ReadOnly] public List<string> ChildrenNames = new List<string>();
 
@@ -28,14 +32,15 @@ public class StatementNode : BaseNode
         
         nodeView?.UpdateTitle();
         
-        var currentGraph = DialogueEditor.GetCurrentGraphView();
-        List<BaseNode> childrenToRemove = new List<BaseNode>();
+        var childrenToRemove = new List<BaseNode>();
+        Children = Children.OrderBy(p => p.Order).ToList();
 
         foreach (var child in Children)
         {
             if (child is ActionNode actionNode)
             {
-                childrenToRemove.Add(child);
+                ChildrenNames.Add("Audio");
+                //childrenToRemove.Add(child);
             }
 
             if (child is ResponseNode response)
@@ -66,6 +71,7 @@ public class StatementNode : BaseNode
                 nextstatementId =
                     $"{statementNode.id}";// ( {ConfigurationManager.GetLocalisedValue(statementNode.statementText)} )";
                 ChildrenNames.Add(statementNode.statementText);
+
             }
          
         }
@@ -75,10 +81,9 @@ public class StatementNode : BaseNode
         {
             if (child is ResponseNode responseNode)
                 ChildrenNames.Remove(ConfigurationManager.GetLocalisedValue(responseNode.responseText));
-            currentGraph?.DialogGraph.RemoveChild(this, child);
+            currenGraphView?.DialogGraph.RemoveChild(this, child);
         }
 
-        
         // Action subscribed from the inspector's view, so it can refresh the list of items.
         OnNodeUpdate?.Invoke();
         // if (forceRefresh)

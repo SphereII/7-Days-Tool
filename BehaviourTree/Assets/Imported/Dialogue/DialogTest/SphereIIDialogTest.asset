@@ -1,0 +1,940 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8848371759850706435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: amnesia
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 8e064ad0b90011b499b12a6e2d6e6c96
+  position: {x: 2631, y: 398}
+  statementText: "Amnesia is the fancy word for losing your memory. It can happen
+    if you get hit in the head, if you've gotten a fever, or a few other causes.\r"
+  id: amnesia
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: 7707247330232388837}
+  ChildrenNames:
+  - Will it get any better?
+--- !u!114 &-8786250033022621710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 5ddea6bbb1a2cf84282b79d67e3a0552
+  position: {x: 1824, y: 1194}
+  responseText: No
+  id: a4e7ac9b2fb992b499afec5827145621
+  nextstatementId: start
+  requirements: []
+  Children:
+  - {fileID: 6029718830824997256}
+  parent: {fileID: -6613111656889458629}
+--- !u!114 &-8690181915119847045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: soundsawful
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 9f35bd317a5877f42ae8a9c899efa869
+  position: {x: 5496, y: 0}
+  statementText: "I hid in the van for hours, hearing them snarl and growl. I must
+    have fallen asleep; when I woke up, it was all quiet. I woke up to this new hell.\r"
+  id: soundsawful
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: 4369600886071187623}
+  ChildrenNames:
+  - Sorry that happened.
+--- !u!114 &-8410529873882026622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 8d0ebf7131158394581658d7ae845f31
+  position: {x: 2058, y: 398}
+  responseText: Amnesia?
+  id: 965446cdd28313344b2a50a864640b72
+  nextstatementId: amnesia
+  requirements: []
+  Children:
+  - {fileID: -8848371759850706435}
+  parent: {fileID: 7227758537518603228}
+--- !u!114 &-7013107572527116309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 431a919dcf20f454a89ec2ef96586350
+  position: {x: 5865, y: 398}
+  responseText: Sorry, I'm just stressed.
+  id: dc45e2f54800fad4d93f69c870a53238
+  nextstatementId: sorry_1
+  requirements: []
+  Children:
+  - {fileID: -5724250112357366106}
+  parent: {fileID: -5229686418144554030}
+--- !u!114 &-6613111656889458629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: HireThem
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: c651bcaad557bed49955da98174a4f57
+  position: {x: 1368, y: 1194}
+  statementText: "I'd like to hire you.\r"
+  id: HireThem
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: -8786250033022621710}
+  ChildrenNames:
+  - No
+--- !u!114 &-6011361162159552407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: sorryithappened
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 0df83878d29eaad48b457040616e59d9
+  position: {x: 6525, y: 0}
+  statementText: "Sorry doesn't make it go away. But thanks for listening.\r"
+  id: sorryithappened
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: -1865064147616204653}
+  ChildrenNames:
+  - Any Time
+--- !u!114 &-5724250112357366106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: sorry_1
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 507f77f75863e8741b75717c8aaf8165
+  position: {x: 6438, y: 398}
+  statementText: "I can understand that. We are all stressed. You don't see us taking
+    it out on others though.\r"
+  id: sorry_1
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: 6445238056936911741}
+  ChildrenNames:
+  - I know. Again, sorry.
+--- !u!114 &-5229686418144554030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: donotbelieve
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: a61449ab09a1fd142b3623a8d57a9816
+  position: {x: 5394, y: 398}
+  statementText: "What the hell? I don't give a shit about you believe. I'm done
+    with you.\r"
+  id: donotbelieve
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: -7013107572527116309}
+  - {fileID: 1604364864027222479}
+  ChildrenNames:
+  - Sorry, I'm just stressed.
+  - You've poisoned people for years!
+--- !u!114 &-5128250641668455177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac265493e6374a93bf8d31d22c0da53b, type: 3}
+  m_Name: ImportNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 52db2cb317c088f4e9c67ee252f58dbe
+  position: {x: 842, y: -306.5}
+  importedDialog: {fileID: 11400000, guid: 506577d7dda5b5443a7f404fbee805e7, type: 2}
+--- !u!114 &-4261983556133476592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a126453fdb64d70b9b315310a7485f8, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 09de6db4687d04d459e2a6c90ae1c7ac
+  position: {x: 0, y: 0}
+  child: {fileID: 6029718830824997256}
+  dialogId: SphereIIDialogTest
+  localizationPrefix: SphereIIDialogTest
+  createLocalization: 1
+  createSounds: 1
+  createVoices: 1
+  createSoundActions: 1
+  dialogCVarsList: []
+--- !u!114 &-2830202123055605448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: f8c50e7f7316a0e40b7e0c720650732d
+  position: {x: 2631, y: 0}
+  responseText: What made them sick?
+  id: 8cd348fe3971aad40a393a38678e28c8
+  nextstatementId: madethemsick
+  requirements: []
+  Children:
+  - {fileID: -593664727997122537}
+  parent: {fileID: -320584447380390368}
+--- !u!114 &-2614086107296513023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: 6ab80a4224cd27e468f508c7129e1e0c
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: af62e51e85c75664d91244139f51a766
+  position: {x: 3698, y: -463.84003}
+  statementText: "The lab workers didn't detect any gas leak, so they cleared the
+    area for us to go get the bodies. That's when things got really bad.\r"
+  id: 6ab80a4224cd27e468f508c7129e1e0c
+  nextstatementId: b6d615aa21cca594386df85aea06f4c6
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: -2050655774599743296}
+  ChildrenNames:
+  - "The kids started to get up, growling and snarling at us. I ran back to the van,
+    but I was the only one who made it...\r"
+--- !u!114 &-2050655774599743296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: b6d615aa21cca594386df85aea06f4c6
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 592adf97e61f728419ba65d8e870904c
+  position: {x: 4350, y: 0}
+  statementText: "The kids started to get up, growling and snarling at us. I ran
+    back to the van, but I was the only one who made it...\r"
+  id: b6d615aa21cca594386df85aea06f4c6
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: 8534483118130102034}
+  - {fileID: 9205307720441282900}
+  ChildrenNames:
+  - That sounds awful.
+  - You could have saved them.
+--- !u!114 &-1865064147616204653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: e2e90b5603ed5814e99ee3477a51f1b2
+  position: {x: 6981, y: 0}
+  responseText: Any Time
+  id: 6f85d00136a131d42b9ec272c4652190
+  nextstatementId: start
+  requirements: []
+  Children:
+  - {fileID: 6029718830824997256}
+  parent: {fileID: -6011361162159552407}
+--- !u!114 &-593664727997122537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: madethemsick
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 2031c58be1e52bd4faa8c2e641a06fa1
+  position: {x: 3135, y: -84}
+  statementText: "We didn't know at first. We thought it might have been a gas leak,
+    so we called in support from the bio-lab. They came in their hazmat suits, but
+    by the time they arrived, it was too late.\r"
+  id: madethemsick
+  nextstatementId: 6ab80a4224cd27e468f508c7129e1e0c
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: 96031135844921532}
+  ChildrenNames:
+  - Did they find anything?
+--- !u!114 &-411932008357209816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: start_01
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 57246a5a0fac92c429700f501a07e0c2
+  position: {x: 1340, y: -243.28001}
+  statementText: "You think I wear this outfit for the fun of it? Yes, I'm a real
+    nurse. I was at work when the world went to shit. \r"
+  id: start_01
+  nextstatementId: 860354f59236e19469093dfcc989b693
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: 8289464129528324540}
+  ChildrenNames:
+  - What happened at work?
+--- !u!114 &-321514597335938391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: a555490c1ccbaae4d84d420096b38671
+  position: {x: 6777, y: 796}
+  responseText: I know a liar when I see one.
+  id: 869abf0c0e1494e4699d77f37ba52262
+  nextstatementId: start
+  requirements: []
+  Children:
+  - {fileID: 6029718830824997256}
+  parent: {fileID: 5239635663068103735}
+--- !u!114 &-320584447380390368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: 860354f59236e19469093dfcc989b693
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: cd79a8642b2fe4f439a36678056d9967
+  position: {x: 2058, y: 0}
+  statementText: "I worked with a group of first responders. We got a call to the
+    skate park because there was some kids getting sick. We got there, and it was
+    a shit show. All the kids there were sick, and throwing up.\r"
+  id: 860354f59236e19469093dfcc989b693
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: -2830202123055605448}
+  ChildrenNames:
+  - What made them sick?
+--- !u!114 &-263106435029182433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 1098de571219bb24b9efb7beea9cbe8f
+  position: {x: 912, y: 218.14}
+  responseText: '[ Tell Your Story ]'
+  id: bbd5ede896d367b45bf65b30cd98472f
+  nextstatementId: YourStory
+  requirements: []
+  Children:
+  - {fileID: 7227758537518603228}
+  parent: {fileID: 6029718830824997256}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3f26486cfe4057a48a2d0866716126, type: 3}
+  m_Name: SphereIIDialogTest
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -4261983556133476592}
+  nodes:
+  - {fileID: 6029718830824997256}
+  - {fileID: -4261983556133476592}
+  - {fileID: -6613111656889458629}
+  - {fileID: -411932008357209816}
+  - {fileID: -320584447380390368}
+  - {fileID: -593664727997122537}
+  - {fileID: -2614086107296513023}
+  - {fileID: -2050655774599743296}
+  - {fileID: -8690181915119847045}
+  - {fileID: -6011361162159552407}
+  - {fileID: 7227758537518603228}
+  - {fileID: -8848371759850706435}
+  - {fileID: 1244678856875182868}
+  - {fileID: -5229686418144554030}
+  - {fileID: -5724250112357366106}
+  - {fileID: 5239635663068103735}
+  - {fileID: 9008230774388399839}
+  - {fileID: -263106435029182433}
+  - {fileID: 6707897036253713942}
+  - {fileID: 523283545329589813}
+  - {fileID: -8786250033022621710}
+  - {fileID: -2830202123055605448}
+  - {fileID: 8534483118130102034}
+  - {fileID: 9205307720441282900}
+  - {fileID: 4369600886071187623}
+  - {fileID: -1865064147616204653}
+  - {fileID: -8410529873882026622}
+  - {fileID: 8076893641773773751}
+  - {fileID: 7707247330232388837}
+  - {fileID: 7662224721972669879}
+  - {fileID: -7013107572527116309}
+  - {fileID: 1604364864027222479}
+  - {fileID: 6445238056936911741}
+  - {fileID: -321514597335938391}
+  - {fileID: 8289464129528324540}
+  - {fileID: 96031135844921532}
+  - {fileID: -5128250641668455177}
+  - {fileID: 8625858998768186990}
+  cvars: []
+--- !u!114 &96031135844921532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 7b6c35648e1ebb243afd4ea6f1908efd
+  position: {x: 3252, y: -424}
+  responseText: Did they find anything?
+  id: 7b6c35648e1ebb243afd4ea6f1908efd
+  nextstatementId: 6ab80a4224cd27e468f508c7129e1e0c
+  requirements: []
+  Children:
+  - {fileID: -2614086107296513023}
+  parent: {fileID: -593664727997122537}
+--- !u!114 &523283545329589813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 83df68184f047c64ab7f8a9d84c2b7da
+  position: {x: 894.9999, y: 667.84796}
+  responseText: '[ Hire ]'
+  id: 55b068e835ff84040aed245d02ec0a6a
+  nextstatementId: HireThem
+  requirements: []
+  Children:
+  - {fileID: -6613111656889458629}
+  parent: {fileID: 6029718830824997256}
+--- !u!114 &1244678856875182868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: willitgetbetter
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: aec2add34e4481b4aa300cf52589549d
+  position: {x: 3777, y: 398}
+  statementText: "It's hard to say. I'm not a doctor, so it's not really area. It
+    might get better over time. You'll just have to have some patience.\r"
+  id: willitgetbetter
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: 7662224721972669879}
+  ChildrenNames:
+  - Thank you.
+--- !u!114 &1604364864027222479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 09a2cfa7b17326c4b87b0631f9ce9c4f
+  position: {x: 5865, y: 796}
+  responseText: You've poisoned people for years!
+  id: 748418ef15bf26c43937413e39c73f7f
+  nextstatementId: poisoned
+  requirements: []
+  Children:
+  - {fileID: 5239635663068103735}
+  parent: {fileID: -5229686418144554030}
+--- !u!114 &4369600886071187623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: ffb840454372ff14e9a5628435f092f9
+  position: {x: 6069, y: 0}
+  responseText: Sorry that happened.
+  id: 6623fa595df9d554cad7263504507bb9
+  nextstatementId: sorryithappened
+  requirements: []
+  Children:
+  - {fileID: -6011361162159552407}
+  parent: {fileID: -8690181915119847045}
+--- !u!114 &5239635663068103735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: poisoned
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 711fcb189895b9947990f552bbdf546f
+  position: {x: 6321, y: 796}
+  statementText: "Poison people?! What the hell is your problem? \r"
+  id: poisoned
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: -321514597335938391}
+  ChildrenNames:
+  - I know a liar when I see one.
+--- !u!114 &6029718830824997256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: start
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 44ab4fcb12e9ce148914220dcf293c32
+  position: {x: 436, y: 0}
+  statementText: "Hi... \r"
+  id: start
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: 9008230774388399839}
+  - {fileID: -263106435029182433}
+  - {fileID: 6707897036253713942}
+  - {fileID: 523283545329589813}
+  - {fileID: -5128250641668455177}
+  - {fileID: 8625858998768186990}
+  ChildrenNames:
+  - Are you an actual nurse?
+  - '[ Tell Your Story ]'
+  - '[ Give Gift ]'
+  - '[ Hire ]'
+--- !u!114 &6445238056936911741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 4ade655e46b898c48b1b2347d3052c96
+  position: {x: 7011, y: 398}
+  responseText: I know. Again, sorry.
+  id: fcdebf4f5ba015546a31aeb65cda1641
+  nextstatementId: 
+  requirements: []
+  Children: []
+  parent: {fileID: -5724250112357366106}
+--- !u!114 &6707897036253713942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: e0f765dd26848db40b69486f47832a0a
+  position: {x: 894.8075, y: 436.28}
+  responseText: '[ Give Gift ]'
+  id: d91d012f62899564f95cdb75ff76aed1
+  nextstatementId: 
+  requirements: []
+  Children: []
+  parent: {fileID: 6029718830824997256}
+--- !u!114 &7227758537518603228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbda64456e54721b1aff11d6f6dee89, type: 3}
+  m_Name: YourStory
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 38f814aa1a6692e49ad0d1af2de655e2
+  position: {x: 1485, y: 398}
+  statementText: "You must have gotten hit in the head pretty hard, if you don't
+    remember a lot. Sounds like a touch of amnesia.\r"
+  id: YourStory
+  nextstatementId: 
+  questEntry: []
+  ResponseEntries: []
+  Children:
+  - {fileID: -8410529873882026622}
+  - {fileID: 8076893641773773751}
+  ChildrenNames:
+  - Amnesia?
+  - Will it get better?
+--- !u!114 &7662224721972669879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: ba7825d3df9d53342b659b8e490a49fa
+  position: {x: 4350, y: 398}
+  responseText: Thank you.
+  id: ce39c309699b61546ad9e64fb6a46fb5
+  nextstatementId: 
+  requirements: []
+  Children: []
+  parent: {fileID: 1244678856875182868}
+--- !u!114 &7707247330232388837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 78710a15c2e759a45a890a163da9c4da
+  position: {x: 3204, y: 398}
+  responseText: Will it get any better?
+  id: 66a25fb797dcdba4aa4f7a83c9085522
+  nextstatementId: willitgetbetter
+  requirements: []
+  Children:
+  - {fileID: 1244678856875182868}
+  parent: {fileID: -8848371759850706435}
+--- !u!114 &8076893641773773751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: d71b74941835a8a4eb1401e9920c9e8d
+  position: {x: 2058, y: 796}
+  responseText: Will it get better?
+  id: 45783ecad69e5aa40bf30e7e5002ae0f
+  nextstatementId: willitgetbetter
+  requirements: []
+  Children:
+  - {fileID: 1244678856875182868}
+  parent: {fileID: 7227758537518603228}
+--- !u!114 &8289464129528324540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 1b9a1679980be8e428a83ad67f8bd1f6
+  position: {x: 1971, y: -270}
+  responseText: What happened at work?
+  id: 1b9a1679980be8e428a83ad67f8bd1f6
+  nextstatementId: 860354f59236e19469093dfcc989b693
+  requirements: []
+  Children:
+  - {fileID: -320584447380390368}
+  parent: {fileID: -411932008357209816}
+--- !u!114 &8534483118130102034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 404a4c973f21a9e4dae37a49ab378e88
+  position: {x: 4923, y: 0}
+  responseText: That sounds awful.
+  id: 81d65a3ceb8c3ed48b31e75bf6f01e6a
+  nextstatementId: soundsawful
+  requirements: []
+  Children:
+  - {fileID: -8690181915119847045}
+  parent: {fileID: -2050655774599743296}
+--- !u!114 &8625858998768186990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac265493e6374a93bf8d31d22c0da53b, type: 3}
+  m_Name: ImportNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: d5ddf16bf3fa9c04cb579ea2236d0309
+  position: {x: 842, y: -433}
+  importedDialog: {fileID: 11400000, guid: 087ab5e3178e1a44da7b671aca499276, type: 2}
+--- !u!114 &9008230774388399839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: -99
+  guid: b9e0e41330642dd408a1a757a7ebaddf
+  position: {x: 886, y: -99}
+  responseText: Are you an actual nurse?
+  id: 8e5a5043e533b044896f9cd4283ae329
+  nextstatementId: start_01
+  requirements: []
+  Children:
+  - {fileID: -411932008357209816}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  parent: {fileID: 6029718830824997256}
+--- !u!114 &9205307720441282900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664298f2b4d0495bb363c51d66f86eb0, type: 3}
+  m_Name: ResponseNode
+  m_EditorClassIdentifier: 
+  Order: 0
+  guid: 7d1a05c7490462242a5ff318fdec44d0
+  position: {x: 4923, y: 398}
+  responseText: You could have saved them.
+  id: 7d91314074cf93e429ff8140b45a4335
+  nextstatementId: donotbelieve
+  requirements: []
+  Children:
+  - {fileID: -5229686418144554030}
+  parent: {fileID: -2050655774599743296}

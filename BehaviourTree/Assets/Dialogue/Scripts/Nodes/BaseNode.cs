@@ -6,8 +6,10 @@ using UnityEngine;
 public abstract class BaseNode : ScriptableObject
 {
     public Action OnNodeUpdate;
-
+    public DialogueGraphView currenGraphView;
     public NodeView nodeView;
+
+    public float Order;
     // Read only Attribute class defined in the ReadOnlyAttribute.cs, and a matching PropertyDrawer.
     // Why is this so convoluted, Unity?
     [ReadOnly] 

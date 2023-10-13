@@ -1,4 +1,6 @@
-﻿using Dialogue.Scripts.Nodes;
+﻿using System.Collections.Generic;
+using Dialogue.GameData.Dialogs;
+using Dialogue.Scripts.Nodes;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -15,6 +17,7 @@ namespace Dialogue.Editor.EditorWindows
         private VisualElement _ve;
         private GroupBox _groupBoxResponses;
         private StatementNode _currentStatement;
+        private ListView _listView;
         public override VisualElement CreateInspectorGUI()
         {
             var visualTreeAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(Uxml);
@@ -28,7 +31,7 @@ namespace Dialogue.Editor.EditorWindows
             }
 
             _currentStatement.OnNodeUpdate += RefreshRespones;
-            
+            _listView = _ve.Q<ListView>("ResponsesListView");
             HandleAddNewResponse();
 
             _groupBoxResponses = _ve.Q<GroupBox>("LinkedResponses");
@@ -63,16 +66,18 @@ namespace Dialogue.Editor.EditorWindows
                 
             });
         }
+        
+
         private void RefreshRespones()
         {
             _groupBoxResponses.Clear();
-            
+
             var responseAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(LinkedResponseUxml);
             foreach (var response in _currentStatement.Children)
             {
                 if (response is ResponseNode responseNode)
                 {
-                   var ve = responseAsset.CloneTree();
+                    var ve = responseAsset.CloneTree();
                     var button = ve.Q<Button>("GoToResponse");
                     button.clickable = new Clickable(() =>
                     {
@@ -91,7 +96,7 @@ namespace Dialogue.Editor.EditorWindows
                     foreach (var newChild in children)
                     {
                         var newResponse = newChild as ResponseNode;
-                        if( newResponse == null ) continue;
+                        if (newResponse == null) continue;
                         var localized = ConfigurationManager.GetLocalisedValue(newResponse.responseText);
                         var ve = responseAsset.CloneTree();
                         var button = ve.Q<Button>("GoToResponse");
@@ -102,15 +107,14 @@ namespace Dialogue.Editor.EditorWindows
                             graphView.AddToSelection(importNode.nodeView);
                             graphView.FrameSelection();
                         });
-                        button.text =localized;
-                      //  if ( _groupBoxResponses.Contains(ve)) continue;
-                        
+                        button.text = localized;
+                        //  if ( _groupBoxResponses.Contains(ve)) continue;
+
                         _groupBoxResponses.Add(ve);
                     }
-          
                 }
             }
-  }
+        }
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();

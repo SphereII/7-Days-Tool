@@ -16,6 +16,7 @@
                 <ui:GroupBox name="LinkedResponses" text="Responses">
                     <ui:Instance template="LinkedResponse" name="LinkedResponse" />
                 </ui:GroupBox>
+                <ui:ListView focusable="true" name="ResponsesListView" header-title="Responses" reorderable="true" binding-path="ResponseEntries" show-border="true" virtualization-method="FixedHeight" reorder-mode="Simple" show-alternating-row-backgrounds="All" style="max-height: none; display: none;" />
             </ui:Foldout>
         </ui:VisualElement>
     </ui:VisualElement>

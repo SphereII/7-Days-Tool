@@ -1,7 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
     <Style src="project://database/Assets/Dialogue/UI/uss/DialogueEditor.uss?fileID=7433441132597879392&amp;guid=3fdf0e9414dddd04a8b29e731f0e6b77&amp;type=3#DialogueEditor" />
     <uie:Toolbar style="justify-content: space-between;">
-        <ui:VisualElement style="justify-content: center;" />
+        <ui:VisualElement style="justify-content: center;">
+            <uie:ToolbarMenu display-tooltip-when-elided="true" name="History" text="History" />
+        </ui:VisualElement>
         <ui:VisualElement style="flex-direction: row; justify-content: flex-end;">
             <uie:ToolbarButton text="Scratch" display-tooltip-when-elided="true" name="mnuQuickDoodle" tooltip="A quick option to add in statements with responses." />
             <uie:ToolbarSpacer style="width: 50px;" />
@@ -11,8 +13,7 @@
             <uie:ToolbarSpacer />
             <uie:ToolbarButton text="Auto Layout" display-tooltip-when-elided="true" name="mnuAutoLayout" />
             <uie:ToolbarSpacer />
-            <uie:ToolbarMenu display-tooltip-when-elided="true" name="ExportOptions" text="Export..." />
-            <uie:ToolbarButton text="Export" display-tooltip-when-elided="true" name="mnuExport" style="display: none;" />
+            <uie:ToolbarButton text="Export Manager" display-tooltip-when-elided="true" name="mnuExport" style="display: flex;" />
             <uie:ToolbarSpacer />
             <uie:ToolbarPopupSearchField focusable="true" name="mnuSearchField" />
             <uie:ToolbarSpacer />

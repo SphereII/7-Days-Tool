@@ -3,6 +3,8 @@ using System.Linq;
 using Dialogue.Editor;
 using Dialogue.Editor.EditorWindows;
 using Dialogue.GameData.Dialogs;
+using Dialogue.Scripts.Editor.EditorWindows;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -19,6 +21,7 @@ namespace Dialogue.Scripts.Editor.PropertyDrawers
         protected ConfigurationManager.ConfigMap ConfigMap;
 
         protected string Guid;
+
         // Action Description
         protected Label Description;
 
@@ -96,8 +99,8 @@ namespace Dialogue.Scripts.Editor.PropertyDrawers
             _idDescription.text = ConfigMap.idDescription;
             _idType.tooltip = ConfigMap.idToolTip;
 
-            if (!ConfigMap.supportOperator) return;
-            ShowVisualElement(OperatorGroup, true);
+            if (ConfigMap.supportOperator)
+                ShowVisualElement(OperatorGroup, true);
 
             // Hide the search bar until we have something to search for.
             ShowVisualElement(_idSearch, false);
@@ -116,8 +119,6 @@ namespace Dialogue.Scripts.Editor.PropertyDrawers
             ShowVisualElement(_idSearch, true);
             searchProvider.so = CurrentProperty.FindPropertyRelative("Id");
             _idSearch.clickable = new Clickable(_ => { OpenSearchProvider(searchProvider); });
-            
-            
         }
 
         private void OpenSearchProvider(StringListSearchProvider searchProvider)
@@ -140,9 +141,9 @@ namespace Dialogue.Scripts.Editor.PropertyDrawers
             // Hide the search bar until we know we have something to search for.
             ShowVisualElement(_valueSearch, false);
 
-            if (!ConfigMap.supportOperator) return;
-            ShowVisualElement(OperatorGroup, true);
-            
+            if (ConfigMap.supportOperator)
+                ShowVisualElement(OperatorGroup, true);
+
             var searchProvider = ConfigureSearch(ConfigMap.valueType, ConfigMap.ValueOptions);
             if (searchProvider == null) return;
 
@@ -161,15 +162,17 @@ namespace Dialogue.Scripts.Editor.PropertyDrawers
             // The "Value" in this is the DialogAction / RequirementBase.Value field. This will update it..
             searchProvider.so = CurrentProperty.FindPropertyRelative("Value");
             _valueSearch.clickable = new Clickable(_ => { OpenSearchProvider(searchProvider); });
-
-  
         }
 
         private StringListSearchProvider ConfigureSearch(string searchType, List<string> altList = null)
         {
             if (string.IsNullOrEmpty(searchType)) return null;
 
-         
+            var currentGraph = DialogueEditor.GetCurrentGraphView();
+            if (currentGraph == null) return null;
+            var rootNode = currentGraph.DialogGraph.rootNode as RootNode;
+            if (rootNode == null) return null;
+
             // // If we have built in references, then show the find button and prepare the search window.
             var searchlist = ConfigurationManager.Instance.GetGameInfo(searchType);
             if (searchlist?.Count <= 0)
@@ -177,16 +180,25 @@ namespace Dialogue.Scripts.Editor.PropertyDrawers
 
             if (searchlist?.Count <= 0)
             {
-                if (searchType != "cvar") return null;
-                
-                var currentGraph = DialogueEditor.GetCurrentGraphView();
-                if (currentGraph == null) return null;
-                var rootNode = currentGraph.DialogGraph.rootNode as RootNode;
-                if (rootNode == null) return null;
-                var list = new List<string>();
-                foreach (var cvar in rootNode.dialogCVarsList) 
-                     list.Add(cvar.cVarName);
-                searchlist = list;
+                if (searchType == "cvar")
+                {
+                    var list = new List<string>();
+                    foreach (var cvar in rootNode.dialogCVarsList)
+                        list.Add(cvar.cVarName);
+                    searchlist = list;
+                }
+                else if (searchType == "statements")
+                {
+                    var statements = currentGraph.DialogGraph.GetStatements();
+                    var list = new List<string>();
+
+                    foreach (var statement in statements)
+                    {
+                        list.Add($"{rootNode.dialogId}_{statement.id}");
+                    }
+
+                    searchlist = list;
+                }
             }
 
             var searchProvider = ScriptableObject.CreateInstance<StringListSearchProvider>();

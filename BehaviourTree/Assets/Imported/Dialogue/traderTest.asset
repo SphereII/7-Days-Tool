@@ -16,7 +16,8 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   statementText: The Duke's personal band of mercenaries.
   id: cassadores
-  nextstatementId: background ( What would you like to know about? )
+  nextstatementId: background
+  questEntry: []
   Children:
   - {fileID: -2642132214796440775}
   ChildrenNames:
@@ -76,10 +77,11 @@ MonoBehaviour:
   m_Name: admin
   m_EditorClassIdentifier: 
   guid: f262895053eed0a469f593313bede1a5
-  position: {x: 0, y: 0}
+  position: {x: 1368, y: 1356}
   statementText: Admin Options
   id: admin
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: 2841613768424891054}
   - {fileID: 1159672056823065616}
@@ -99,7 +101,7 @@ MonoBehaviour:
   m_Name: ActionNode
   m_EditorClassIdentifier: 
   guid: f955b996157d50a4fad4549b2e8d15e7
-  position: {x: 0, y: 0}
+  position: {x: 1874, y: 1554}
   actions:
   - guid: 00000000-0000-0000-0000-000000000000
     type: Trader
@@ -119,7 +121,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: fb36a97f0b6fbff4dbff104c32a8b7ea
-  position: {x: 0, y: 0}
+  position: {x: 912, y: 877}
   responseText: Do you have any jobs?
   id: jobshave
   nextstatementId: currentjobs
@@ -146,7 +148,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: 7c2107807e0ebd848ae91193fff0a318
-  position: {x: 0, y: 0}
+  position: {x: 912, y: 1356}
   responseText: Admin Options
   id: admin
   nextstatementId: admin
@@ -194,10 +196,11 @@ MonoBehaviour:
   m_Name: nojobs
   m_EditorClassIdentifier: 
   guid: 3ddd465cab468e84580d9e7b47e75256
-  position: {x: 0, y: 0}
+  position: {x: 1368, y: 398}
   statementText: I have no work at this time.
   id: nojobs
-  nextstatementId: start ( Hello friend, how can I help you? )
+  nextstatementId: start
+  questEntry: []
   Children:
   - {fileID: 4846099607203158371}
   ChildrenNames:
@@ -219,6 +222,7 @@ MonoBehaviour:
   statementText: What would you like to know about?
   id: background
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: 2174275768990588499}
   - {fileID: -3926632198229936330}
@@ -244,7 +248,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: 4cb34c665fc96834694566cfab4afafd
-  position: {x: 0, y: 0}
+  position: {x: 912, y: 1815}
   responseText: Nevermind.
   id: done
   nextstatementId: 
@@ -264,10 +268,11 @@ MonoBehaviour:
   m_Name: currentjobs
   m_EditorClassIdentifier: 
   guid: 5306296a7d9c4c74381e470828a7b3f4
-  position: {x: 0, y: 0}
+  position: {x: 1368, y: 877}
   statementText: Do any of these tasks sound like something you can do?
   id: currentjobs
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: 1159672056823065616}
   ChildrenNames:
@@ -290,7 +295,8 @@ MonoBehaviour:
     crooked Native American of Apache decent named 'Duke Cassadore' which means Warrior
     and Chief in Apache.
   id: theduke
-  nextstatementId: background ( What would you like to know about? )
+  nextstatementId: background
+  questEntry: []
   Children:
   - {fileID: -2642132214796440775}
   ChildrenNames:
@@ -334,6 +340,7 @@ MonoBehaviour:
   - {fileID: 2841613768424891054}
   - {fileID: -4797912039096743763}
   - {fileID: -2480407794351817050}
+  cvars: []
 --- !u!114 &1159672056823065616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,7 +354,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: cf249627b5b6f7f4cbfb9704e16f7b69
-  position: {x: 0, y: 0}
+  position: {x: 1824, y: 1754}
   responseText: Nevermind.
   id: nevermind
   nextstatementId: start
@@ -372,7 +379,8 @@ MonoBehaviour:
   statementText: The founder of the White River Settler's Outposts, Noah White stood
     up to the Duke and is now on the run from the Cassadores.
   id: noah
-  nextstatementId: background ( What would you like to know about? )
+  nextstatementId: background
+  questEntry: []
   Children:
   - {fileID: -2642132214796440775}
   ChildrenNames:
@@ -411,7 +419,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: 581368afe9f23ee48b00069ad00d9ad6
-  position: {x: 0, y: 0}
+  position: {x: 1824, y: 1356}
   responseText: Restock Inventory
   id: restock
   nextstatementId: 
@@ -452,7 +460,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: 268bfb0f036f66d4d899ff6ceaf9df75
-  position: {x: 0, y: 0}
+  position: {x: 912, y: 0}
   responseText: May I see your inventory?
   id: shop
   nextstatementId: 
@@ -473,10 +481,11 @@ MonoBehaviour:
   m_Name: start
   m_EditorClassIdentifier: 
   guid: 6be38ff5a4b6b8e438860841138ad3d6
-  position: {x: 0, y: 0}
+  position: {x: 456, y: 0}
   statementText: Hello friend, how can I help you?
   id: start
   nextstatementId: 
+  questEntry: []
   Children:
   - {fileID: 4670836586882359445}
   - {fileID: 5238621704715891104}
@@ -485,6 +494,8 @@ MonoBehaviour:
   - {fileID: -2480407794351817050}
   ChildrenNames:
   - May I see your inventory?
+  - Do you have any jobs?
+  - Do you have any jobs?
   - Admin Options
   - Nevermind.
 --- !u!114 &4963015898601356811
@@ -505,6 +516,10 @@ MonoBehaviour:
   dialogId: traderTest
   localizationPrefix: 
   createLocalization: 0
+  createSounds: 0
+  createVoices: 0
+  createSoundActions: 0
+  dialogCVarsList: []
 --- !u!114 &5238621704715891104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +533,7 @@ MonoBehaviour:
   m_Name: ResponseNode
   m_EditorClassIdentifier: 
   guid: 292bf00b786b0b942a5e4fa66ccc6531
-  position: {x: 0, y: 0}
+  position: {x: 912, y: 398}
   responseText: Do you have any jobs?
   id: jobsnone
   nextstatementId: nojobs
@@ -549,7 +564,8 @@ MonoBehaviour:
   statementText: "Navezgane County Arizona one of the last true Eden\u2019s on Earth
     where crops can still grow which is mostly Apache Indian Reservation territory."
   id: navezgane
-  nextstatementId: background ( What would you like to know about? )
+  nextstatementId: background
+  questEntry: []
   Children:
   - {fileID: -2642132214796440775}
   ChildrenNames:
@@ -567,7 +583,7 @@ MonoBehaviour:
   m_Name: ActionNode
   m_EditorClassIdentifier: 
   guid: 168852943e857fa41897a2870a5803f8
-  position: {x: 0, y: 0}
+  position: {x: 962, y: 198}
   actions:
   - guid: 00000000-0000-0000-0000-000000000000
     type: Trader

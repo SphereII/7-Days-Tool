@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.18f1 (3129e69bc0c7) revision 3221990'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'en' Physical Memory: 32675 MB
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 32675 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
@@ -15,7 +15,7 @@ C:/Users/kilpa/OneDrive/Documents/GitHub/7-Days-Tool/BehaviourTree
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59383
+54438
 Successfully changed project path to: C:/Users/kilpa/OneDrive/Documents/GitHub/7-Days-Tool/BehaviourTree
 C:/Users/kilpa/OneDrive/Documents/GitHub/7-Days-Tool/BehaviourTree
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/kilpa/OneDrive/Documents/GitHub/7-Days-Tool/BehaviourTree
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [32216] Host "[IP] 192.168.2.66 [Port] 0 [Flags] 2 [Guid] 1415826654 [EditorId] 1415826654 [Version] 1048832 [Id] WindowsEditor(7,Jeff) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [12368] Host "[IP] 192.168.2.66 [Port] 0 [Flags] 2 [Guid] 3296178851 [EditorId] 3296178851 [Version] 1048832 [Id] WindowsEditor(7,Jeff) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [32216] Host "[IP] 192.168.2.66 [Port] 0 [Flags] 2 [Guid] 1415826654 [EditorId] 1415826654 [Version] 1048832 [Id] WindowsEditor(7,Jeff) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [12368] Host "[IP] 192.168.2.66 [Port] 0 [Flags] 2 [Guid] 3296178851 [EditorId] 3296178851 [Version] 1048832 [Id] WindowsEditor(7,Jeff) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 108.88 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 116.36 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.18f1 (3129e69bc0c7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -62,362 +62,100 @@ Direct3D:
     Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f82)
     Vendor:   NVIDIA
     VRAM:     3949 MB
-    Driver:   31.0.15.3141
+    Driver:   31.0.15.3742
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56176
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56860
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.011478 seconds.
+Registered in 0.015783 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 96.27 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 108.80 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.786 seconds
+- Completed reload, in  0.891 seconds
 Domain Reload Profiling:
-	ReloadAssembly (787ms)
-		BeginReloadAssembly (94ms)
+	ReloadAssembly (892ms)
+		BeginReloadAssembly (105ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (540ms)
-			LoadAssemblies (90ms)
+		EndReloadAssembly (620ms)
+			LoadAssemblies (102ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (114ms)
+			SetupTypeCache (135ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (322ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (367ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
+				InitializePlatformSupportModulesInManaged (23ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (96ms)
+				RefreshPlugins (109ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (153ms)
-				ProcessInitializeOnLoadMethodAttributes (53ms)
+				ProcessInitializeOnLoadAttributes (175ms)
+				ProcessInitializeOnLoadMethodAttributes (58ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.009453 seconds.
+Registered in 0.010716 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 113.11 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 126.17 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.676 seconds
+- Completed reload, in  1.890 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1677ms)
-		BeginReloadAssembly (166ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (25ms)
-		EndReloadAssembly (1357ms)
-			LoadAssemblies (104ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (293ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (77ms)
-			SetupLoadedEditorAssemblies (824ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (113ms)
-				BeforeProcessingInitializeOnLoad (135ms)
-				ProcessInitializeOnLoadAttributes (507ms)
-				ProcessInitializeOnLoadMethodAttributes (40ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3792 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 41 unused Assets / (228.9 KB). Loaded Objects now: 4247.
-Memory consumption went from 144.3 MB to 144.1 MB.
-Total: 3.525600 ms (FindLiveObjects: 0.320700 ms CreateObjectMapping: 0.232600 ms MarkObjects: 2.812100 ms  DeleteObjects: 0.159200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 893976.068693 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbc35774e5f71e1975d464447292249f') in 0.048609 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.689652 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '296c5c9e6ba44e43b9f63afb93143f96') in 0.004606 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.491692 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cddc77a6207bb81739b1fc963b5765d4') in 0.002307 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.864946 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9fecda5a16263037b6e0c8d52786281') in 0.002370 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.084210 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9813b6e7a83042dfcf1c9b78e075227c') in 0.007737 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009951 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.769 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1770ms)
-		BeginReloadAssembly (163ms)
+	ReloadAssembly (1891ms)
+		BeginReloadAssembly (165ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (50ms)
-		EndReloadAssembly (1477ms)
-			LoadAssemblies (104ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (1562ms)
+			LoadAssemblies (122ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (403ms)
+			SetupTypeCache (345ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (74ms)
-			SetupLoadedEditorAssemblies (816ms)
+			RebuildScriptCaches (90ms)
+			SetupLoadedEditorAssemblies (946ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (28ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (118ms)
-				ProcessInitializeOnLoadAttributes (583ms)
-				ProcessInitializeOnLoadMethodAttributes (74ms)
-				AfterProcessingInitializeOnLoad (11ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (126ms)
+				BeforeProcessingInitializeOnLoad (157ms)
+				ProcessInitializeOnLoadAttributes (576ms)
+				ProcessInitializeOnLoadMethodAttributes (48ms)
+				AfterProcessingInitializeOnLoad (17ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.81 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3787 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (195.4 KB). Loaded Objects now: 4251.
-Memory consumption went from 143.8 MB to 143.6 MB.
-Total: 3.188900 ms (FindLiveObjects: 0.299800 ms CreateObjectMapping: 0.279200 ms MarkObjects: 2.480500 ms  DeleteObjects: 0.128500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009657 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.76 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.590 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1591ms)
-		BeginReloadAssembly (164ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (11ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (43ms)
-		EndReloadAssembly (1309ms)
-			LoadAssemblies (110ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (351ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (60ms)
-			SetupLoadedEditorAssemblies (722ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (23ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (102ms)
-				ProcessInitializeOnLoadAttributes (518ms)
-				ProcessInitializeOnLoadMethodAttributes (61ms)
-				AfterProcessingInitializeOnLoad (16ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (16ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 5.84 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3787 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (195.5 KB). Loaded Objects now: 4254.
-Memory consumption went from 143.8 MB to 143.7 MB.
-Total: 3.552900 ms (FindLiveObjects: 0.290300 ms CreateObjectMapping: 0.205600 ms MarkObjects: 2.851200 ms  DeleteObjects: 0.204600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007772 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
 Refreshing native plugins compatible for Editor in 1.05 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.924 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1925ms)
-		BeginReloadAssembly (173ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (42ms)
-		EndReloadAssembly (1621ms)
-			LoadAssemblies (125ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (381ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (68ms)
-			SetupLoadedEditorAssemblies (893ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (24ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (124ms)
-				ProcessInitializeOnLoadAttributes (682ms)
-				ProcessInitializeOnLoadMethodAttributes (50ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.60 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3787 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (195.4 KB). Loaded Objects now: 4257.
-Memory consumption went from 143.9 MB to 143.7 MB.
-Total: 4.469400 ms (FindLiveObjects: 0.443200 ms CreateObjectMapping: 0.265800 ms MarkObjects: 3.599600 ms  DeleteObjects: 0.159500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008328 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.843 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1844ms)
-		BeginReloadAssembly (200ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (51ms)
-		EndReloadAssembly (1513ms)
-			LoadAssemblies (136ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (415ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (57ms)
-			SetupLoadedEditorAssemblies (853ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (30ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (110ms)
-				ProcessInitializeOnLoadAttributes (661ms)
-				ProcessInitializeOnLoadMethodAttributes (38ms)
-				AfterProcessingInitializeOnLoad (11ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.41 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3787 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (195.8 KB). Loaded Objects now: 4260.
-Memory consumption went from 143.9 MB to 143.7 MB.
-Total: 5.174000 ms (FindLiveObjects: 0.428400 ms CreateObjectMapping: 0.438000 ms MarkObjects: 4.150400 ms  DeleteObjects: 0.155700 ms)
+Unloading 3797 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (229.0 KB). Loaded Objects now: 4252.
+Memory consumption went from 144.4 MB to 144.2 MB.
+Total: 6.012300 ms (FindLiveObjects: 0.408300 ms CreateObjectMapping: 0.329100 ms MarkObjects: 5.058300 ms  DeleteObjects: 0.214900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -431,75 +169,63 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 367.944288 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d4696af9f7b71aa172f33643cebe941') in 0.016515 seconds 
+  Time since last request: 207999.415459 seconds.
+  path: Assets/Imported/Dialogue/SphereIIDialogTest.asset
+  artifactKey: Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/Dialogue/SphereIIDialogTest.asset using Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd57b9c9f8e5f48749c11f970bde88cd') in 0.076440 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.951369 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ad331c4c017251aaaf77486f235c82') in 0.003208 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.501719 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '484a851f1811c55bde24e2bd71cb3852') in 0.002132 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.701775 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '393ce30a6f07e3be02a211cf4c2f348a') in 0.010219 seconds 
+  Time since last request: 42.527193 seconds.
+  path: Assets/Imported/Dialogue/SphereIIDialogTest.asset
+  artifactKey: Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/Dialogue/SphereIIDialogTest.asset using Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4b850ea180ee6b7c96fedb79628634') in 0.012349 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.008599 seconds.
+Registered in 0.012769 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.513 seconds
+- Completed reload, in  1.707 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1514ms)
-		BeginReloadAssembly (178ms)
+	ReloadAssembly (1708ms)
+		BeginReloadAssembly (198ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (47ms)
-		EndReloadAssembly (1138ms)
-			LoadAssemblies (130ms)
+			CreateAndSetChildDomain (55ms)
+		EndReloadAssembly (1346ms)
+			LoadAssemblies (136ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (293ms)
+			SetupTypeCache (311ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (55ms)
-			SetupLoadedEditorAssemblies (616ms)
+			RebuildScriptCaches (102ms)
+			SetupLoadedEditorAssemblies (714ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (23ms)
-				SetLoadedEditorAssemblies (0ms)
+				InitializePlatformSupportModulesInManaged (29ms)
+				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (93ms)
-				ProcessInitializeOnLoadAttributes (451ms)
-				ProcessInitializeOnLoadMethodAttributes (38ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				BeforeProcessingInitializeOnLoad (118ms)
+				ProcessInitializeOnLoadAttributes (503ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
+				AfterProcessingInitializeOnLoad (16ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.53 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 3.06 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3787 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (195.4 KB). Loaded Objects now: 4263.
-Memory consumption went from 143.9 MB to 143.7 MB.
-Total: 3.590900 ms (FindLiveObjects: 0.281600 ms CreateObjectMapping: 0.199000 ms MarkObjects: 2.967100 ms  DeleteObjects: 0.142500 ms)
+Unloading 3792 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (195.3 KB). Loaded Objects now: 4256.
+Memory consumption went from 144.0 MB to 143.8 MB.
+Total: 4.105800 ms (FindLiveObjects: 0.594500 ms CreateObjectMapping: 0.317900 ms MarkObjects: 3.046000 ms  DeleteObjects: 0.146000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -512,76 +238,110 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 54.028434 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e46f055a03fd8cd0c29cf9d395e9c246') in 0.015557 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.742244 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72c6749415ca1d4dccfb7bd292b2672b') in 0.003037 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.788282 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c4b4b737c6372768edae3b8a94af53') in 0.002292 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.140596 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96fa426d74d316824ceb150a22077b26') in 0.004478 seconds 
-========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007876 seconds.
+Registered in 0.012289 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.77 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.483 seconds
+- Completed reload, in  1.661 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1484ms)
-		BeginReloadAssembly (156ms)
+	ReloadAssembly (1662ms)
+		BeginReloadAssembly (229ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (53ms)
+		EndReloadAssembly (1269ms)
+			LoadAssemblies (155ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (320ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (710ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (27ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (120ms)
+				ProcessInitializeOnLoadAttributes (506ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.77 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3792 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (195.6 KB). Loaded Objects now: 4259.
+Memory consumption went from 144.0 MB to 143.8 MB.
+Total: 4.834700 ms (FindLiveObjects: 0.346800 ms CreateObjectMapping: 0.428900 ms MarkObjects: 3.916000 ms  DeleteObjects: 0.141900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012419 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.44 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.364 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2365ms)
+		BeginReloadAssembly (285ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (42ms)
-		EndReloadAssembly (1199ms)
-			LoadAssemblies (105ms)
+			CreateAndSetChildDomain (71ms)
+		EndReloadAssembly (1841ms)
+			LoadAssemblies (207ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (329ms)
+			SetupTypeCache (723ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (629ms)
+			SetupLoadedEditorAssemblies (866ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (25ms)
+				InitializePlatformSupportModulesInManaged (27ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (97ms)
-				ProcessInitializeOnLoadAttributes (461ms)
-				ProcessInitializeOnLoadMethodAttributes (34ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (110ms)
+				ProcessInitializeOnLoadAttributes (666ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
+				AfterProcessingInitializeOnLoad (14ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.87 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 5.05 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3787 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (195.4 KB). Loaded Objects now: 4266.
-Memory consumption went from 143.9 MB to 143.7 MB.
-Total: 3.659000 ms (FindLiveObjects: 0.325500 ms CreateObjectMapping: 0.202100 ms MarkObjects: 2.985500 ms  DeleteObjects: 0.144800 ms)
+Unloading 3792 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (195.6 KB). Loaded Objects now: 4262.
+Memory consumption went from 144.0 MB to 143.8 MB.
+Total: 14.843400 ms (FindLiveObjects: 0.414100 ms CreateObjectMapping: 0.495300 ms MarkObjects: 13.698200 ms  DeleteObjects: 0.234700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -594,332 +354,52 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 87.234020 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd85488f4e3c21e4cba6aaeddf5e61946') in 0.014835 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.220978 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7a4c0899b18721424568cd00b4747f5') in 0.003286 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.718016 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dedea7cc0862990b7add9465d97d25c') in 0.002416 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.919498 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c42ddfbba4bab1b2d84fb106684d3300') in 0.006808 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 71.750597 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad89ec1bbb2726d0180b54fea20f9875') in 0.002756 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.228549 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4983d24cc0a741ad9d2dc4e894bdf2f5') in 0.002322 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.722877 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa84820309af3740ac6efd4e723c6b9b') in 0.002423 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.708855 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd37ed2324314a230d383f4f4cd00f26a') in 0.008108 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 70.734037 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17557aea59625dfd1ef46043d4224232') in 0.002910 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.353978 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c064365f626e490df973832067ba0f63') in 0.002489 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.692832 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '545941dabb8f44d5bde8afee63dab2d0') in 0.002454 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.786348 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54104894d895db46ff701210e81e1ad0') in 0.007408 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 29.900786 seconds.
-  path: Assets/My Dialogs/New Dialog Graph 1.asset
-  artifactKey: Guid(7408493755482f246ae1b0cb004f021a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph 1.asset using Guid(7408493755482f246ae1b0cb004f021a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b19115d3b77de8a1c49db4cc4e66132d') in 0.002699 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.819664 seconds.
-  path: Assets/My Dialogs/New Dialog Graph 1.asset
-  artifactKey: Guid(7408493755482f246ae1b0cb004f021a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph 1.asset using Guid(7408493755482f246ae1b0cb004f021a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c01fe9a062bc6a27e6c04a910e24d2af') in 0.002533 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 617.089408 seconds.
-  path: Assets/Exports/Dialogue/MyNurse01/MyNurse01.xml
-  artifactKey: Guid(13c677a1cbffd1442bd042bced0d4526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Exports/Dialogue/MyNurse01/MyNurse01.xml using Guid(13c677a1cbffd1442bd042bced0d4526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d5937c1274fd764264805602a92482c') in 0.011808 seconds 
-========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.009722 seconds.
+Registered in 0.009768 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 1.45 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.72 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.617 seconds
+- Completed reload, in  1.763 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2619ms)
-		BeginReloadAssembly (598ms)
+	ReloadAssembly (1764ms)
+		BeginReloadAssembly (179ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (23ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (275ms)
-		EndReloadAssembly (1620ms)
-			LoadAssemblies (264ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1419ms)
+			LoadAssemblies (130ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (460ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (79ms)
-			SetupLoadedEditorAssemblies (854ms)
+			SetupTypeCache (377ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (87ms)
+			SetupLoadedEditorAssemblies (749ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (30ms)
-				SetLoadedEditorAssemblies (2ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (127ms)
-				ProcessInitializeOnLoadAttributes (630ms)
-				ProcessInitializeOnLoadMethodAttributes (49ms)
-				AfterProcessingInitializeOnLoad (15ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 6.16 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3787 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (195.5 KB). Loaded Objects now: 4269.
-Memory consumption went from 143.9 MB to 143.7 MB.
-Total: 6.385800 ms (FindLiveObjects: 0.376600 ms CreateObjectMapping: 0.377600 ms MarkObjects: 5.476900 ms  DeleteObjects: 0.153700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 122.927777 seconds.
-  path: Assets/My Dialogs/New Dialog Graph.asset
-  artifactKey: Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph.asset using Guid(1d4e2acc4fdfbea47a2f68f6a0076497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '605a3edddd740721c00d5e1982332369') in 0.028907 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.166999 seconds.
-  path: Assets/My Dialogs/New Dialog Graph 1.asset
-  artifactKey: Guid(7408493755482f246ae1b0cb004f021a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/New Dialog Graph 1.asset using Guid(7408493755482f246ae1b0cb004f021a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c12003c6bbecc1734c9c1fa97aed55ed') in 0.011258 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 84405.323413 seconds.
-  path: Assets/My Dialogs/Nurse 1.asset
-  artifactKey: Guid(d5220661f5c8cef4687c80c2632cae38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/Nurse 1.asset using Guid(d5220661f5c8cef4687c80c2632cae38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fcdf7ed0c5faa88c6a2527c608a913c') in 0.089903 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 260.763397 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36fc560a1c9d4c3e9b8417fb56ae5dbb') in 0.006461 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.725850 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b478be86da576ae6d67b0831aace45a') in 0.003973 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.406504 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '806d94b5cd8767f836e76a89b5865dc6') in 0.002890 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.757138 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8847d37b6a4d359235087b94428565d') in 0.002689 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.280120 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0320533176f25ba8e8dea6a65a61d310') in 0.002885 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 45.715020 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb5068ce4f54961d68d57ff9b241c407') in 0.003534 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 38.265427 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a72e4d3b385c0ee4253f5e7651d4685') in 0.004049 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.203048 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd9d06c6fd855c24c80e65210f3af6c3') in 0.003308 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 45.067940 seconds.
-  path: Assets/Exports/Dialogue/SphereIIDialogTest/SphereIIDialogTest.xml
-  artifactKey: Guid(fde8829d29fc2a4479c7099cc11d7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Exports/Dialogue/SphereIIDialogTest/SphereIIDialogTest.xml using Guid(fde8829d29fc2a4479c7099cc11d7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3100ce32718ede69c81b2bbdaa6b13e2') in 0.003555 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 199.231724 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5db060b70e6026cd94872912f8353953') in 0.003138 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 96.446026 seconds.
-  path: Assets/Exports/Dialogue/SphereIIDialogTest/SphereIIDialogTest.xml
-  artifactKey: Guid(fde8829d29fc2a4479c7099cc11d7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Exports/Dialogue/SphereIIDialogTest/SphereIIDialogTest.xml using Guid(fde8829d29fc2a4479c7099cc11d7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3818fa536555910ef2497ff228a24d1') in 0.003227 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 79.819629 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0a5afadd29677e98d496a66594f0ca8') in 0.004069 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 26.208904 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0efef5efe06ce5e3f2462242696d2c29') in 0.003298 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.761166 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c0330224615022c3ffd46d0937e5ba3') in 0.003430 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.400043 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb38aafbea2853831263131c9188a6ad') in 0.012007 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 82.479325 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23e191452fe6f5c96876859f357dd39f') in 0.003719 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 15.222632 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '328f49a5d4e1de269c129c6e14665a3b') in 0.004015 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 43.173772 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13d9b85dbdc78a6d02055b594011dc5d') in 0.007385 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 180.643671 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f1d7fe5d4417cd1ad37a030abeb19ff') in 0.007460 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010239 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.66 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.960 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1963ms)
-		BeginReloadAssembly (441ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (46ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (180ms)
-		EndReloadAssembly (1362ms)
-			LoadAssemblies (152ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (333ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (71ms)
-			SetupLoadedEditorAssemblies (755ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (36ms)
+				InitializePlatformSupportModulesInManaged (31ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (125ms)
-				ProcessInitializeOnLoadAttributes (538ms)
-				ProcessInitializeOnLoadMethodAttributes (42ms)
-				AfterProcessingInitializeOnLoad (12ms)
+				BeforeProcessingInitializeOnLoad (177ms)
+				ProcessInitializeOnLoadAttributes (481ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (17ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.51 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 3.36 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3787 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (195.6 KB). Loaded Objects now: 4272.
-Memory consumption went from 143.9 MB to 143.7 MB.
-Total: 4.941400 ms (FindLiveObjects: 0.303500 ms CreateObjectMapping: 0.201500 ms MarkObjects: 4.151400 ms  DeleteObjects: 0.283400 ms)
+Unloading 3792 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (195.4 KB). Loaded Objects now: 4265.
+Memory consumption went from 144.0 MB to 143.8 MB.
+Total: 3.216600 ms (FindLiveObjects: 0.298100 ms CreateObjectMapping: 0.214800 ms MarkObjects: 2.568400 ms  DeleteObjects: 0.134500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -932,70 +412,52 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 265.217879 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '655a55a12a49ca6495b4cca9167fadd9') in 0.021239 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 78.174059 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a4e91f3a73f1ec4cfa878bfd8776ee7') in 0.004942 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 32.617098 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '159205e3921e33dc804e909bdcf65dc5') in 0.004776 seconds 
-========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.009540 seconds.
+Registered in 0.011271 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\kilpa\OneDrive\Documents\GitHub\7-Days-Tool\BehaviourTree\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.53 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.874 seconds
+- Completed reload, in  1.708 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1875ms)
-		BeginReloadAssembly (367ms)
+	ReloadAssembly (1709ms)
+		BeginReloadAssembly (214ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (11ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (51ms)
-		EndReloadAssembly (1347ms)
-			LoadAssemblies (289ms)
+			CreateAndSetChildDomain (60ms)
+		EndReloadAssembly (1325ms)
+			LoadAssemblies (149ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (340ms)
+			SetupTypeCache (329ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (67ms)
-			SetupLoadedEditorAssemblies (722ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (729ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (33ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (113ms)
-				ProcessInitializeOnLoadAttributes (520ms)
-				ProcessInitializeOnLoadMethodAttributes (44ms)
-				AfterProcessingInitializeOnLoad (11ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (116ms)
+				ProcessInitializeOnLoadAttributes (516ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
+				AfterProcessingInitializeOnLoad (15ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.59 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 3.77 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3787 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 28 unused Assets / (195.6 KB). Loaded Objects now: 4275.
-Memory consumption went from 143.9 MB to 143.7 MB.
-Total: 5.806400 ms (FindLiveObjects: 0.320200 ms CreateObjectMapping: 0.229200 ms MarkObjects: 5.065400 ms  DeleteObjects: 0.190500 ms)
+Unloading 3792 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (195.5 KB). Loaded Objects now: 4268.
+Memory consumption went from 144.0 MB to 143.8 MB.
+Total: 3.235700 ms (FindLiveObjects: 0.313900 ms CreateObjectMapping: 0.200500 ms MarkObjects: 2.582700 ms  DeleteObjects: 0.137900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -1009,343 +471,61 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 448.407909 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd40fc565bd99f12c85aa72e8c530463') in 0.023598 seconds 
+  Time since last request: 9964.519413 seconds.
+  path: Assets/Imported/Dialogue/SphereIIDialogTest.asset
+  artifactKey: Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/Dialogue/SphereIIDialogTest.asset using Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af8c4918244ee8b2b974b24e4e812c5d') in 0.255758 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 134.389528 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52ce1faeedd0c5769a37a75ff8434c33') in 0.003240 seconds 
+  Time since last request: 244.116638 seconds.
+  path: Assets/Imported/Dialogue/SphereIIDialogTest.asset
+  artifactKey: Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/Dialogue/SphereIIDialogTest.asset using Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203393efaeec0e6964e8f2b9dc36fbcc') in 0.022307 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.827319 seconds.
-  path: Assets/Exports/Dialogue/SphereIIDialogTest
-  artifactKey: Guid(4f113f001a6daeb41b779a6eba4af808) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Exports/Dialogue/SphereIIDialogTest using Guid(4f113f001a6daeb41b779a6eba4af808) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6791d8f92af884203cd0928bcfe6dda1') in 0.001474 seconds 
+  Time since last request: 115.055333 seconds.
+  path: Assets/Imported/Dialogue/SphereIIDialogTest.asset
+  artifactKey: Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/Dialogue/SphereIIDialogTest.asset using Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e1fa4b222aae45c42a32165a6e44b49') in 0.015343 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.091447 seconds.
-  path: Assets/Exports/Dialogue/SphereIIDialogTest/SphereIIDialogTest.xml
-  artifactKey: Guid(fde8829d29fc2a4479c7099cc11d7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Exports/Dialogue/SphereIIDialogTest/SphereIIDialogTest.xml using Guid(fde8829d29fc2a4479c7099cc11d7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '978c3baa7901e217bf4057a19cde78a5') in 0.002929 seconds 
+  Time since last request: 13.570799 seconds.
+  path: Assets/Imported/Dialogue/SphereIIDialogTest.asset
+  artifactKey: Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/Dialogue/SphereIIDialogTest.asset using Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '662db873381965b6938735a5fa00c66f') in 0.013786 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 134.343888 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f09630a0646a2bc2199cfdce047284b2') in 0.003705 seconds 
+  Time since last request: 22.543436 seconds.
+  path: Assets/Imported/Dialogue/SphereIIDialogTest.asset
+  artifactKey: Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/Dialogue/SphereIIDialogTest.asset using Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c85bc37de94cf1d302d9e3e1bdc5e19b') in 0.010522 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 17.262816 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a3ed4beed7381408dbffcd120f25f85') in 0.003418 seconds 
+  Time since last request: 24.158289 seconds.
+  path: Assets/Imported/Dialogue/SphereIIDialogTest.asset
+  artifactKey: Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/Dialogue/SphereIIDialogTest.asset using Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5802ccf77da74ce20a817332da08bef') in 0.012638 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.636204 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '217047b6e13f174480e7c32a60769ed6') in 0.002682 seconds 
+  Time since last request: 971.463034 seconds.
+  path: Assets/Imported/Dialogue/SphereIIDialogTest.asset
+  artifactKey: Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/Dialogue/SphereIIDialogTest.asset using Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49e718be88cbb183d5c56ebee13a8193') in 0.011925 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 88.874765 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01257eddf4fd17958e0c712a2d52b728') in 0.003517 seconds 
+  Time since last request: 12.656579 seconds.
+  path: Assets/Imported/Dialogue/SphereIIDialogTest.asset
+  artifactKey: Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/Dialogue/SphereIIDialogTest.asset using Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4e3eb20cfae5b25c8a66fb4d935e08f') in 0.010864 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 40.765517 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08b8f1d965ee5e2f1b00988285b0e6af') in 0.004619 seconds 
+  Time since last request: 224.057572 seconds.
+  path: Assets/Imported/Dialogue/SphereIIDialogTest.asset
+  artifactKey: Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported/Dialogue/SphereIIDialogTest.asset using Guid(890ebe8009505194ba6586f8e2d19c39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80b576a2d6cde3d03c117a821bec6e9f') in 0.021552 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.150018 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c15fe39bbb758e61e16f6ed572803164') in 0.005352 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 135.175754 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f5622666e94594f2675f4bb7f1cedd4') in 0.005664 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 117.777941 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '166278f067a6f613cbbbed4a710d8581') in 0.004232 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 92.239151 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bdcd1dc1f39d6c15da9cac58385b0e8') in 0.003518 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 30.144120 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd48638dc2a43fac793668c78df772be5') in 0.005380 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 375.428118 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest.asset
-  artifactKey: Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest.asset using Guid(ddda65fc765b41e4d974e3a894d0324f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f7c26615017a2f38bae3eaaefcb3808') in 0.006351 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 29.623822 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest2.asset
-  artifactKey: Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest2.asset using Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a352e112ab2b6f52f1b86bf1e31b1987') in 0.004273 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.204707 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest2.asset
-  artifactKey: Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest2.asset using Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51ca2708045426fe36860583d5de1de6') in 0.004122 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.734523 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest2.asset
-  artifactKey: Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest2.asset using Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e65dd1219dd93fd1146d44cb8f2c276') in 0.002340 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.781639 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest2.asset
-  artifactKey: Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest2.asset using Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a415c59530b01dad30202e5e29a08861') in 0.002560 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 90.657616 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest2.asset
-  artifactKey: Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest2.asset using Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '042259fddaf3bca19b6ae78cdbc7efb6') in 0.004066 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 91.349966 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest2.asset
-  artifactKey: Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest2.asset using Guid(d5349da4843b62d4bada80f71c2a6712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79f4495868b697b384df7976cea1cb12') in 0.004252 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 161.876973 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest3.asset
-  artifactKey: Guid(bfa89c6684f783041a10ba4aa777675f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest3.asset using Guid(bfa89c6684f783041a10ba4aa777675f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7a2a8b27758a46177958968296aafdd') in 0.003714 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.079762 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest3.asset
-  artifactKey: Guid(bfa89c6684f783041a10ba4aa777675f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest3.asset using Guid(bfa89c6684f783041a10ba4aa777675f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea4a99aa72821f9098473fdaa43a60d3') in 0.002771 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.605370 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest3.asset
-  artifactKey: Guid(bfa89c6684f783041a10ba4aa777675f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest3.asset using Guid(bfa89c6684f783041a10ba4aa777675f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a8a26a188a0fe3331d8c4cd13af6c1d') in 0.003340 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.630326 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest3.asset
-  artifactKey: Guid(bfa89c6684f783041a10ba4aa777675f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest3.asset using Guid(bfa89c6684f783041a10ba4aa777675f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61feffb9ce34e7f3e92eae79fc086738') in 0.002250 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.375604 seconds.
-  path: Assets/My Dialogs/SphereIIDialogTest3.asset
-  artifactKey: Guid(bfa89c6684f783041a10ba4aa777675f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/My Dialogs/SphereIIDialogTest3.asset using Guid(bfa89c6684f783041a10ba4aa777675f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f33c6cfc4ec073e544000cbf4378965f') in 0.007775 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 89.313779 seconds.
-  path: Assets/Exports/Dialogue/SphereIIDialogTest3/SphereIIDialogTest3.xml
-  artifactKey: Guid(ef22d8015c01f724783f84fcc1bab1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Exports/Dialogue/SphereIIDialogTest3/SphereIIDialogTest3.xml using Guid(ef22d8015c01f724783f84fcc1bab1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b05f36ba7cf6c1b7b56622a8b4c3ec2') in 0.002049 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 613.256694 seconds.
-  path: Assets/Dialogue/Changes.txt
-  artifactKey: Guid(3494df913dec48db9a0126df0a3c1085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Changes.txt using Guid(3494df913dec48db9a0126df0a3c1085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a17fb72ef92c5d0495c95d1330a3e6e') in 0.013754 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 79.389886 seconds.
-  path: Assets/Dialogue/Scripts/GraphView/DialogueGraphView.cs
-  artifactKey: Guid(89a6534d9d794234b5b2951e8339f461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/GraphView/DialogueGraphView.cs using Guid(89a6534d9d794234b5b2951e8339f461) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9a02838175826ad5a352f411a9cf549') in 0.008226 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.034447 seconds.
-  path: Assets/Dialogue/Scripts/GraphView/Blackboard.cs
-  artifactKey: Guid(d85226b27a5545d8a75e243f5a2a5105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/GraphView/Blackboard.cs using Guid(d85226b27a5545d8a75e243f5a2a5105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '907e03285a34187287804447c848d0f9') in 0.002772 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.027523 seconds.
-  path: Assets/Dialogue/Scripts/Nodes/RequirementNode.cs
-  artifactKey: Guid(3aef6eea7fdd420ca50a12e8c931b4e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Nodes/RequirementNode.cs using Guid(3aef6eea7fdd420ca50a12e8c931b4e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b3711b2d4b94b64f460eca9babbe22b') in 0.001901 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.002602 seconds.
-  path: Assets/Dialogue/Scripts/Managers/ExportManager.cs
-  artifactKey: Guid(9b4c58babf8c4870b2a84885d576399e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Managers/ExportManager.cs using Guid(9b4c58babf8c4870b2a84885d576399e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21684166896063885cf758e13d1f486a') in 0.002280 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001105 seconds.
-  path: Assets/Dialogue/Scripts/Editor/PropertyDrawers/Base/BaseDrawer.cs
-  artifactKey: Guid(ebe240047b824a949d14f5166d7c0c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Editor/PropertyDrawers/Base/BaseDrawer.cs using Guid(ebe240047b824a949d14f5166d7c0c41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e79179e61477d8bd8b12dc0616c75c9') in 0.001728 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.005533 seconds.
-  path: Assets/Dialogue/Scripts/Common/UI/CustomControls/InspectorView.cs
-  artifactKey: Guid(6a6f10b9c2b640e796cd97265f16f0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Common/UI/CustomControls/InspectorView.cs using Guid(6a6f10b9c2b640e796cd97265f16f0e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35c915c676fd9160e6a7b723a54fc466') in 0.002547 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.014972 seconds.
+  Time since last request: 3332.814957 seconds.
   path: Assets/Dialogue/version.txt
   artifactKey: Guid(2a13a8a2a647466b9759d7d0d51b3668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/version.txt using Guid(2a13a8a2a647466b9759d7d0d51b3668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41ddfca68bbc22075b2356f6d5c94a08') in 0.002036 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000699 seconds.
-  path: Assets/Dialogue/Scripts/GraphView/DialogueEditor.cs
-  artifactKey: Guid(6feca2a2cbe1491438f97a1a851f3302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/GraphView/DialogueEditor.cs using Guid(6feca2a2cbe1491438f97a1a851f3302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6137763201d38c5c7568da8a55a0c581') in 0.003047 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.002923 seconds.
-  path: Assets/Dialogue/Configuration/1-score.xml
-  artifactKey: Guid(0cafdcc99d31e5d4aa0cd577640778f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Configuration/1-score.xml using Guid(0cafdcc99d31e5d4aa0cd577640778f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31431c1f4937dcfa5de621f2ebda619a') in 0.002098 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.008388 seconds.
-  path: Assets/Dialogue/Scripts/Nodes/RootNode.cs
-  artifactKey: Guid(9a126453fdb64d70b9b315310a7485f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Nodes/RootNode.cs using Guid(9a126453fdb64d70b9b315310a7485f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '079b01d699180e54a187fbb41a12c05e') in 0.001800 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.007292 seconds.
-  path: Assets/Dialogue/Scripts/Managers/ConfigurationManager.cs
-  artifactKey: Guid(60dcd18f9b5242069ffcca725832fd64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Managers/ConfigurationManager.cs using Guid(60dcd18f9b5242069ffcca725832fd64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5730832a9d7c36b191292bfe58686eae') in 0.001701 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.003997 seconds.
-  path: Assets/Dialogue/Scripts/GraphView/QuickDoodle.cs
-  artifactKey: Guid(81626ccbf2d14758a0993ecf16d8c27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/GraphView/QuickDoodle.cs using Guid(81626ccbf2d14758a0993ecf16d8c27d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c009d580629a0e2ef94b0c7d3d7c841') in 0.001576 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001309 seconds.
-  path: Assets/Dialogue/Scripts/Editor/PropertyDrawers/DialogCVarDrawer.cs
-  artifactKey: Guid(e2115d7f2ba64a6e83a18e7cd9f1cc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Editor/PropertyDrawers/DialogCVarDrawer.cs using Guid(e2115d7f2ba64a6e83a18e7cd9f1cc31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78a8c874919998d98fb5ad9229cef5a4') in 0.003509 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000292 seconds.
-  path: Assets/Dialogue/Scripts/Nodes/ResponseNode.cs
-  artifactKey: Guid(664298f2b4d0495bb363c51d66f86eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Nodes/ResponseNode.cs using Guid(664298f2b4d0495bb363c51d66f86eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3875337d8c60772d12392546c2d88df7') in 0.001763 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001403 seconds.
-  path: Assets/Dialogue/UI/DialogueEditor.uxml
-  artifactKey: Guid(f3c2b54ad39433f4faa7777ee497c14d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/UI/DialogueEditor.uxml using Guid(f3c2b54ad39433f4faa7777ee497c14d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84b561b7ba4018ad0dad2a74e4ff8ca1') in 0.015976 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.006369 seconds.
-  path: Assets/Exports/Dialogue/MyNurse01
-  artifactKey: Guid(8fe7d22eca45d3848a676f58616e4c0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Exports/Dialogue/MyNurse01 using Guid(8fe7d22eca45d3848a676f58616e4c0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e55752cd2de5a43679c7b204886e460d') in 0.001759 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.063360 seconds.
-  path: Assets/Dialogue/Scripts/GraphView/ViewLayouts.cs
-  artifactKey: Guid(ad50698c436b4c58a2c92082c9c5cfef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/GraphView/ViewLayouts.cs using Guid(ad50698c436b4c58a2c92082c9c5cfef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed2c14d93a7f24cb73d36dcee401e1c3') in 0.002338 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.011378 seconds.
-  path: Assets/Dialogue/Scripts/GraphView/DialogGraph.cs
-  artifactKey: Guid(9e3f26486cfe4057a48a2d0866716126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/GraphView/DialogGraph.cs using Guid(9e3f26486cfe4057a48a2d0866716126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69cde56f378c8f3a1ff2fdfa28875c8f') in 0.001991 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.011865 seconds.
-  path: Assets/Dialogue/Scripts/Editor/EditorWindows/RootEditor.cs
-  artifactKey: Guid(70496b033ffe4e5c88418b5fce43ce12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Editor/EditorWindows/RootEditor.cs using Guid(70496b033ffe4e5c88418b5fce43ce12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2edb44089d85e35ff812b7fd5007cd33') in 0.001738 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.008557 seconds.
-  path: Assets/Dialogue/Scripts/Editor/PropertyDrawers/ActionDrawer.cs
-  artifactKey: Guid(5f89c78192ca41e38ede7b2a3a6a5b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Editor/PropertyDrawers/ActionDrawer.cs using Guid(5f89c78192ca41e38ede7b2a3a6a5b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '743f55a069d24f5c7cd96c47d4a26122') in 0.001776 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.018755 seconds.
-  path: Assets/Dialogue/UI/GotoNode.uxml
-  artifactKey: Guid(5a2122ecccaaa1c47955447353b40575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/UI/GotoNode.uxml using Guid(5a2122ecccaaa1c47955447353b40575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c3facf4b2f789ceb7f416a9da25c8b9') in 0.004765 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.020839 seconds.
-  path: Assets/Dialogue/Scripts/Nodes/ActionNode.cs
-  artifactKey: Guid(8ceff5d4fce646b0a9e41b7054434110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Nodes/ActionNode.cs using Guid(8ceff5d4fce646b0a9e41b7054434110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a62a77211366c706c466adc34a06eec9') in 0.002107 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.050739 seconds.
-  path: Assets/Exports/Dialogue/SphereIIDialogTest3
-  artifactKey: Guid(de438a92c55db2e488c66fe328114fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Exports/Dialogue/SphereIIDialogTest3 using Guid(de438a92c55db2e488c66fe328114fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f518243d934c6187e50ede88682eb11') in 0.002223 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.004328 seconds.
-  path: Assets/Dialogue/Scripts/GraphView/ExposedProperty.cs
-  artifactKey: Guid(d2a245c3db7644a6810f19c2c5e4066d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/GraphView/ExposedProperty.cs using Guid(d2a245c3db7644a6810f19c2c5e4066d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33c97cd10ebd86042fff833f68c745b4') in 0.001964 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.007429 seconds.
-  path: Assets/Exports/Dialogue/SphereIIDialogTest/SphereIIDialogTest.xml
-  artifactKey: Guid(fde8829d29fc2a4479c7099cc11d7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Exports/Dialogue/SphereIIDialogTest/SphereIIDialogTest.xml using Guid(fde8829d29fc2a4479c7099cc11d7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28141a0f1dd73ff6bf1c138805c3f153') in 0.002335 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Exports/Dialogue/MyNurse01/MyNurse01.xml
-  artifactKey: Guid(13c677a1cbffd1442bd042bced0d4526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Exports/Dialogue/MyNurse01/MyNurse01.xml using Guid(13c677a1cbffd1442bd042bced0d4526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a342eec386b0b1839e2fe60b646f703') in 0.001911 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.029435 seconds.
-  path: Assets/Dialogue/Scripts/Nodes/DialogCVar.cs
-  artifactKey: Guid(44c2fc82d8f84af1b864eedc1cdf20ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/Nodes/DialogCVar.cs using Guid(44c2fc82d8f84af1b864eedc1cdf20ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdc754ec42c790da9d891ccce20ab83d') in 0.001641 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001970 seconds.
-  path: Assets/Dialogue/Scripts/GraphView/NodeView.cs
-  artifactKey: Guid(d6eb43e4b5da470b8396629a4249aabc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Scripts/GraphView/NodeView.cs using Guid(d6eb43e4b5da470b8396629a4249aabc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ce82dc7787cf2762341d6792ffc9ef2') in 0.001851 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.013665 seconds.
-  path: Assets/Imported/Dialogue/GenericNPCCowboy.asset
-  artifactKey: Guid(21e707e2163dada4caea3b2aa77bb644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported/Dialogue/GenericNPCCowboy.asset using Guid(21e707e2163dada4caea3b2aa77bb644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1dee25b2c42a48bfcde55a131277f49') in 0.007817 seconds 
+Start importing Assets/Dialogue/version.txt using Guid(2a13a8a2a647466b9759d7d0d51b3668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1050e9f8e5853c61206176b9a45a3cc7') in 0.021428 seconds 

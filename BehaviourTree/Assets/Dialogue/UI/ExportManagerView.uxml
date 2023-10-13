@@ -1,0 +1,37 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement name="Header" style="align-items: center; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px;">
+            <ui:Label text="Export Manager" display-tooltip-when-elided="true" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Body" style="flex-grow: 1;">
+            <ui:GroupBox text="Dialog Settings" name="BasicDialogSettings" style="border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-left-color: rgb(86, 86, 86); border-right-color: rgb(86, 86, 86); border-top-color: rgb(86, 86, 86); border-bottom-color: rgb(86, 86, 86);">
+                <ui:TextField picking-mode="Ignore" label="Dialog ID" name="DialogID" binding-path="dialogId" />
+            </ui:GroupBox>
+            <ui:GroupBox name="LocalizationSettings" text="Localization Settings" style="border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; border-left-color: rgb(86, 86, 86); border-right-color: rgb(86, 86, 86); border-top-color: rgb(86, 86, 86); border-bottom-color: rgb(86, 86, 86);">
+                <ui:Toggle label="Create Localization.txt" name="LocalizationToggle" value="true" />
+                <ui:TextField picking-mode="Ignore" label="Localization Prefix" name="LocalizationPrefix" binding-path="localizationPrefix" />
+            </ui:GroupBox>
+            <ui:GroupBox name="SoundSettings" text="Sound Settings" style="border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; border-left-color: rgb(86, 86, 86); border-right-color: rgb(86, 86, 86); border-top-color: rgb(86, 86, 86); border-bottom-color: rgb(86, 86, 86);">
+                <ui:VisualElement name="SoundsXML" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(86, 86, 86); border-right-color: rgb(86, 86, 86); border-top-color: rgb(86, 86, 86); border-bottom-color: rgb(86, 86, 86); padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                    <ui:Label text="Creating the sounds.xml will create a SoundDataNode for each Statement ID in the dialog. This will allow you to create a unity3d bundle with the sounds.&#10;&#10;The format of the ClipName is :  #@modfolder:/Resources/&lt;DialogID&gt;.unity3d?&lt;statementID&gt;&#10;" display-tooltip-when-elided="true" style="flex-wrap: wrap; white-space: normal; margin-left: 10px; margin-right: 5px;" />
+                    <ui:Toggle label="Create Sounds.xml" name="SoundsXMLToggle" value="true" tooltip="Deermines if a sounds.xml with sound data node pre-populated for all statements" />
+                    <ui:Label text="Creating the Audio Actions will auto-generate the appropriate actions to the dialogs.xml on export. This will allow you to automatically set up the actions without creating them in the graph.&#10;&#10; Note: This only affects the export, the action nodes are not actually generated in the dialog graph view.&#10;" display-tooltip-when-elided="true" style="flex-wrap: wrap; white-space: normal; margin-left: 10px; margin-top: 5px;" />
+                    <ui:Toggle label="Generate Audio Actions" name="GenerateActions" value="true" tooltip="Automatically generate actions to attach the audio clips to the appropriate responses." />
+                </ui:VisualElement>
+                <ui:VisualElement name="Voices" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(86, 86, 86); border-right-color: rgb(86, 86, 86); border-top-color: rgb(86, 86, 86); border-bottom-color: rgb(86, 86, 86); margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                    <ui:Label text="Creates a voices.csv  file containing all the statement text. This may be used for programs such as xVASynth on steam, or an online service like Eleven Labs.&#10;" display-tooltip-when-elided="true" style="flex-wrap: wrap; white-space: normal; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-left-color: rgb(86, 86, 86); border-right-color: rgb(86, 86, 86); border-top-color: rgb(86, 86, 86); border-bottom-color: rgb(86, 86, 86); margin-left: 10px; margin-top: 5px;" />
+                    <ui:Toggle label="Create Voices.csv" name="CreateVoices" value="true" tooltip="Deermines if a sounds.xml with sound data node pre-populated for all statements" />
+                    <ui:GroupBox name="xVASynthSettings" text="xVASynthSettings" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(86, 86, 86); border-right-color: rgb(86, 86, 86); border-top-color: rgb(86, 86, 86); border-bottom-color: rgb(86, 86, 86);">
+                        <ui:Toggle label="Export xVASynth" name="TogglexVASynth" />
+                        <ui:TextField picking-mode="Ignore" label="Game ID" name="TextGameID" value="cyberpunk2077" text="cyberpunk2077" />
+                        <ui:TextField picking-mode="Ignore" label="Voice ID" value="cp_dakota" text="cp_dakota" name="TextVoiceID" />
+                    </ui:GroupBox>
+                </ui:VisualElement>
+            </ui:GroupBox>
+            <ui:VisualElement style="flex-direction: row; align-items: center; justify-content: center; min-height: 35px;">
+                <ui:Button text="Export" display-tooltip-when-elided="true" name="ExportButton" />
+                <ui:Button text="Close" display-tooltip-when-elided="true" name="Close" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

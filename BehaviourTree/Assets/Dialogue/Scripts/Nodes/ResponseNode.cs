@@ -21,6 +21,7 @@ public class ResponseNode : BaseNode
     
     [HideInInspector] public List<BaseNode> Children = new List<BaseNode>();
 
+
     public StatementNode parent;
     public override void Update()
     {

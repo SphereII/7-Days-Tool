@@ -21,6 +21,8 @@ namespace Dialogue.GameData.Dialogs
         [XmlElement(ElementName = "quest_entry")]
         public List<DialogQuestEntry> questEntry = null;
 
+        [XmlElement(ElementName = "action")] 
+        public List<DialogAction> Actions = new List<DialogAction>();
         /*public string Localized()
         {
             return Localization.GetLocalization(Text);

@@ -188,6 +188,7 @@ public class ImportManager
         statementNode.nextstatementId = statement.Nextstatementid;
         statementNode.ResponseEntries = statement.responseEntry;
         statementNode.questEntry = statement.questEntry;
+        statementNode.Actions = statement.Actions;
         
         // Check if this is the start statement, as it'll be our root node.
         if (statement.id != dialog.Startstatementid) return;

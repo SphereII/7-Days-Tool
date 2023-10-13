@@ -52,7 +52,7 @@ namespace Dialogue.Scripts.Editor.EditorWindows
         {
             var choices = new List<string>();
             _statementNodes.Clear();
-            var graphView = DialogueEditor.GetCurrentGraphView();
+            var graphView = _gotoNode.currenGraphView;
             if (graphView == null) return;
             foreach (var node in graphView.DialogGraph.nodes)
             {
